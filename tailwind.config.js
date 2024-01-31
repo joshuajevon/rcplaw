@@ -11,8 +11,12 @@ export default {
 
     theme: {
         extend: {
+            colors:{
+                gold: '#C4AF65',
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                cormorant: ['Cormorant Garamond', ...defaultTheme.fontFamily.sans],
             },
         },
     },
