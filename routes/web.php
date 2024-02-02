@@ -18,7 +18,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('beranda');
+
+Route::get('/layanan-kami', function () {
+    return view('layanan-kami');
+})->name('layanan-kami');
 
 Route::middleware('auth')->group(function () {
 

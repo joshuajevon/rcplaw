@@ -6,3 +6,15 @@
     font-family: "Outfit", sans-serif;
     scroll-behavior: smooth;
 }
+
+.custom-container {
+    @apply px-8 md:px-16 lg:px-24 xl:px-32;
+}
+
+.heading-1 {
+    @apply text-3xl md:text-4xl xl:text-5xl;
+}
+
+.paragraph {
+    @apply text-xs md:text-sm xl:text-base;
+}
