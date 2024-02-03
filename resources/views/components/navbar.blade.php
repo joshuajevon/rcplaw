@@ -32,9 +32,9 @@
         <div class="paragraph hidden lg:flex items-center font-medium gap-12">
             <a class="{{$page === 'beranda' ? 'text-gold' : ''}}" href="{{route('beranda')}}">Beranda</a>
 
-            <a href="#tentang-kami">Tentang Kami</a>
+            <a class="{{$page === 'tentang-kami' ? 'text-gold' : ''}}" href="{{$page === 'beranda' ? '#layanan-kami' : '/tentang-kami'}}">Tentang Kami</a>
 
-            <a class="{{$page === 'layanan-kami' ? 'text-gold' : ''}}" href="{{$page === 'beranda' ? '#layanan-kami' : '/'}}">Layanan Kami</a>
+            <a class="{{$page === 'layanan-kami' ? 'text-gold' : ''}}" href="{{$page === 'beranda' ? '#layanan-kami' : '/layanan-kami'}}">Layanan Kami</a>
 
             <a href="">Artikel</a>
 

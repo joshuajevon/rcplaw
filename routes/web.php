@@ -24,6 +24,10 @@ Route::get('/layanan-kami', function () {
     return view('layanan-kami');
 })->name('layanan-kami');
 
+Route::get('/tentang-kami', function () {
+    return view('tentang-kami');
+})->name('tentang-kami');
+
 Route::middleware('auth')->group(function () {
 
     Route::middleware('isAdmin')->group(function(){
