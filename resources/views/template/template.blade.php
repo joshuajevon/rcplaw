@@ -24,6 +24,8 @@
 <body>
     @yield('body')
 
+    <x-footer />
+
     <script src="{{asset('js/navbar.js')}}"></script>
 </body>
 </html>
