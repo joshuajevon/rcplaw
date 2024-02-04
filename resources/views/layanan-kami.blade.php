@@ -9,11 +9,13 @@
 
 <div class="bg-[#EDEDED] font-outfit *:text-customDarkGray pt-24">
     <section id="tentang-kami" class="custom-container py-12 md:py-16 xl:py-20 flex flex-col items-center">
-        <img class="size-6 md:size-7 xl:size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
+        <div class="flex flex-col items-center">
+            <img class="size-6 md:size-7 xl:size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
 
-        <h1 class="heading-1 font-cormorant font-bold text-center">Layanan Kami</h1>
+            <h1 class="heading-1 font-cormorant font-bold text-center">Layanan Kami</h1>
 
-        <img src="{{asset('assets/logo/line.svg')}}" alt="line" class="w-8 md:w-12 xl:w-16 mt-2 md:mt-3 xl:mt-4 mb-6 md:mb-7 xl:mb-8">
+            <img src="{{asset('assets/logo/line.svg')}}" alt="line" class="w-8 md:w-12 xl:w-16 mt-2 md:mt-3 xl:mt-4 mb-6 md:mb-7 xl:mb-8">
+        </div>
 
         <div class="flex flex-col w-full gap-6 md:gap-7 xl:gap-8">
             <a href="{{route('beranda')}}" class="paragraph flex items-center gap-1 md:gap-1.5 xl:gap-2 hover:text-gold transition">
