@@ -27,5 +27,6 @@
     <x-footer />
 
     <script src="{{asset('js/navbar.js')}}"></script>
+    <script src="{{asset('js/footer.js')}}"></script>
 </body>
 </html>

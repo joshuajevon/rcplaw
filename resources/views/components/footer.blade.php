@@ -1,4 +1,4 @@
-<footer class="custom-container bg-customDarkGray text-white pb-4 pt-8 md:pt-12 xl:pt-16 flex flex-col items-center justify-center gap-12 md:gap-14 xl:gap-16">
+<footer id="footer" class="custom-container bg-customDarkGray text-white pb-4 pt-8 md:pt-12 xl:pt-16 flex flex-col items-center justify-center gap-12 md:gap-14 xl:gap-16">
     <div class="flex flex-col items-center justify-center text-center">
         <img class="size-8 md:size-12 xl:size-16" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
         <h1 class="font-bold font-cormorant text-xl md:text-2xl xl:text-3xl">Resandhi Cumbhadrika Partnership</h1>
@@ -6,15 +6,31 @@
     </div>
 
     <div class="paragraph flex justify-center items-center gap-y-4 gap-x-8 md:gap-x-12 xl:gap-x-16 flex-wrap">
-        <a class="hover:text-gold transition" href="{{route('beranda')}}">Beranda</a>
+        <a class="hover:text-gold transition" href="{{route('beranda-beranda')}}">Beranda</a>
 
-        <a class="hover:text-gold transition" href="{{route('tentang-kami')}}">Tentang Kami</a>
+        <span id="tentang-kami-tim-kami-footer" class="relative">
+            <span class="flex items-center gap-1 cursor-pointer transition hover:text-gold">
+                Tentang Kami
 
-        <a class="hover:text-gold transition" href="{{route('layanan-kami')}}">Layanan Kami</a>
+                <svg id="dropdown-arrow-footer" xmlns="http://www.w3.org/2000/svg" class="size-5 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </span>
 
-        <a class="hover:text-gold transition" href="">Artikel</a>
+            <div id="dropdown-tentang-kami-tim-kami-footer" class="hidden absolute top-[100%] mt-1 text-white bg-customDarkGray w-full">
+                <div class="flex flex-col gap-2 p-2 w-full shadow-xl">
+                    <a id="footer-tentang-kami" class="flex-none transition hover:text-gold" href="{{ route("beranda-tentang-kami") }}">Tentang Kami</a>
 
-        <a class="hover:text-gold transition" href="">Kontak</a>
+                    <a id="footer-tim-kami" class="flex-none transition hover:text-gold" href="{{route("beranda-tim-kami")}}">Tim Kami</a>
+                </div>
+            </div>
+        </span>
+
+        <a class="hover:text-gold transition" href="{{route('beranda-layanan-kami')}}">Layanan Kami</a>
+
+        <a class="hover:text-gold transition" href="{{route('beranda-artikel')}}">Artikel</a>
+
+        <a class="hover:text-gold transition" href="{{route('beranda-kontak')}}">Kontak</a>
     </div>
 
     <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 xl:gap-16 text-xs md:text-sm text-white">
