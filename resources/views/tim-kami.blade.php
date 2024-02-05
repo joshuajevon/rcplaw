@@ -9,11 +9,13 @@
 
 <div class="bg-[#EDEDED] font-outfit *:text-customDarkGray pt-24">
     <section id="tim-kami" class="custom-container pt-12 md:pt-16 xl:pt-20 pb-32 md:pb-48 xl:pb-64 flex flex-col items-center">
-        <img class="size-6 md:size-7 xl:size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
+        <div class="flex flex-col items-center">
+            <img class="size-6 md:size-7 xl:size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
 
-        <h1 class="heading-1 font-cormorant font-bold text-center">Tim Kami</h1>
+            <h1 class="heading-1 font-cormorant font-bold text-center">Tim Kami</h1>
 
-        <img src="{{asset('assets/logo/line.svg')}}" alt="line" class="w-8 md:w-12 xl:w-16 mt-2 md:mt-3 xl:mt-4 mb-6 md:mb-7 xl:mb-8">
+            <img src="{{asset('assets/logo/line.svg')}}" alt="line" class="w-8 md:w-12 xl:w-16 mt-2 md:mt-3 xl:mt-4 mb-6 md:mb-7 xl:mb-8">
+        </div>
 
         <div class="flex flex-col w-full gap-6 md:gap-7 xl:gap-8">
             <a href="{{route('beranda-tim-kami')}}" class="paragraph flex items-center gap-1 md:gap-1.5 xl:gap-2 hover:text-gold transition">
