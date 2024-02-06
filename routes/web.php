@@ -67,6 +67,12 @@ Route::get('/tim-kami', function () {
     return view('tim-kami');
 })->name('tim-kami');
 
+Route::get('/artikel/{id}', function ($id) {
+    $artikel = News::findOrFail($id);
+
+    return view('artikel', compact('artikel'));
+})->name('artikel');
+
 Route::middleware('auth')->group(function () {
 
     Route::middleware('isAdmin')->group(function(){
