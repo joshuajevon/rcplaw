@@ -9,18 +9,93 @@
 
 <div class="bg-[#EDEDED] font-outfit *:text-customDarkGray">
     {{-- BERANDA --}}
-    <section id="beranda" class="custom-container h-dvh flex items-center">
-        <h1>Hello World</h1>
+    <section id="beranda" class="flex flex-col gap-32 pt-48 pb-20">
+        <div class="custom-container">
+            <div class="flex flex-col gap-16 w-2/5">
+                <h1 class="title font-cormorant font-bold   ">
+                    Resandh
+                    <br>
+                    Cumbhadrika
+                    <br>
+                    Partnership</h1>
+
+                <form action="">
+                    <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden paragraph bg-[#D9D9D9] *:font-cormorant *:font-bold">
+                        <input class="border-none outline-none py-3 pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda">
+                        <button class="flex-none py-2.5 px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]">Hubungi Kami</button>
+                    </div>
+                    <p class="text-xs text-red-500 mt-2">Error Message</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-12">
+            <p class="uppercase paragraph font-semibold text-center">Dipercaya oleh banyak Client di Indonesia</p>
+
+            <div class="w-full inline-flex flex-nowrap overflow-hidden">
+                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left">
+                    @for($i = 1; $i
+                    <= 16; $i++) <li>
+                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        </li>
+                        @endfor
+                </ul>
+                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left" aria-hidden="true">
+                    @for($i = 1; $i
+                    <= 16; $i++) <li>
+                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        </li>
+                        @endfor
+                </ul>
+            </div>
+
+            <div class="w-full inline-flex flex-nowrap overflow-hidden">
+                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-right">
+                    @for($i = 17; $i
+                    <= 33; $i++) <li>
+                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        </li>
+                        @endfor
+                </ul>
+                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-right" aria-hidden="true">
+                    @for($i = 17; $i
+                    <= 33; $i++) <li>
+                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        </li>
+                        @endfor
+                </ul>
+            </div>
+
+            <div class="w-full inline-flex flex-nowrap overflow-hidden">
+                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left">
+                    @for($i = 34; $i
+                    <= 52; $i++) <li>
+                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        </li>
+                        @endfor
+                </ul>
+                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left" aria-hidden="true">
+                    @for($i = 34; $i
+                    <= 52; $i++) <li>
+                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        </li>
+                        @endfor
+                </ul>
+            </div>
+        </div>
     </section>
 
 
     {{-- TENTANG KAMI --}}
     <section id="tentang-kami" class="py-20 custom-container flex flex-col items-center">
-        <img class="size-10" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
+        <div class="flex flex-col items-center">
+            <img class="size-6 md:size-7 xl:size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
 
-        <h1 class="text-5xl font-cormorant font-bold">Tentang Kami</h1>
+            <h1 class="heading-1 font-cormorant font-bold text-center">Tentang Kami</h1>
 
-        <img src="{{asset('assets/logo/line.svg')}}" alt="line" class="mt-4 mb-8">
+            <img src="{{asset('assets/logo/line.svg')}}" alt="line" class="w-8 md:w-12 xl:w-16 mt-2 md:mt-3 xl:mt-4 mb-6 md:mb-7 xl:mb-8">
+        </div>
+
 
         <p class="text-center leading-loose"><span class="font-bold">Resandhi Cumbhadrika Partnership (RCP)</span> adalah firma hukum penuh layanan yang beroperasi sejak 2020. Dengan lebih dari 10 tahun pengalaman sebagai pengacara, tim RCP berkomitmen untuk memberikan layanan hukum profesional berstandar internasional. Firma ini menawarkan sumber daya dan keahlian yang dapat dipercayakan untuk membantu klien. Dengan pengetahuan mendalam dalam ilmu hukum dan kredibilitas profesional, RCP bertujuan untuk mempertahankan dan memaksimalkan posisi serta kepentingan hukum klien.</p>
 
@@ -508,7 +583,7 @@
                         <div class="flex flex-col gap-2 w-full">
                             <label class="text-white" for="nama-depan">Nama Depan</label>
                             <input class="rounded-lg py-3 w-full" type="text" name="nama-depan" id="nama-depan" placeholder="Nama depan Anda">
-                            <p class="text-xs text-red-500">Error</p>
+                            <p class="text-xs text-red-500">Error Message</p>
                         </div>
 
                         <div class="flex flex-col gap-2 w-full">
@@ -533,7 +608,7 @@
                     </div>
 
                     <div class="flex justify-end">
-                        <button class="hover:bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2))] text-xs md:text-sm bg-gold text-white px-12 py-4 rounded-lg">Kirim</button>
+                        <button class="hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] text-xs md:text-sm bg-gold text-white px-12 py-4 rounded-lg">Kirim</button>
                     </div>
                 </form>
 

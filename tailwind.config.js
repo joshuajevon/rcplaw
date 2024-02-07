@@ -23,6 +23,22 @@ export default {
                     ...defaultTheme.fontFamily.sans,
                 ],
             },
+            animation: {
+                "infinite-scroll-left":
+                    "infinite-scroll-left 60s linear infinite",
+                "infinite-scroll-right":
+                    "infinite-scroll-right 60s linear infinite",
+            },
+            keyframes: {
+                "infinite-scroll-left": {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(-100%)" },
+                },
+                "infinite-scroll-right": {
+                    from: { transform: "translateX(-100%)" },
+                    to: { transform: "translateX(0%)" },
+                },
+            },
         },
     },
 

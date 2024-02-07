@@ -64,7 +64,7 @@
     <p class="text-xs">© RCP Law {{ date('Y') }}</p>
 </footer>
 <a href="https://webcreativs.com/" target="_blank" rel="noreferrer noopener">
-    <div class="custom-container bg-gold hover:bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2))] py-2">
+    <div class="custom-container bg-gold hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] py-2">
         <p class="paragraph text-center font-medium text-white">
             Dibuat oleh <span class="text-[#344F34] font-bold underline">WebCreativs</span>
         </p>

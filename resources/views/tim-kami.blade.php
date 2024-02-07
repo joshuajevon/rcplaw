@@ -29,10 +29,10 @@
 
             <div id="tim-selector-container" class="w-full flex items-center justify-center border-b-2 border-customDarkGray overflow-x-auto">
                 <div id="tim-selector-content" class="flex items-center gap-8 md:gap-12 xl:gap-16 pb-2 *:cursor-pointer">
-                    <p class="tim-selector paragraph flex-none uppercase hover:opacity-100 transition font-bold pointer-events-none" data-nama-tim="Fadjar Sukma">Fadjar Sukma</p>
-                    <p class="tim-selector paragraph flex-none uppercase hover:opacity-100 transition opacity-50" data-nama-tim="Elisabeth Yunita">Elisabeth Yunita</p>
-                    <p class="tim-selector paragraph flex-none uppercase hover:opacity-100 transition opacity-50" data-nama-tim="Hafidzun Sat Febrian">Hafidzun Sat Febrian</p>
-                    <p class="tim-selector paragraph flex-none uppercase hover:opacity-100 transition opacity-50" data-nama-tim="Dicke Muhdi Gailea">Dicke Muhdi Gailea</p>
+                    <p class="tim-selector paragraph flex-none uppercase hover:opacity-100 transition font-bold pointer-events-none" data-nama-tim="Fadjar Sukma">Fadjar Sukma, S.H.</p>
+                    <p class="tim-selector paragraph flex-none uppercase hover:opacity-100 transition opacity-50" data-nama-tim="Elisabeth Yunita">Elisabeth Yunita, S.H.</p>
+                    <p class="tim-selector paragraph flex-none uppercase hover:opacity-100 transition opacity-50" data-nama-tim="Hafidzun Sat Febrian">Hafidzun Sat Febrian, S.H.</p>
+                    <p class="tim-selector paragraph flex-none uppercase hover:opacity-100 transition opacity-50" data-nama-tim="Dicke Muhdi Gailea">Dicke Muhdi Gailea, S.H.</p>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
                 <div id="detail-tim" class="paragraph flex flex-col items-center gap-8 md:gap-12 xl:gap-16">
                     <div class="flex flex-col items-center *:font-cormorant *:font-bold">
                         <p id="tim-position" class="paragraph text-gold">Junior Associate</p>
-                        <h3 id="tim-name" class="heading-3">Fadjar Sukma</h3>
+                        <h3 id="tim-name" class="heading-3">Fadjar Sukma, S.H.</h3>
 
                         <div class="text-customDarkGray flex justify-center items-center gap-4 md:gap-5 xl:gap-6 mt-2 md:mt-3 xl:mt-4">
                             <a id="whatsapp" href="" class="hover:text-gold transition" target="_blank" rel="noreferrer noopener">
@@ -75,5 +75,5 @@
     </section>
 </div>
 
-<script src="{{asset('js/tentang-kami.js')}}"></script>
+<script src="{{asset('js/tim-kami.js')}}"></script>
 @endsection

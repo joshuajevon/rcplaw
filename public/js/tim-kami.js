@@ -4,7 +4,7 @@ $(".tim-selector").on("click", function () {
     switch (dataNamaTim) {
         case "Fadjar Sukma":
             $("#tim-position").html("Junior Associate");
-            $("#tim-name").html("Fadjar Sukma");
+            $("#tim-name").html("Fadjar Sukma, S.H.");
 
             $("#whatsapp").attr("href", "https://www.example.com");
             $("#instagram").attr("href", "https://www.example.com");
@@ -19,7 +19,7 @@ $(".tim-selector").on("click", function () {
 
         case "Elisabeth Yunita":
             $("#tim-position").html("Junior Associate");
-            $("#tim-name").html("Elisabeth Yunita");
+            $("#tim-name").html("Elisabeth Yunita, S.H.");
 
             $("#whatsapp").attr("href", "https://www.example.com");
             $("#instagram").attr("href", "https://www.example.com");
@@ -34,7 +34,7 @@ $(".tim-selector").on("click", function () {
 
         case "Hafidzun Sat Febrian":
             $("#tim-position").html("Junior Associate");
-            $("#tim-name").html("Hafidzun Sat Febrian");
+            $("#tim-name").html("Hafidzun Sat Febrian, S.H.");
 
             $("#whatsapp").attr("href", "https://www.example.com");
             $("#instagram").attr("href", "https://www.example.com");
@@ -49,7 +49,7 @@ $(".tim-selector").on("click", function () {
 
         case "Dicke Muhdi Gailea":
             $("#tim-position").html("Junior Associate");
-            $("#tim-name").html("Elisabeth Yunita");
+            $("#tim-name").html("Elisabeth Yunita, S.H.");
 
             $("#whatsapp").attr("href", "https://www.example.com");
             $("#instagram").attr("href", "https://www.example.com");
