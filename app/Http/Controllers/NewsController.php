@@ -9,9 +9,15 @@ use Illuminate\Support\Facades\Storage;
 class NewsController extends Controller
 {
 
-    public function viewsNews(){
-        $newss = News::all();
-        return view('admin.news.viewAllNews', compact('newss'));
+    public function viewsNews(Request $request){
+        $result = $request->input('search');
+        if($result){
+            $newss = News::where('title','like','%' .request('search'). '%')->paginate(6);
+        } else{
+            $newss = News::paginate(6);
+        }
+
+        return view('admin.news.viewAllNews', compact('newss','result'));
     }
 
     public function viewNewsById($id){
@@ -42,7 +48,7 @@ class NewsController extends Controller
             'author' => $request->author,
             'date' => $request->date
         ]);
-        return redirect(route('viewsNews'));
+        return redirect(route('createNews'));
     }
 
     public function editNews($id){

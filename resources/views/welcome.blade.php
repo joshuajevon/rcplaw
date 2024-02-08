@@ -19,10 +19,11 @@
                     <br>
                     Partnership</h1>
 
-                <form action="">
+                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" onsubmit="subscribe(event)">
+                    @csrf
                     <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden paragraph bg-[#D9D9D9] *:font-cormorant *:font-bold">
-                        <input class="border-none outline-none py-3 pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda">
-                        <button class="flex-none py-2.5 px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]">Hubungi Kami</button>
+                        <input class="border-none outline-none py-3 pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda" value="{{ old('email') }}">
+                        <button class="flex-none py-2.5 px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]" type="submit">Hubungi Kami</button>
                     </div>
                     <p class="text-xs text-red-500 mt-2">Error Message</p>
                 </form>
@@ -656,17 +657,18 @@
                     <h5 class="heading-5">Isi form ini dan tim kami akan menghubungi anda</h5>
                 </div>
 
-                <form action="" class="paragraph flex flex-col gap-8 w-full">
+                <form action="{{ route('contact') }}" method="POST" class="paragraph flex flex-col gap-8 w-full">
+                    @csrf
                     <div class="flex gap-8 w-full">
                         <div class="flex flex-col gap-2 w-full">
                             <label class="text-white" for="nama-depan">Nama Depan</label>
-                            <input class="rounded-lg py-3 w-full" type="text" name="nama-depan" id="nama-depan" placeholder="Nama depan Anda">
+                            <input class="rounded-lg py-3 w-full" type="text" name="first_name" id="nama-depan" placeholder="Nama depan Anda">
                             <p class="text-xs text-red-500">Error Message</p>
                         </div>
 
                         <div class="flex flex-col gap-2 w-full">
                             <label class="text-white" for="nama-belakang">Nama Belakang</label>
-                            <input class="rounded-lg py-3 w-full" type="text" name="nama-belakang" id="nama-belakang" placeholder="Nama belakang Anda">
+                            <input class="rounded-lg py-3 w-full" type="text" name="last_name" id="nama-belakang" placeholder="Nama belakang Anda">
                         </div>
                     </div>
 
@@ -677,16 +679,16 @@
 
                     <div class="flex flex-col gap-2 w-full">
                         <label class="text-white" for="subjek">Subjek</label>
-                        <input class="rounded-lg py-3 w-full" type="text" name="subjek" id="subjek" placeholder="Subjek email Anda">
+                        <input class="rounded-lg py-3 w-full" type="text" name="subject" id="subjek" placeholder="Subjek email Anda">
                     </div>
 
                     <div class="flex flex-col gap-2 w-full">
                         <label class="text-white" for="pesan">Pesan</label>
-                        <textarea class="rounded-lg py-3 w-full h-48 resize-none" name="pesan" id="pesan" placeholder="Pesan Anda"></textarea>
+                        <textarea class="rounded-lg py-3 w-full h-48 resize-none" name="mail" id="pesan" placeholder="Pesan Anda"></textarea>
                     </div>
 
                     <div class="flex justify-end">
-                        <button class="hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] text-xs md:text-sm bg-gold text-white px-12 py-4 rounded-lg">Kirim</button>
+                        <button type="submit" class="hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] text-xs md:text-sm bg-gold text-white px-12 py-4 rounded-lg">Kirim</button>
                     </div>
                 </form>
 
