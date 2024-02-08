@@ -13,7 +13,7 @@
         <div class="custom-container flex item-center gap-16">
             <div class="flex-none flex flex-col gap-16 w-2/5">
                 <h1 class="title font-cormorant font-bold   leading" style="line-height: 1.5;">
-                    Resandh
+                    Resandhi
                     <br>
                     Cumbhadrika
                     <br>
