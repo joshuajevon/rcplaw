@@ -48,7 +48,7 @@ class NewsController extends Controller
             'author' => $request->author,
             'date' => $request->date
         ]);
-        return redirect(route('viewsNews'));
+        return redirect(route('createNews'));
     }
 
     public function editNews($id){

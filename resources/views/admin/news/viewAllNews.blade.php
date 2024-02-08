@@ -126,7 +126,7 @@
         </div>
 
         {{-- Modal --}}
-        <div id="modal" class="flex items-center justify-center w-screen h-screen bg-[#67676780] z-10 fixed hidden">
+        <div id="modal" class="flex items-center justify-center w-screen h-screen bg-black bg-opacity-70 z-10 fixed hidden">
             <div class="flex flex-col items-center bg-[#D9D9D9] rounded-xl px-8 py-16">
                 <div class="flex flex-col items-center justify-center">
                     <img class="w-20 mb-4" src="{{ asset('assets/logo/logo-rcp.png') }}" alt="">
