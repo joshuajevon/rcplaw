@@ -43,7 +43,7 @@
 
                 <div class="w-full">
                     <x-input-label for="description" :value="__('Isi Artikel')" class="font-cormorant font-bold"/>
-                    <x-text-area type="text" id="description" class="mt-1 w-full font-cormorant font-bold" placeholder="Masukkan deskripsi artikel"
+                    <x-text-area type="text" id="description" class="mt-1 w-full font-cormorant font-bold" placeholder="Masukkan isi artikel"
                         name="description" value="{{ old('description') }}" />
                     <x-input-error :messages="$errors->get('description')" class="mt-2" />
                 </div>

@@ -2,6 +2,7 @@
 
 @section('head')
     {{-- css --}}
+    <link rel="stylesheet" href="{{ asset('css/pagination.css') }}?t={{ env('VERSION_TIME') }}">
 
     <!-- javascript -->
 @endsection
@@ -25,15 +26,15 @@
 
 
             {{-- Search Bar, Sort, Refresh --}}
-            {{-- <form action="" method="GET"
-                class="w-full flex flex-col justify-center items-start gap-8"> --}}
+            <form class="w-full flex flex-row  items-center gap-8">
                 {{-- Search Bar --}}
-                {{-- <div class="self-center w-full">
+                <div class="self-center w-full">
                     <div class="w-full gap-2 text-base">
-                        <div class="py-1 sm:py-2 lg:py-3 px-6 sm:px-7 lg:px-8 flex rounded-full bg-black text-cWhite">
+                        <div class="py-1 sm:py-2 lg:py-3 px-6 sm:px-7 lg:px-8 flex rounded-full bg-gold text-white">
                             <input autocomplete="false" type="text"
-                                class="w-full bg-transparent border-none placeholder:text-cWhite px-0 autofill:shadow-[inset_0_0_0px_1000px_rgb(197,175,102)]"
-                                id="search" name="search" placeholder="Pencarian..." value="">
+                                class="w-full bg-transparent border-none placeholder:text-white px-0 autofill:shadow-[inset_0_0_0px_1000px_rgb(197,175,102)]"
+                                id="search" name="search" placeholder="Pencarian..." value="{{ $result }}"
+                                onfocus="this.style.outline='none';" onblur="this.style.outline='';">
                             <button type="submit" class="flex justify-center items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-search" viewBox="0 0 16 16">
@@ -43,10 +44,20 @@
                             </button>
                         </div>
                     </div>
-                </div> --}}
+                </div>
 
 
-                {{-- Sort and refresh --}}
+                {{-- Refresh --}}
+                {{-- <a href="{{ route('viewsNews') }}"
+                    class="flex justify-center items-center p-2 bg-gold text-white rounded-md transition hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+                </a> --}}
+
+                {{-- Sort --}}
                 {{-- <div class="flex w-full gap-2"> --}}
                     {{-- Sorting --}}
                     {{-- <div class="flex justify-start items-center gap-2">
@@ -64,88 +75,84 @@
                         </select>
                     </div> --}}
 
-                    {{-- Refresh --}}
-                    {{-- <a href=""
-                        class="flex justify-center items-center p-2 bg-cGold text-cWhite rounded-md transition hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                            stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                        </svg>
-                    </a>
-                </div>
-            </form> --}}
+                </form>
 
-            <div class="grid grid-cols-2 gap-4">
-                @foreach ($newss as $news)
-                <div class="flex group transition duration-300 ease-in-out transform hover:shadow-lg">
-                    <img src="{{ asset('/storage/news/' . $news->image) }}" alt="" class="w-56 h-56 object-cover">
-
-                    <a href="{{ route('viewNewsById', $news->id) }}">
-                        <div class="flex flex-col justify-around items-stretch pl-5 bg-[#3A3A38] text-white bg-opacity-80 group-hover:bg-opacity-100">
-                            <div class="flex flex-row justify-around items-center">
-                                <h1 class="text-xl font-cormorant font-semibold">{{ \Illuminate\Support\Str::limit($news->title, 20) }}</h1>
-                                <div class="flex flex-row gap-3">
-                                    <a href="{{ route('editNews', $news->id) }}">
-                                        <button type="button" class="focus:outline-none">
-                                            <i class="fas fa-edit"></i>
+                @if($newss->count() == 0)
+                <h1 class="font-outfit">Maaf, hasil pencarian untuk artikel dengan kata kunci "{{ $result }}" belum tersedia. <a href="{{ route('viewsNews') }}" class="underline text-blue-500">Klik di sini</a> untuk memuat ulang.</h1>
+                @else
+                    <div class="grid grid-cols-2 gap-4">
+                        @foreach ($newss as $news)
+                        <div class="flex group transition duration-300 ease-in-out transform hover:shadow-lg" onclick="window.location.href = '{{ route('viewNewsById', $news->id) }}';" style="cursor: pointer;">
+                            <img src="{{ asset('/storage/news/' . $news->image) }}" alt="" class="w-56 h-56 object-cover">
+                            <div class="flex flex-col justify-around items-stretch pl-5 bg-[#3A3A38] text-white bg-opacity-80 group-hover:bg-opacity-100" >
+                                <div class="flex flex-row justify-around items-center">
+                                    <h1 class="text-xl font-cormorant font-semibold">{{ \Illuminate\Support\Str::limit($news->title, 20) }}</h1>
+                                    <div class="flex flex-row gap-3">
+                                        <a href="{{ route('editNews', $news->id) }}">
+                                            <button type="button" class="focus:outline-none z-100">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </a>
+                                        {{-- <button onclick="event.stopPropagation(); deleteNews({{$news->id}})" type="button" class="focus:outline-none z-100">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button> --}}
+                                        <button onclick="event.stopPropagation(); openModal('{{ $news->title }}', {{ $news->id }})" type="button" class="focus:outline-none z-100">
+                                            <i class="fas fa-trash-alt"></i>
                                         </button>
-                                    </a>
-                                    <button onclick="deleteNews({{$news->id}})" type="button" class="focus:outline-none">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="text-sm">{{ \Illuminate\Support\Str::limit($news->description, 100) }}</p>
-                            <div class="flex flex-row items-center justify-around">
-                                <div class="flex items-center gap-2">
-                                    <img src="{{ asset('assets/logo/logo-rcp.png') }}" class="w-6 h-6" alt="RCP Logo">
-                                    <p class="text-lg font-cormorant">RCP</p>
+                                <p class="text-sm">{{ \Illuminate\Support\Str::limit($news->description, 100) }}</p>
+                                <div class="flex flex-row items-center justify-around">
+                                    <div class="flex items-center gap-2">
+                                        <img src="{{ asset('assets/logo/logo-rcp.png') }}" class="w-6 h-6" alt="RCP Logo">
+                                        <p class="text-lg font-cormorant">RCP</p>
+                                    </div>
+                                    <p class="text-lg font-cormorant">{{ date('d F Y', strtotime($news->date)) }} </p>
                                 </div>
-                                <p class="text-lg font-cormorant">{{ date('d F Y', strtotime($news->date)) }} </p>
                             </div>
                         </div>
-                    </a>
-                </div>
+                        @endforeach
+                    </div>
+                @endif
 
-                @endforeach
-            </div>
 
 
             {{-- Bottom Pagination --}}
             <div id="top-pagination" class="pagination">
-
+                <div id="bottom-pagination" class="pagination">
+                    {{ $newss->links() }}
+                </div>
             </div>
         </div>
 
         {{-- Modal --}}
         <div id="modal" class="flex items-center justify-center w-screen h-screen bg-[#67676780] z-10 fixed hidden">
-            <div class="flex flex-col items-center bg-cWhite rounded-xl px-8 py-16">
+            <div class="flex flex-col items-center bg-[#D9D9D9] rounded-xl px-8 py-16">
                 <div class="flex flex-col items-center justify-center">
-                    <img class="w-20 mb-4" src="{{ asset('assets/admin/trash.svg') }}" alt="">
-                    <h2 class="text-2xl font-semibold text-cBlack">
-                        {{ __('Are you sure want to delete this news?') }}
+                    <img class="w-20 mb-4" src="{{ asset('assets/logo/logo-rcp.png') }}" alt="">
+                    <h2 class="text-2xl font-semibold text-black text-center">
+                        Apakah anda yakin ingin menghapus artikel
                     </h2>
-                    <p class="mt-1 text-sm sm:text-base text-gray-500">
-                        {{ __('Once this news is deleted, all related resources and data will be permanently deleted.') }}
-                    </p>
+                    <h2 id="modal-title" class="text-2xl font-semibold text-black text-center"></h2>
                     <div class="mt-6 flex justify-end">
                         <x-secondary-button onclick="closeModal()">
-                            {{ __('Batal') }}
+                            {{ __('Tidak') }}
                         </x-secondary-button>
 
-                        <form action="" id="confirmDelete" method="POST">
+                        <form id="confirmDelete" method="POST">
                             @csrf
                             @method('delete')
                             <x-danger-button class="ml-3">
-                                {{ __('Hapus Asset') }}
+                                {{ __('Iya') }}
                             </x-danger-button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <script src="{{ asset('js/delete-modal.js') }}"></script>
+
 @endsection
