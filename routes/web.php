@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ProfileController;
 use App\Models\News;
 use Illuminate\Support\Facades\Route;
@@ -72,6 +73,10 @@ Route::get('/artikel/{id}', function ($id) {
 
     return view('artikel', compact('artikel'));
 })->name('artikel');
+
+Route::post('/contact', [EmailController::class, 'contact'])->name('contact');
+
+Route::post('/store-email', [EmailController::class, 'storeEmail'])->name('storeEmail');
 
 Route::middleware('auth')->group(function () {
 
