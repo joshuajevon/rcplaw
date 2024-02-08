@@ -49,12 +49,12 @@
                     <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
 
                     <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
-                        <h4 class="heading-4" style="text-orientation: mixed;">Perdana Umum</h4>
+                        <h4 class="heading-4" style="text-orientation: mixed;">Perdata Umum</h4>
                     </div>
 
                     <div class="absolute z-10 text-white bottom-4 hidden group-hover:flex flex-col p-4 font-bold *:font-cormorant gap-2">
-                        <h5 class="heading-5">Perdana Umum</h5>
-                        <p class="text-xs md:text-sm">PKPU dan kepailitan adalah proses hukum yang bertujuan untuk menyelamatkan perusahaan yang sedang mengalami kesulitan keuangan.</p>
+                        <h5 class="heading-5">Perdata Umum</h5>
+                        <p class="text-xs md:text-sm">Hukum perdata mengatur berbagai aspek kehidupan manusia, mulai dari hukum keluarga, hukum perikatan, hukum kekayaan, hukum waris, hukum benda, hukum perjanjian, hukum warisan, dan lain-lain.</p>
                     </div>
 
                     <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/perdana-umum.png')}}" alt="perdana-umum">
@@ -69,7 +69,7 @@
 
                     <div class="absolute z-10 text-white bottom-4 hidden group-hover:flex flex-col p-4 font-bold *:font-cormorant gap-2">
                         <h5 class="heading-5">Perselisihan Hubungan Industrial</h5>
-                        <p class="text-xs md:text-sm">PKPU dan kepailitan adalah proses hukum yang bertujuan untuk menyelamatkan perusahaan yang sedang mengalami kesulitan keuangan.</p>
+                        <p class="text-xs md:text-sm">Perselisihan Hubungan Industrial (PPHI) adalah perbedaan pendapat yang mengakibatkan pertentangan antara pengusaha atau gabungan pengusaha dengan pekerja/buruh atau serikat pekerja/serikat buruh karena adanya perselisihan mengenai hak, kepentingan, pemutusan hubungan kerja, dan antar serikat pekerja/serikat buruh dalam satu perusahaan.</p>
                     </div>
 
                     <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/perselisihan-hubungan-industrial.png')}}" alt="perselisihan-hubungan-industrial">
@@ -84,7 +84,7 @@
 
                     <div class="absolute z-10 text-white bottom-4 hidden group-hover:flex flex-col p-4 font-bold *:font-cormorant gap-2">
                         <h5 class="heading-5">Pidana Umum dan Pidana Khusus</h5>
-                        <p class="text-xs md:text-sm">PKPU dan kepailitan adalah proses hukum yang bertujuan untuk menyelamatkan perusahaan yang sedang mengalami kesulitan keuangan.</p>
+                        <p class="text-xs md:text-sm">Hukum pidana adalah cabang hukum yang mengatur perbuatan yang dilarang oleh hukum dan diancam dengan hukuman. Hukum pidana bertujuan untuk melindungi ketertiban umum dan keamanan masyarakat.</p>
                     </div>
 
                     <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/pidana-umum-dan-pidana-khusus.png')}}" alt="pidana-umum-dan-pidana-khusus">
@@ -99,7 +99,7 @@
 
                     <div class="absolute z-10 text-white bottom-4 hidden group-hover:flex flex-col p-4 font-bold *:font-cormorant gap-2">
                         <h5 class="heading-5">Hukum Kekeluargaan dan Waris Islam</h5>
-                        <p class="text-xs md:text-sm">PKPU dan kepailitan adalah proses hukum yang bertujuan untuk menyelamatkan perusahaan yang sedang mengalami kesulitan keuangan.</p>
+                        <p class="text-xs md:text-sm">Hukum Kekeluargaan dan Waris Islam (HKWI) adalah seperangkat aturan dalam agama Islam yang mengatur kehidupan keluarga Muslim secara menyeluruh, mulai dari pernikahan, perceraian, hak asuh anak, hubungan kekeluargaan, ibadah haji, wakaf, hingga pembagian harta warisan.</p>
                     </div>
 
                     <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/hukum-kekeluargaan-dan-waris-islam.png')}}" alt="hukum-kekeluargaan-dan-waris-islam">
