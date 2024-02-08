@@ -108,21 +108,21 @@
             </div>
         </div>
 
-        <div class="flex flex-col gap-12">
+        <div class="flex flex-col gap-8">
             <p class="uppercase paragraph font-semibold text-center">Dipercaya oleh banyak Client di Indonesia</p>
 
             <div class="w-full inline-flex flex-nowrap overflow-hidden">
                 <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left">
                     @for($i = 1; $i
                     <= 16; $i++) <li>
-                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
                 <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left" aria-hidden="true">
                     @for($i = 1; $i
                     <= 16; $i++) <li>
-                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
@@ -132,14 +132,14 @@
                 <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-right">
                     @for($i = 17; $i
                     <= 33; $i++) <li>
-                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
                 <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-right" aria-hidden="true">
                     @for($i = 17; $i
                     <= 33; $i++) <li>
-                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
@@ -149,14 +149,14 @@
                 <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left">
                     @for($i = 34; $i
                     <= 52; $i++) <li>
-                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
                 <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left" aria-hidden="true">
                     @for($i = 34; $i
                     <= 52; $i++) <li>
-                        <img loading="lazy" class="h-12 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
