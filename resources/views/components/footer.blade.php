@@ -1,6 +1,6 @@
 <footer id="footer" class="custom-container bg-customDarkGray text-white pb-4 pt-8 md:pt-12 xl:pt-16 flex flex-col items-center justify-center gap-12 md:gap-14 xl:gap-16">
     <div class="flex flex-col items-center justify-center text-center">
-        <img class="size-8 md:size-12 xl:size-16" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
+        <img class="size-8 md:size-12 xl:size-16 mb-2" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
         <h1 class="font-bold font-cormorant text-xl md:text-2xl xl:text-3xl">Resandhi Cumbhadrika Partnership</h1>
         <h2 class="font-medium font-cormorant text-base md:text-lg xl:text-xl">Attorneys and Counsellors at Law</h2>
     </div>
