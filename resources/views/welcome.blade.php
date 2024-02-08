@@ -10,9 +10,9 @@
 <div class="bg-[#EDEDED] font-outfit *:text-customDarkGray">
     {{-- BERANDA --}}
     <section id="beranda" class="flex flex-col gap-32 pt-48 pb-20">
-        <div class="custom-container">
-            <div class="flex flex-col gap-16 w-2/5">
-                <h1 class="title font-cormorant font-bold   ">
+        <div class="custom-container flex item-center gap-16">
+            <div class="flex-none flex flex-col gap-16 w-2/5">
+                <h1 class="title font-cormorant font-bold   leading" style="line-height: 1.5;">
                     Resandh
                     <br>
                     Cumbhadrika
@@ -26,6 +26,84 @@
                     </div>
                     <p class="text-xs text-red-500 mt-2">Error Message</p>
                 </form>
+            </div>
+
+            <div class="flex w-full gap-4 h-96">
+                <div class="group transition-all h-full overflow-hidden w-1/5 hover:w-96 shadow-lg rounded-2xl relative">
+                    <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
+
+                    <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
+                        <h4 class="heading-4" style="text-orientation: mixed;">PKPU & Kepailitan</h4>
+                    </div>
+
+                    <div class="absolute z-10 text-white bottom-4 hidden group-hover:flex flex-col p-4 font-bold *:font-cormorant gap-2">
+                        <h5 class="heading-5">PKPU & Kepailitan</h5>
+                        <p class="text-xs md:text-sm">PKPU dan kepailitan adalah proses hukum yang bertujuan untuk menyelamatkan perusahaan yang sedang mengalami kesulitan keuangan.</p>
+                    </div>
+
+                    <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/pkpu-&-kepailitan.png')}}" alt="pkpu-&-kepailitan">
+                </div>
+
+                <div class="group transition-all h-full overflow-hidden w-1/5 hover:w-96 shadow-lg rounded-2xl relative">
+                    <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
+
+                    <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
+                        <h4 class="heading-4" style="text-orientation: mixed;">Perdana Umum</h4>
+                    </div>
+
+                    <div class="absolute z-10 text-white bottom-4 hidden group-hover:flex flex-col p-4 font-bold *:font-cormorant gap-2">
+                        <h5 class="heading-5">Perdana Umum</h5>
+                        <p class="text-xs md:text-sm">PKPU dan kepailitan adalah proses hukum yang bertujuan untuk menyelamatkan perusahaan yang sedang mengalami kesulitan keuangan.</p>
+                    </div>
+
+                    <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/perdana-umum.png')}}" alt="perdana-umum">
+                </div>
+
+                <div class="group transition-all h-full overflow-hidden w-1/5 hover:w-96 shadow-lg rounded-2xl relative">
+                    <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
+
+                    <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
+                        <h4 class="heading-4" style="text-orientation: mixed;">Perselisihan Hubungan Industrial</h4>
+                    </div>
+
+                    <div class="absolute z-10 text-white bottom-4 hidden group-hover:flex flex-col p-4 font-bold *:font-cormorant gap-2">
+                        <h5 class="heading-5">Perselisihan Hubungan Industrial</h5>
+                        <p class="text-xs md:text-sm">PKPU dan kepailitan adalah proses hukum yang bertujuan untuk menyelamatkan perusahaan yang sedang mengalami kesulitan keuangan.</p>
+                    </div>
+
+                    <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/perselisihan-hubungan-industrial.png')}}" alt="perselisihan-hubungan-industrial">
+                </div>
+
+                <div class="group transition-all h-full overflow-hidden w-1/5 hover:w-96 shadow-lg rounded-2xl relative">
+                    <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
+
+                    <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
+                        <h4 class="heading-4" style="text-orientation: mixed;">Pidana Umum dan Pidana Khusus</h4>
+                    </div>
+
+                    <div class="absolute z-10 text-white bottom-4 hidden group-hover:flex flex-col p-4 font-bold *:font-cormorant gap-2">
+                        <h5 class="heading-5">Pidana Umum dan Pidana Khusus</h5>
+                        <p class="text-xs md:text-sm">PKPU dan kepailitan adalah proses hukum yang bertujuan untuk menyelamatkan perusahaan yang sedang mengalami kesulitan keuangan.</p>
+                    </div>
+
+                    <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/pidana-umum-dan-pidana-khusus.png')}}" alt="pidana-umum-dan-pidana-khusus">
+                </div>
+
+                <div class="group transition-all h-full overflow-hidden w-1/5 hover:w-96 shadow-lg rounded-2xl relative">
+                    <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
+
+                    <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
+                        <h4 class="heading-4" style="text-orientation: mixed;">Hukum Kekeluargaan dan Waris Islam</h4>
+                    </div>
+
+                    <div class="absolute z-10 text-white bottom-4 hidden group-hover:flex flex-col p-4 font-bold *:font-cormorant gap-2">
+                        <h5 class="heading-5">Hukum Kekeluargaan dan Waris Islam</h5>
+                        <p class="text-xs md:text-sm">PKPU dan kepailitan adalah proses hukum yang bertujuan untuk menyelamatkan perusahaan yang sedang mengalami kesulitan keuangan.</p>
+                    </div>
+
+                    <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/hukum-kekeluargaan-dan-waris-islam.png')}}" alt="hukum-kekeluargaan-dan-waris-islam">
+                </div>
+
             </div>
         </div>
 

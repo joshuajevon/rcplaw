@@ -22,7 +22,7 @@ export default {
                     "Cormorant Garamond",
                     ...defaultTheme.fontFamily.sans,
                 ],
-                outfit: ['Outfit', ...defaultTheme.fontFamily.sans],
+                outfit: ["Outfit", ...defaultTheme.fontFamily.sans],
             },
             animation: {
                 "infinite-scroll-left":
