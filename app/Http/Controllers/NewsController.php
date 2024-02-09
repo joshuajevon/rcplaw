@@ -10,14 +10,19 @@ class NewsController extends Controller
 {
 
     public function viewsNews(Request $request){
-        $result = $request->input('search');
-        if($result){
-            $newss = News::where('title','like','%' .request('search'). '%')->paginate(6);
-        } else{
-            $newss = News::paginate(6);
-        }
 
-        return view('admin.news.viewAllNews', compact('newss','result'));
+        if(News::count() == 0){
+            return view('admin.news.viewNoNews');
+        }else{
+            $result = $request->input('search');
+            if($result){
+                $newss = News::where('title','like','%' .request('search'). '%')->paginate(6);
+            } else{
+                $newss = News::paginate(6);
+            }
+
+            return view('admin.news.viewAllNews', compact('newss','result'));
+        }
     }
 
     public function viewNewsById($id){

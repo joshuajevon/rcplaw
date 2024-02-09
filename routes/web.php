@@ -51,6 +51,7 @@ Route::middleware('auth')->group(function () {
 
         Route::prefix('/news')->group(function(){
             Route::get('/views', [NewsController::class, 'viewsNews'])->name('viewsNews');
+            Route::get('/views-no-news', [NewsController::class, 'viewsNews'])->name('viewsNoNews');
             Route::get('/view/{id}', [NewsController::class, 'viewNewsById'])->name('viewNewsById');
 
             Route::get('/create', [NewsController::class, 'createNews'])->name('createNews');
