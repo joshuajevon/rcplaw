@@ -50,7 +50,7 @@ class EmailController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Your message has been sent, Thank you!',
+            'message' => 'Pesan anda telah terkirimkan. Terima kasih!',
         ]);
     }
 
