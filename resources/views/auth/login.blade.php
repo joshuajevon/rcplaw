@@ -21,7 +21,7 @@
         <div class="flex flex-col items-center justify-center px-6 py-12 lg:px-8 font-cormorant">
 
             <div class="sm:mx-auto sm:w-full sm:max-w-sm ">
-                <img class="mx-auto h-15 w-auto" src="{{ asset('assets/logo/logo-rcp.png') }}" alt="Your Company">
+                <img class="mx-auto h-10 w-auto" src="{{ asset('assets/logo/logo-rcp.png') }}" alt="Your Company">
                 <h2 class="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900 font-cormorant">Resandhi Cumbhadrika Partnership</h2>
             </div>
 

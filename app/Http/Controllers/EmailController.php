@@ -37,7 +37,7 @@ class EmailController extends Controller
             return response()->json([
                 'success' => false,
                 'errors' => $validator->errors(),
-            ], 422); // 422 is the HTTP status code for unprocessable entity
+            ], 422);
         }
 
         $first_name = $request->input('first_name');
@@ -50,23 +50,30 @@ class EmailController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Your message has been sent, Thank you!',
+            'message' => 'Pesan anda telah terkirimkan. Terima kasih!',
         ]);
     }
 
 
     public function storeEmail(Request $request){
 
-        $email = $request->input('email');
+        $rules = [
+            'email' => 'required|email|unique:emails,email,except,id',
+        ];
 
-        $exists = Email::where('email', $email)->exists();
+        $messages = [
+            'email.required' => 'Email harus diisi.',
+            'email.email' => 'Format email tidak valid.',
+            'email.unique' => 'Alamat email tersebut sudah digunakan.',
+        ];
 
-        if ($exists){
-            return response()->json([
-                'status' => 'duplicate',
-                'message' => 'Email is already subscribed!'
-            ]);
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
         }
+
+        $email = $request->input('email');
 
         Mail::to($email)->send(new SendEmail());
 
@@ -74,11 +81,9 @@ class EmailController extends Controller
             'email' => $request->email
         ]);
 
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Thanks for subscribing!'
-        ]);
+        return redirect(route('beranda'))->with('success', 'Terimakasih sudah berlangganan.');
     }
+
 
     // public function sendEmail(Request $request)
     // {

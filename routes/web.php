@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PageController;
 use App\Models\News;
 use Illuminate\Support\Facades\Route;
 
@@ -18,61 +19,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $news = News::paginate(4);
+Route::get('/', [PageController::class, 'welcome'])->name('beranda');
 
-    return view('welcome', compact('news'));
-})->name('beranda');
+Route::get('/#beranda', [PageController::class, 'beranda'])->name('beranda-beranda');
 
-Route::get('/#beranda', function () {
-    $news = News::paginate(4);
+Route::get('/#tentang-kami', [PageController::class, 'tentang_kami'])->name('beranda-tentang-kami');
 
-    return view('welcome', compact('news'));
-})->name('beranda-beranda');
+Route::get('/#layanan-kami', [PageController::class, 'layanan_kami'])->name('beranda-layanan-kami');
 
-Route::get('/#tentang-kami', function () {
-    $news = News::paginate(4);
+Route::get('/#tim-kami', [PageController::class, 'tim_kami'])->name('beranda-tim-kami');
 
-    return view('welcome', compact('news'));
-})->name('beranda-tentang-kami');
+Route::get('/#artikel', [PageController::class, 'artikel'])->name('beranda-artikel');
 
-Route::get('/#layanan-kami', function () {
-    $news = News::paginate(4);
+Route::get('/#kontak', [PageController::class, 'kontak'])->name('beranda-kontak');
 
-    return view('welcome', compact('news'));
-})->name('beranda-layanan-kami');
+Route::get('/layanan-kami', [PageController::class, 'layananKami'])->name('layanan-kami');
 
-Route::get('/#tim-kami', function () {
-    $news = News::paginate(4);
+Route::get('/tim-kami', [PageController::class, 'timKami'])->name('tim-kami');
 
-    return view('welcome', compact('news'));
-})->name('beranda-tim-kami');
-
-Route::get('/#artikel', function () {
-    $news = News::paginate(4);
-
-    return view('welcome', compact('news'));
-})->name('beranda-artikel');
-
-Route::get('/#kontak', function () {
-    $news = News::paginate(4);
-
-    return view('welcome', compact('news'));
-})->name('beranda-kontak');
-
-Route::get('/layanan-kami', function () {
-    return view('layanan-kami');
-})->name('layanan-kami');
-
-Route::get('/tim-kami', function () {
-    return view('tim-kami');
-})->name('tim-kami');
-
-Route::get('/artikel/{id}', function ($id) {
-    $artikel = News::findOrFail($id);
-
-    return view('artikel', compact('artikel'));
-})->name('artikel');
+Route::get('/artikel/{id}', [PageController::class, 'artikelById'])->name('artikel');
 
 Route::post('/contact', [EmailController::class, 'contact'])->name('contact');
 
@@ -86,6 +51,7 @@ Route::middleware('auth')->group(function () {
 
         Route::prefix('/news')->group(function(){
             Route::get('/views', [NewsController::class, 'viewsNews'])->name('viewsNews');
+            Route::get('/views-no-news', [NewsController::class, 'viewsNews'])->name('viewsNoNews');
             Route::get('/view/{id}', [NewsController::class, 'viewNewsById'])->name('viewNewsById');
 
             Route::get('/create', [NewsController::class, 'createNews'])->name('createNews');

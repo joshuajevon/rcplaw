@@ -26,41 +26,41 @@
             <form id="articleForm" class="w-full  p-8  flex flex-col justify-center items-start gap-6" action="{{ route('storeNews') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="w-full">
-                    <x-input-label for="title" :value="__('Judul Artikel')" class="font-cormorant font-bold"/>
+                    <x-input-label for="title" :value="__('Judul Artikel')" class="font-cormorant font-bold text-black"/>
                     <x-text-input type="text" id="title" class="mt-1 w-full font-cormorant font-bold" placeholder="Masukkan judul artikel" name="title"
                         value="{{ old('title') }}" />
                     <x-input-error :messages="$errors->get('title')" class="mt-2" />
                 </div>
 
                 <div class="w-full">
-                    <x-input-label for="image" :value="__('Gambar')" class="font-cormorant font-bold" />
+                    <x-input-label for="image" :value="__('Gambar')" class="font-cormorant font-bold text-black"  />
                     <x-text-input type="file" id="image" class="mt-1 w-full font-cormorant font-bold border-black"
                         name="image" value="{{ old('image') }}" />
                     <x-input-error :messages="$errors->get('image')" class="mt-2" />
                 </div>
 
                 <div class="w-full">
-                    <x-input-label for="description" :value="__('Isi Artikel')" class="font-cormorant font-bold"/>
+                    <x-input-label for="description" :value="__('Isi Artikel')" class="font-cormorant font-bold text-black" />
                     <x-text-area type="text" id="description" class="mt-1 w-full font-cormorant font-bold" placeholder="Masukkan isi artikel"
                         name="description" value="{{ old('description') }}" />
                     <x-input-error :messages="$errors->get('description')" class="mt-2" />
                 </div>
 
                 <div class="w-full">
-                    <x-input-label for="author" :value="__('Penulis Artikel')" class="font-cormorant font-bold"/>
+                    <x-input-label for="author" :value="__('Penulis Artikel')" class="font-cormorant font-bold text-black"/>
                     <x-text-input type="text" id="author" class="mt-1 w-full font-cormorant font-bold" placeholder="Masukkan penulis artikel"
                         name="author" value="{{ old('author') }}" />
                     <x-input-error :messages="$errors->get('author')" class="mt-2" />
                 </div>
 
                 <div class="w-full">
-                    <x-input-label for="date" :value="__('Tanggal Penulisan')" class="font-cormorant font-bold"/>
+                    <x-input-label for="date" :value="__('Tanggal Penulisan')" class="font-cormorant font-bold text-black" />
                     <x-text-input type="date" id="date" class="mt-1 w-full font-cormorant font-bold"
                         name="date" value="{{ old('date') }}" />
                     <x-input-error :messages="$errors->get('date')" class="mt-2" />
                 </div>
 
-                <button type="button" id="submitForm" class="bg-gold py-2 rounded-full px-12 font-cormorant font-bold">Tambah Artikel</button>
+                <button type="submit" id="submitForm" class="bg-gold py-2 rounded-full px-12 font-cormorant font-bold">Tambah Artikel</button>
             </form>
 
         </div>

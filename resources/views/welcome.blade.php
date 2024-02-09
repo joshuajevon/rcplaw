@@ -2,6 +2,7 @@
 
 @section('head')
 <link rel="stylesheet" href="{{ asset('css/pagination.css') }}?t={{ env('VERSION_TIME') }}">
+
 @endsection
 
 @section('body')
@@ -19,13 +20,18 @@
                     <br>
                     Partnership</h1>
 
-                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" onsubmit="subscribe(event)">
+                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" >
                     @csrf
                     <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden bg-[#D9D9D9] *:font-cormorant *:font-bold">
                         <input class="paragraph border-none outline-none py-2 md:py-2.5 xl:py-3 pl-3 md:pl-3.5 xl:pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda" value="{{ old('email') }}">
                         <button class="paragraph flex-none py-1.5 md:py-2 xl:py-2.5 px-4 md:px-5 xl:px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]" type="submit">Hubungi Kami</button>
                     </div>
-                    <p class="text-xs text-red-500 mt-2">Error Message</p>
+                    @if(session('success'))
+                        <p class="text-xs text-green-500 mt-2">{{ session('success') }}</p>
+                    @endif
+                    @error('email')
+                        <p class="text-xs text-red-500 mt-2">{{ $message }}</p>
+                    @enderror
                 </form>
             </div>
 
@@ -655,38 +661,47 @@
                     <h5 class="heading-5">Isi form ini dan tim kami akan menghubungi anda</h5>
                 </div>
 
-                <form action="{{ route('contact') }}" method="POST" class="paragraph flex flex-col gap-8 w-full">
+                <form action="{{ route('contact') }}" method="POST" class="paragraph flex flex-col gap-8 w-full" onsubmit="contactUs(event)" id="form-contact-us">
                     @csrf
                     <div class="flex gap-8 w-full">
                         <div class="flex flex-col gap-2 w-full">
-                            <label class="text-white" for="nama-depan">Nama Depan</label>
-                            <input class="rounded-lg py-3 w-full" type="text" name="first_name" id="nama-depan" placeholder="Nama depan Anda">
-                            <p class="text-xs text-red-500">Error Message</p>
+                            <label class="text-white" for="first_name">Nama Depan</label>
+                            <input class="rounded-lg py-3 w-full" type="text" name="first_name" id="first_name" placeholder="Nama depan Anda" :value="old('first_name')">
+                            <p id="error-first-name" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
                         </div>
 
                         <div class="flex flex-col gap-2 w-full">
-                            <label class="text-white" for="nama-belakang">Nama Belakang</label>
-                            <input class="rounded-lg py-3 w-full" type="text" name="last_name" id="nama-belakang" placeholder="Nama belakang Anda">
+                            <label class="text-white" for="last_name">Nama Belakang</label>
+                            <input class="rounded-lg py-3 w-full" type="text" name="last_name" id="last_name" placeholder="Nama belakang Anda" :value="old('last_name')">
+                            <p id="error-last-name" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
                         </div>
                     </div>
 
                     <div class="flex flex-col gap-2 w-full">
                         <label class="text-white" for="email">Alamat Email</label>
-                        <input class="rounded-lg py-3 w-full" type="text" name="email" id="email" placeholder="Alamat email Anda">
+                        <input class="rounded-lg py-3 w-full" type="email" name="email" id="email1" placeholder="Alamat email Anda" :value="old('email')">
+                        <p id="error-email" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
                     </div>
 
                     <div class="flex flex-col gap-2 w-full">
-                        <label class="text-white" for="subjek">Subjek</label>
-                        <input class="rounded-lg py-3 w-full" type="text" name="subject" id="subjek" placeholder="Subjek email Anda">
+                        <label class="text-white" for="subject">Subjek</label>
+                        <input class="rounded-lg py-3 w-full" type="text" name="subject" id="subject" placeholder="Subjek email Anda" :value="old('subject')">
+                        <p id="error-subject" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
                     </div>
 
                     <div class="flex flex-col gap-2 w-full">
-                        <label class="text-white" for="pesan">Pesan</label>
-                        <textarea class="rounded-lg py-3 w-full h-48 resize-none" name="mail" id="pesan" placeholder="Pesan Anda"></textarea>
+                        <label class="text-white" for="mail">Pesan</label>
+                        <textarea class="rounded-lg py-3 w-full h-48 resize-none" name="mail" id="mail" placeholder="Pesan Anda" :value="old('mail')"></textarea>
+                        <p id="error-message" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
                     </div>
 
                     <div class="flex justify-end">
-                        <button type="submit" class="hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] text-xs md:text-sm bg-gold text-white px-12 py-4 rounded-lg">Kirim</button>
+                        <button id="contact-submit-button" type="submit" class="hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] text-xs md:text-sm bg-gold text-white px-12 py-4 rounded-lg">Kirim</button>
+                    </div>
+
+                    <div class="flex w-full justify-center items-center text-xs sm:text-sm md:text-base">
+                        <p id="contact-validation-message" class="text-center font-medium">
+                        </p>
                     </div>
                 </form>
 
@@ -718,5 +733,7 @@
     <br><br><br><br>
 </div>
 
+<script src="{{ asset('js/contact.js') }}?t={{ env('VERSION_TIME') }}"></script>
 <script src="{{asset('js/beranda.js')}}"></script>
+
 @endsection
