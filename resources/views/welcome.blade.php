@@ -10,9 +10,9 @@
 <div class="bg-[#EDEDED] font-outfit *:text-customDarkGray">
     {{-- BERANDA --}}
     <section id="beranda" class="flex flex-col gap-32 pt-48 pb-20">
-        <div class="custom-container flex item-center gap-16">
-            <div class="flex-none flex flex-col gap-16 w-2/5">
-                <h1 class="title font-cormorant font-bold   leading" style="line-height: 1.5;">
+        <div class="custom-container flex item-center gap-8 md:gap-12 xl:gap-16">
+            <div class="flex-none flex flex-col gap-8 md:gap-12 xl:gap-16 w-2/5">
+                <h1 class="title font-cormorant font-bold" style="line-height: 1.5;">
                     Resandhi
                     <br>
                     Cumbhadrika
@@ -21,15 +21,15 @@
 
                 <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" onsubmit="subscribe(event)">
                     @csrf
-                    <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden paragraph bg-[#D9D9D9] *:font-cormorant *:font-bold">
-                        <input class="border-none outline-none py-3 pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda" value="{{ old('email') }}">
-                        <button class="flex-none py-2.5 px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]" type="submit">Hubungi Kami</button>
+                    <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden bg-[#D9D9D9] *:font-cormorant *:font-bold">
+                        <input class="paragraph border-none outline-none py-2 md:py-2.5 xl:py-3 pl-3 md:pl-3.5 xl:pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda" value="{{ old('email') }}">
+                        <button class="paragraph flex-none py-1.5 md:py-2 xl:py-2.5 px-4 md:px-5 xl:px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]" type="submit">Hubungi Kami</button>
                     </div>
                     <p class="text-xs text-red-500 mt-2">Error Message</p>
                 </form>
             </div>
 
-            <div class="flex w-full gap-4 h-96">
+            <div class="flex w-full gap-4 h-96 overflow-auto">
                 <div class="group transition-all h-full overflow-hidden w-1/5 hover:w-96 shadow-lg rounded-2xl relative">
                     <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
 
@@ -104,59 +104,58 @@
 
                     <img class="object-cover h-full brightness-50" src="{{asset('assets/beranda/hukum-kekeluargaan-dan-waris-islam.png')}}" alt="hukum-kekeluargaan-dan-waris-islam">
                 </div>
-
             </div>
         </div>
 
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-6 md:gap-7 xl:gap-8">
             <p class="uppercase paragraph font-semibold text-center">Dipercaya oleh banyak Client di Indonesia</p>
 
             <div class="w-full inline-flex flex-nowrap overflow-hidden">
-                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left">
+                <ul class="flex items-center [&_li]:mx-3 [&_li]:md:mx-3.5 [&_li]:xl:mx-4 [&_img]:max-w-none animate-infinite-scroll-left">
                     @for($i = 1; $i
                     <= 16; $i++) <li>
-                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-6 md:h-7 xl:h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
-                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left" aria-hidden="true">
+                <ul class="flex items-center [&_li]:mx-2 [&_li]:md:mx-3 [&_li]:xl:mx-4 [&_img]:max-w-none animate-infinite-scroll-left" aria-hidden="true">
                     @for($i = 1; $i
                     <= 16; $i++) <li>
-                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-6 md:h-7 xl:h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
             </div>
 
             <div class="w-full inline-flex flex-nowrap overflow-hidden">
-                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-right">
+                <ul class="flex items-center [&_li]:mx-3 [&_li]:md:mx-3.5 [&_li]:xl:mx-4 [&_img]:max-w-none animate-infinite-scroll-right">
                     @for($i = 17; $i
                     <= 33; $i++) <li>
-                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-6 md:h-7 xl:h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
-                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-right" aria-hidden="true">
+                <ul class="flex items-center [&_li]:mx-3 [&_li]:md:mx-3.5 [&_li]:xl:mx-4 [&_img]:max-w-none animate-infinite-scroll-right" aria-hidden="true">
                     @for($i = 17; $i
                     <= 33; $i++) <li>
-                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-6 md:h-7 xl:h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
             </div>
 
             <div class="w-full inline-flex flex-nowrap overflow-hidden">
-                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left">
+                <ul class="flex items-center [&_li]:mx-3 [&_li]:md:mx-3.5 [&_li]:xl:mx-4 [&_img]:max-w-none animate-infinite-scroll-left">
                     @for($i = 34; $i
                     <= 52; $i++) <li>
-                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-6 md:h-7 xl:h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
-                <ul class="flex items-center [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll-left" aria-hidden="true">
+                <ul class="flex items-center [&_li]:mx-3 [&_li]:md:mx-3.5 [&_li]:xl:mx-4 [&_img]:max-w-none animate-infinite-scroll-left" aria-hidden="true">
                     @for($i = 34; $i
                     <= 52; $i++) <li>
-                        <img loading="lazy" class="h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
+                        <img loading="lazy" class="h-6 md:h-7 xl:h-8 w-auto" src="{{ asset('assets/logo/klien/logo-' . $i . '.png') }}" alt="Logo {{ $i }}" />
                         </li>
                         @endfor
                 </ul>
