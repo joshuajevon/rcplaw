@@ -2,6 +2,7 @@
 
 @section('head')
 <link rel="stylesheet" href="{{ asset('css/pagination.css') }}?t={{ env('VERSION_TIME') }}">
+
 @endsection
 
 @section('body')
@@ -19,13 +20,18 @@
                     <br>
                     Partnership</h1>
 
-                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" onsubmit="subscribe(event)">
+                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" >
                     @csrf
                     <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden paragraph bg-[#D9D9D9] *:font-cormorant *:font-bold">
                         <input class="border-none outline-none py-3 pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda" value="{{ old('email') }}">
                         <button class="flex-none py-2.5 px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]" type="submit">Hubungi Kami</button>
                     </div>
-                    <p class="text-xs text-red-500 mt-2">Error Message</p>
+                    @if(session('success'))
+                        <p class="text-xs text-green-500 mt-2">{{ session('success') }}</p>
+                    @endif
+                    @error('email')
+                        <p class="text-xs text-red-500 mt-2">{{ $message }}</p>
+                    @enderror
                 </form>
             </div>
 
@@ -720,4 +726,5 @@
 </div>
 
 <script src="{{asset('js/beranda.js')}}"></script>
+
 @endsection
