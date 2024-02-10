@@ -404,9 +404,8 @@
         </div>
     </section>
 
-
     {{-- TIM KAMI --}}
-    <section id="tim-kami" class="py-20 custom-container flex flex-col items-center gap-8">
+    <section id="tim-kami" class="py-12 md:py-16 xl:py-20 custom-container flex flex-col items-center gap-4 md:gap-6 xl:gap-8">
         <div class="flex flex-col items-center">
             <img class="size-6 md:size-7 xl:size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
 
@@ -415,25 +414,25 @@
             <img src="{{asset('assets/logo/line.svg')}}" alt="line" class="w-8 md:w-12 xl:w-16 mt-2 md:mt-3 xl:mt-4 mb-6 md:mb-7 xl:mb-8">
         </div>
 
-        <div class="flex flex-col items-center gap-16">
-            <div class="flex gap-8">
+        <div class="flex flex-col items-center gap-8 md:gap-12 xl:gap-16">
+            <div class="flex gap-6 md:gap-7 xl:gap-8">
                 <div class="flex-none">
-                    <img class="w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/WILHELMUS.png')}}" alt="Wilhemus">
+                    <img class="w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/WILHELMUS.png')}}" alt="Wilhemus">
 
-                    <div class="flex justify-center items-start gap-4 -mt-4 md:-mt-5 xl:-mt-6">
-                        <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                    <div class="w-32 md:w-48 xl:w-64 flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
+                        <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
                             <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.2513 1.74603C9.69841 1.19039 9.03991 0.749834 8.31415 0.450065C7.5884 0.150296 6.80992 -0.00268806 6.02412 3.57417e-05C2.73166 3.57417e-05 0.0482413 2.67003 0.0482413 5.94602C0.0482413 6.99601 0.325628 8.01601 0.844221 8.91601L0 12L3.16583 11.172C4.0402 11.646 5.02312 11.898 6.02412 11.898C9.31658 11.898 12 9.22801 12 5.95202C12 4.36202 11.3789 2.86803 10.2513 1.74603ZM6.02412 10.89C5.13166 10.89 4.25729 10.65 3.49146 10.2L3.31055 10.092L1.42915 10.584L1.92965 8.76001L1.80905 8.57401C1.31321 7.78619 1.04993 6.87556 1.04925 5.94602C1.04925 3.22203 3.2804 1.00203 6.01809 1.00203C7.34472 1.00203 8.59296 1.51803 9.52764 2.45403C9.99044 2.91241 10.3572 3.45762 10.6067 4.05808C10.8561 4.65853 10.9833 5.30229 10.9809 5.95202C10.993 8.67601 8.76181 10.89 6.02412 10.89ZM8.74975 7.19401C8.59899 7.12201 7.86332 6.76202 7.73065 6.70802C7.59196 6.66002 7.49548 6.63602 7.39296 6.78002C7.29045 6.93002 7.00703 7.26601 6.92261 7.36201C6.83819 7.46401 6.74774 7.47601 6.59698 7.39801C6.44623 7.32601 5.96382 7.16401 5.39698 6.66002C4.95075 6.26402 4.65528 5.77802 4.56482 5.62802C4.4804 5.47802 4.55276 5.40002 4.63116 5.32202C4.69749 5.25602 4.78191 5.14802 4.85427 5.06402C4.92663 4.98002 4.95678 4.91402 5.00502 4.81802C5.05327 4.71602 5.02915 4.63202 4.99296 4.56002C4.95678 4.48802 4.65528 3.75602 4.53467 3.45603C4.41407 3.16803 4.28744 3.20403 4.19698 3.19803H3.90754C3.80502 3.19803 3.64824 3.23403 3.50955 3.38403C3.37688 3.53403 2.99095 3.89402 2.99095 4.62602C2.99095 5.35802 3.52764 6.06602 3.6 6.16202C3.67236 6.26402 4.65528 7.76401 6.15075 8.40601C6.50653 8.56201 6.78392 8.65201 7.001 8.71801C7.35678 8.83201 7.68241 8.81401 7.94171 8.77801C8.23115 8.73601 8.82814 8.41801 8.94874 8.07001C9.07537 7.72201 9.07538 7.42801 9.03316 7.36201C8.99095 7.29601 8.9005 7.26601 8.74975 7.19401Z" />
                             </svg>
                         </a>
 
-                        <a id="instagram" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                        <a id="instagram" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
                             <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.9985 2.92142C4.29485 2.92142 2.91992 4.29635 2.91992 6C2.91992 7.70365 4.29485 9.07858 5.9985 9.07858C7.70215 9.07858 9.07708 7.70365 9.07708 6C9.07708 4.29635 7.70215 2.92142 5.9985 2.92142ZM5.9985 8.00085C4.89675 8.00085 3.99765 7.10174 3.99765 6C3.99765 4.89826 4.89675 3.99915 5.9985 3.99915C7.10024 3.99915 7.99935 4.89826 7.99935 6C7.99935 7.10174 7.10024 8.00085 5.9985 8.00085ZM9.20317 2.07785C8.8054 2.07785 8.48418 2.39907 8.48418 2.79684C8.48418 3.1946 8.8054 3.51582 9.20317 3.51582C9.60093 3.51582 9.92215 3.19611 9.92215 2.79684C9.92227 2.70238 9.90375 2.60884 9.86766 2.52155C9.83157 2.43427 9.77862 2.35496 9.71183 2.28817C9.64504 2.22138 9.56573 2.16843 9.47845 2.13234C9.39116 2.09625 9.29762 2.07773 9.20317 2.07785ZM11.9996 6C11.9996 5.17144 12.0071 4.35039 11.9605 3.52333C11.914 2.56268 11.6948 1.7101 10.9924 1.00763C10.2884 0.303651 9.43732 0.0860042 8.47667 0.0394728C7.64811 -0.00705863 6.82706 0.000446468 6 0.000446468C5.17144 0.000446468 4.35039 -0.00705863 3.52333 0.0394728C2.56268 0.0860042 1.7101 0.305152 1.00763 1.00763C0.303651 1.7116 0.0860043 2.56268 0.0394728 3.52333C-0.00705863 4.35189 0.000446468 5.17294 0.000446468 6C0.000446468 6.82706 -0.00705863 7.64961 0.0394728 8.47667C0.0860043 9.43732 0.305152 10.2899 1.00763 10.9924C1.7116 11.6963 2.56268 11.914 3.52333 11.9605C4.35189 12.0071 5.17294 11.9996 6 11.9996C6.82856 11.9996 7.64962 12.0071 8.47667 11.9605C9.43732 11.914 10.2899 11.6948 10.9924 10.9924C11.6964 10.2884 11.914 9.43732 11.9605 8.47667C12.0086 7.64961 11.9996 6.82856 11.9996 6ZM10.6787 9.53939C10.5691 9.81258 10.437 10.0167 10.2254 10.2269C10.0137 10.4385 9.81108 10.5706 9.53789 10.6802C8.74836 10.9939 6.87359 10.9233 5.9985 10.9233C5.12341 10.9233 3.24714 10.9939 2.45761 10.6817C2.18442 10.5721 1.98028 10.44 1.77014 10.2284C1.5585 10.0167 1.42641 9.81408 1.31684 9.54089C1.00463 8.74986 1.07517 6.87509 1.07517 6C1.07517 5.12491 1.00463 3.24864 1.31684 2.45911C1.42641 2.18592 1.5585 1.98179 1.77014 1.77164C1.98179 1.5615 2.18442 1.42791 2.45761 1.31834C3.24714 1.00613 5.12341 1.07667 5.9985 1.07667C6.87359 1.07667 8.74986 1.00613 9.53939 1.31834C9.81258 1.42791 10.0167 1.56 10.2269 1.77164C10.4385 1.98329 10.5706 2.18592 10.6802 2.45911C10.9924 3.24864 10.9218 5.12491 10.9218 6C10.9218 6.87509 10.9924 8.74986 10.6787 9.53939Z" />
                             </svg>
                         </a>
 
-                        <a id="email" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                        <a id="email" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
                             <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 23 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.9947 9.06438L21.8311 2.89138V15.1669L15.9947 9.06438ZM8.47406 10.1098L10.5236 12.2756C10.8453 12.6083 11.2646 12.8093 11.7229 12.8093H11.7391H11.7514C12.2107 12.8093 12.6301 12.6072 12.9555 12.2722L12.9527 12.2745L15.0022 10.1086L21.2324 16.6224H2.24673L8.47406 10.1098ZM2.23819 1.42783H21.2438L12.1148 11.0801C12.0122 11.1789 11.8851 11.2326 11.7543 11.2326H11.741H11.7286C11.5973 11.2328 11.4698 11.1786 11.3671 11.0789L11.3681 11.0801L2.23819 1.42783ZM1.64895 2.89022L7.48441 9.06323L1.64895 15.1623V2.89022ZM22.1442 0.0705562C21.9165 -0.0680591 21.6489 -0.148918 21.3652 -0.148918H2.11768C1.84267 -0.148838 1.57143 -0.0709347 1.32539 0.0786421L1.33583 0.0728663C1.04128 0.249729 0.79322 0.523342 0.61968 0.862795C0.446141 1.20225 0.354032 1.59402 0.35376 1.99384V16.0541C0.354262 16.6231 0.540165 17.1686 0.870677 17.571C1.20119 17.9734 1.64932 18.1997 2.11673 18.2003H21.3624C21.8298 18.1997 22.2779 17.9734 22.6084 17.571C22.9389 17.1686 23.1248 16.6231 23.1253 16.0541V1.99384C23.1253 1.15407 22.7278 0.426336 22.149 0.076332L22.1385 0.0705562H22.1442Z" />
                             </svg>
@@ -485,24 +484,24 @@
                 </div>
             </div>
 
-            <div class="flex gap-8">
+            <div class="flex gap-6 md:gap-7 xl:gap-8">
                 <div class="flex-none order-2">
-                    <img class="w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/CHITTO.png')}}" alt="Chitto">
+                    <img class="w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/CHITTO.png')}}" alt="Chitto">
 
-                    <div class="flex justify-center items-start gap-4 -mt-4 md:-mt-5 xl:-mt-6">
-                        <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                    <div class="flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
+                        <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
                             <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.2513 1.74603C9.69841 1.19039 9.03991 0.749834 8.31415 0.450065C7.5884 0.150296 6.80992 -0.00268806 6.02412 3.57417e-05C2.73166 3.57417e-05 0.0482413 2.67003 0.0482413 5.94602C0.0482413 6.99601 0.325628 8.01601 0.844221 8.91601L0 12L3.16583 11.172C4.0402 11.646 5.02312 11.898 6.02412 11.898C9.31658 11.898 12 9.22801 12 5.95202C12 4.36202 11.3789 2.86803 10.2513 1.74603ZM6.02412 10.89C5.13166 10.89 4.25729 10.65 3.49146 10.2L3.31055 10.092L1.42915 10.584L1.92965 8.76001L1.80905 8.57401C1.31321 7.78619 1.04993 6.87556 1.04925 5.94602C1.04925 3.22203 3.2804 1.00203 6.01809 1.00203C7.34472 1.00203 8.59296 1.51803 9.52764 2.45403C9.99044 2.91241 10.3572 3.45762 10.6067 4.05808C10.8561 4.65853 10.9833 5.30229 10.9809 5.95202C10.993 8.67601 8.76181 10.89 6.02412 10.89ZM8.74975 7.19401C8.59899 7.12201 7.86332 6.76202 7.73065 6.70802C7.59196 6.66002 7.49548 6.63602 7.39296 6.78002C7.29045 6.93002 7.00703 7.26601 6.92261 7.36201C6.83819 7.46401 6.74774 7.47601 6.59698 7.39801C6.44623 7.32601 5.96382 7.16401 5.39698 6.66002C4.95075 6.26402 4.65528 5.77802 4.56482 5.62802C4.4804 5.47802 4.55276 5.40002 4.63116 5.32202C4.69749 5.25602 4.78191 5.14802 4.85427 5.06402C4.92663 4.98002 4.95678 4.91402 5.00502 4.81802C5.05327 4.71602 5.02915 4.63202 4.99296 4.56002C4.95678 4.48802 4.65528 3.75602 4.53467 3.45603C4.41407 3.16803 4.28744 3.20403 4.19698 3.19803H3.90754C3.80502 3.19803 3.64824 3.23403 3.50955 3.38403C3.37688 3.53403 2.99095 3.89402 2.99095 4.62602C2.99095 5.35802 3.52764 6.06602 3.6 6.16202C3.67236 6.26402 4.65528 7.76401 6.15075 8.40601C6.50653 8.56201 6.78392 8.65201 7.001 8.71801C7.35678 8.83201 7.68241 8.81401 7.94171 8.77801C8.23115 8.73601 8.82814 8.41801 8.94874 8.07001C9.07537 7.72201 9.07538 7.42801 9.03316 7.36201C8.99095 7.29601 8.9005 7.26601 8.74975 7.19401Z" />
                             </svg>
                         </a>
 
-                        <a id="instagram" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                        <a id="instagram" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
                             <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.9985 2.92142C4.29485 2.92142 2.91992 4.29635 2.91992 6C2.91992 7.70365 4.29485 9.07858 5.9985 9.07858C7.70215 9.07858 9.07708 7.70365 9.07708 6C9.07708 4.29635 7.70215 2.92142 5.9985 2.92142ZM5.9985 8.00085C4.89675 8.00085 3.99765 7.10174 3.99765 6C3.99765 4.89826 4.89675 3.99915 5.9985 3.99915C7.10024 3.99915 7.99935 4.89826 7.99935 6C7.99935 7.10174 7.10024 8.00085 5.9985 8.00085ZM9.20317 2.07785C8.8054 2.07785 8.48418 2.39907 8.48418 2.79684C8.48418 3.1946 8.8054 3.51582 9.20317 3.51582C9.60093 3.51582 9.92215 3.19611 9.92215 2.79684C9.92227 2.70238 9.90375 2.60884 9.86766 2.52155C9.83157 2.43427 9.77862 2.35496 9.71183 2.28817C9.64504 2.22138 9.56573 2.16843 9.47845 2.13234C9.39116 2.09625 9.29762 2.07773 9.20317 2.07785ZM11.9996 6C11.9996 5.17144 12.0071 4.35039 11.9605 3.52333C11.914 2.56268 11.6948 1.7101 10.9924 1.00763C10.2884 0.303651 9.43732 0.0860042 8.47667 0.0394728C7.64811 -0.00705863 6.82706 0.000446468 6 0.000446468C5.17144 0.000446468 4.35039 -0.00705863 3.52333 0.0394728C2.56268 0.0860042 1.7101 0.305152 1.00763 1.00763C0.303651 1.7116 0.0860043 2.56268 0.0394728 3.52333C-0.00705863 4.35189 0.000446468 5.17294 0.000446468 6C0.000446468 6.82706 -0.00705863 7.64961 0.0394728 8.47667C0.0860043 9.43732 0.305152 10.2899 1.00763 10.9924C1.7116 11.6963 2.56268 11.914 3.52333 11.9605C4.35189 12.0071 5.17294 11.9996 6 11.9996C6.82856 11.9996 7.64962 12.0071 8.47667 11.9605C9.43732 11.914 10.2899 11.6948 10.9924 10.9924C11.6964 10.2884 11.914 9.43732 11.9605 8.47667C12.0086 7.64961 11.9996 6.82856 11.9996 6ZM10.6787 9.53939C10.5691 9.81258 10.437 10.0167 10.2254 10.2269C10.0137 10.4385 9.81108 10.5706 9.53789 10.6802C8.74836 10.9939 6.87359 10.9233 5.9985 10.9233C5.12341 10.9233 3.24714 10.9939 2.45761 10.6817C2.18442 10.5721 1.98028 10.44 1.77014 10.2284C1.5585 10.0167 1.42641 9.81408 1.31684 9.54089C1.00463 8.74986 1.07517 6.87509 1.07517 6C1.07517 5.12491 1.00463 3.24864 1.31684 2.45911C1.42641 2.18592 1.5585 1.98179 1.77014 1.77164C1.98179 1.5615 2.18442 1.42791 2.45761 1.31834C3.24714 1.00613 5.12341 1.07667 5.9985 1.07667C6.87359 1.07667 8.74986 1.00613 9.53939 1.31834C9.81258 1.42791 10.0167 1.56 10.2269 1.77164C10.4385 1.98329 10.5706 2.18592 10.6802 2.45911C10.9924 3.24864 10.9218 5.12491 10.9218 6C10.9218 6.87509 10.9924 8.74986 10.6787 9.53939Z" />
                             </svg>
                         </a>
 
-                        <a id="email" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                        <a id="email" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
                             <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 23 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.9947 9.06438L21.8311 2.89138V15.1669L15.9947 9.06438ZM8.47406 10.1098L10.5236 12.2756C10.8453 12.6083 11.2646 12.8093 11.7229 12.8093H11.7391H11.7514C12.2107 12.8093 12.6301 12.6072 12.9555 12.2722L12.9527 12.2745L15.0022 10.1086L21.2324 16.6224H2.24673L8.47406 10.1098ZM2.23819 1.42783H21.2438L12.1148 11.0801C12.0122 11.1789 11.8851 11.2326 11.7543 11.2326H11.741H11.7286C11.5973 11.2328 11.4698 11.1786 11.3671 11.0789L11.3681 11.0801L2.23819 1.42783ZM1.64895 2.89022L7.48441 9.06323L1.64895 15.1623V2.89022ZM22.1442 0.0705562C21.9165 -0.0680591 21.6489 -0.148918 21.3652 -0.148918H2.11768C1.84267 -0.148838 1.57143 -0.0709347 1.32539 0.0786421L1.33583 0.0728663C1.04128 0.249729 0.79322 0.523342 0.61968 0.862795C0.446141 1.20225 0.354032 1.59402 0.35376 1.99384V16.0541C0.354262 16.6231 0.540165 17.1686 0.870677 17.571C1.20119 17.9734 1.64932 18.1997 2.11673 18.2003H21.3624C21.8298 18.1997 22.2779 17.9734 22.6084 17.571C22.9389 17.1686 23.1248 16.6231 23.1253 16.0541V1.99384C23.1253 1.15407 22.7278 0.426336 22.149 0.076332L22.1385 0.0705562H22.1442Z" />
                             </svg>
@@ -563,23 +562,23 @@
                 </div>
             </div>
 
-            <div class="flex gap-16">
-                <div class="flex flex-col items-center *:font-cormorant font-bold">
+            <div class="flex items-center justify-center gap-x-8 md:gap-x-12 xl:gap-x-16 gap-y-4 md:gap-y-8 xl:gap-y-12 flex-wrap">
+                <div class="flex flex-col items-center *:font-cormorant font-bold text-center">
                     <p class="paragraph text-gold">Junior Associate</p>
                     <h5 class="heading-5">Fadjar Sukma, S.H.</h5>
                 </div>
 
-                <div class="flex flex-col items-center *:font-cormorant font-bold">
+                <div class="flex flex-col items-center *:font-cormorant font-bold text-center">
                     <p class="paragraph text-gold">Junior Associate</p>
                     <h5 class="heading-5">Elisabeth Yunita, S.H.</h5>
                 </div>
 
-                <div class="flex flex-col items-center *:font-cormorant font-bold">
+                <div class="flex flex-col items-center *:font-cormorant font-bold text-center">
                     <p class="paragraph text-gold">Junior Associate</p>
                     <h5 class="heading-5">Hafidzun Sat Febrian, S.H.</h5>
                 </div>
 
-                <div class="flex flex-col items-center *:font-cormorant font-bold">
+                <div class="flex flex-col items-center *:font-cormorant font-bold text-center">
                     <p class="paragraph text-gold">Junior Associate</p>
                     <h5 class="heading-5">Dicke Muhdi Gailea, S.H.</h5>
                 </div>
@@ -595,53 +594,55 @@
     </section>
 
     {{-- ARTIKEL --}}
-    <section id="artikel" class="py-20 custom-container flex flex-col gap-24">
-        <div class="flex items-center">
-            <div class="pe-8 me-8 border-e border-e-customDarkGray py-4">
-                <h1 class="text-5xl font-cormorant font-bold w-full whitespace-nowrap">Artikel</h1>
+    <section id="artikel" class="py-12 md:py-16 xl:py-20 custom-container flex flex-col gap-8 md:gap-16 xl:gap-24">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="pb-2 md:pe-8 mb-4 md:mb-0 md:me-8 border-b md:border-b-0 md:border-e border-b-customDarkGray md:border-e-customDarkGray md:py-4 flex-none w-fit">
+                <h1 class="heading-1 font-cormorant font-bold">Artikel</h1>
             </div>
 
-            <p class="text-sm leading-loose">Jelajahi dunia hukum melalui artikel-artikel kami. Temukan wawasan terbaru dalam litigasi, kepailitan dan lain sebagainya. Kami hadirkan solusi praktis dan pandangan mendalam untuk membimbing Anda melalui kompleksitas masalah hukum. Mulailah eksplorasi Anda sekarang untuk mendapatkan pengetahuan yang berharga!</p>
+            <p class="text-sm leading-loose text-center md:text-start">Jelajahi dunia hukum melalui artikel-artikel kami. Temukan wawasan terbaru dalam litigasi, kepailitan dan lain sebagainya. Kami hadirkan solusi praktis dan pandangan mendalam untuk membimbing Anda melalui kompleksitas masalah hukum. Mulailah eksplorasi Anda sekarang untuk mendapatkan pengetahuan yang berharga!</p>
         </div>
 
-        <div class="px-8 grid grid-cols-2 gap-16">
-            @forelse($news as $n)
-            <a href="{{route("artikel", $n->id)}}">
-                <div class="bg-customDarkGray text-white flex shadow-xl hover:scale-105 transition">
-                    <div class="flex-none size-56 flex justify-center items-center overflow-hidden">
-                        <img class="object-cover" src="{{asset('assets/news.png')}}" alt="news">
-                    </div>
-
-                    <div class="py-4 px-6 flex flex-col justify-between">
-                        <div class="*:font-cormorant flex flex-col gap-2">
-                            <h4 class="heading-4 font-bold">{{$n->title}}</h4>
-                            <p class="paragraph font-medium line-clamp-3">{{$n->description}}</p>
+        <div class="flex flex-col gap-8 md:gap-12 xl:gap-16">
+            <div class="px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16">
+                @forelse($news as $n)
+                <a href="{{route("artikel", $n->id)}}">
+                    <div class="bg-customDarkGray text-white flex shadow-xl hover:scale-105 transition">
+                        <div class="flex-none size-40 lg:size-48 xl:size-56 flex justify-center items-center overflow-hidden">
+                            <img class="object-cover" src="{{asset('assets/news.png')}}" alt="news">
                         </div>
 
-                        <div class="flex justify-between items-center">
-                            <div class="flex items-center">
-                                <img class="size-6 md:size-7" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
-                                <p class="text-xs md:text-sm font-cormorant font-semibold">RCP</p>
+                        <div class="py-3 xd:py-3.5 xl:py-4 px-4 md:px-5 xl:px-6 flex flex-col justify-between">
+                            <div class="*:font-cormorant flex flex-col gap-2">
+                                <h4 class="heading-4 font-bold">{{$n->title}}</h4>
+                                <p class="paragraph font-medium line-clamp-3">{{$n->description}}</p>
                             </div>
 
-                            <p class="font-cormorant text-xs md:text-sm font-semibold">{{$n->date}}</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center flex-none gap-1">
+                                    <img class="size-4 md:size-5 xl:size-6" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
+                                    <p class="text-xs md:text-sm font-cormorant font-semibold">RCP</p>
+                                </div>
+
+                                <p class="font-cormorant text-xs md:text-sm font-semibold">{{$n->date}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
-            @empty
-            <p class="paragraph">Maaf, saat ini artikel masih sedang dalam proses pembuatan</p>
-            @endforelse
+                </a>
+                @empty
+                <p class="paragraph">Maaf, saat ini artikel masih sedang dalam proses pembuatan</p>
+                @endforelse
 
-        </div>
+            </div>
 
-        <div id="bottom-pagination" class="pagination">
-            {{ $news->links() }}
+            <div id="bottom-pagination" class="pagination">
+                {{ $news->links() }}
+            </div>
         </div>
     </section>
 
     {{-- KONTAK --}}
-    <section id="kontak" class="py-20 custom-container flex flex-col items-center gap-8">
+    <section id="kontak" class="py-12 md:py-16 xl:py-20 custom-container flex flex-col items-center gap-8">
         <div class="flex flex-col items-center">
             <img class="size-6 md:size-7 xl:size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
 
@@ -655,82 +656,84 @@
                 <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1983.1971427965777!2d106.8299067!3d-6.2116164!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f40f56e2d7af%3A0x5cf7c3803a23f8b2!2sWisma%20Kodel%2C%20Jl.%20H.%20R.%20Rasuna%20Said%2C%20RT.10%2FRW.7%2C%20Kuningan%2C%20Setia%20Budi%2C%20Kecamatan%20Setiabudi%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012920!5e0!3m2!1sen!2sid!4v1707136544781!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div class="flex flex-col gap-8 w-full px-8 pb-8 pt-16">
+            <div class="flex flex-col gap-6 md:gap-7 xl:gap-8 w-full px-6 md:px-7 xl:px-8 pb-4 md:pb-6 xl:pb-8 pt-8 md:pt-12 xl:pt-16">
                 <div class="text-white flex flex-col gap-2">
                     <h1 class="heading-1 font-cormorant font-bold">Hubungi Kami</h1>
                     <h5 class="heading-5">Isi form ini dan tim kami akan menghubungi anda</h5>
                 </div>
 
-                <form action="{{ route('contact') }}" method="POST" class="paragraph flex flex-col gap-8 w-full" onsubmit="contactUs(event)" id="form-contact-us">
+                <form action="{{ route('contact') }}" method="POST" class="flex flex-col gap-4 md:gap-6 xl:gap-8 w-full" onsubmit="contactUs(event)" id="form-contact-us">
                     @csrf
-                    <div class="flex gap-8 w-full">
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6 xl:gap-8 w-full">
                         <div class="flex flex-col gap-2 w-full">
-                            <label class="text-white" for="first_name">Nama Depan</label>
-                            <input class="rounded-lg py-3 w-full" type="text" name="first_name" id="first_name" placeholder="Nama depan Anda" :value="old('first_name')">
-                            <p id="error-first-name" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
+                            <label class="text-white paragraph" for="first_name">Nama Depan</label>
+                            <input class="rounded-lg py-2 md:py-2.5 xl:py-3 w-full paragraph" type="text" name="first_name" id="first_name" placeholder="Nama depan Anda" :value="old('first_name')">
+                            <p id="error-first-name" class="text-sm md:text-xs  text-red-500"></p>
                         </div>
 
                         <div class="flex flex-col gap-2 w-full">
-                            <label class="text-white" for="last_name">Nama Belakang</label>
-                            <input class="rounded-lg py-3 w-full" type="text" name="last_name" id="last_name" placeholder="Nama belakang Anda" :value="old('last_name')">
-                            <p id="error-last-name" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
+                            <label class="text-white paragraph" for="last_name">Nama Belakang</label>
+                            <input class="rounded-lg py-2 md:py-2.5 xl:py-3 w-full paragraph" type="text" name="last_name" id="last_name" placeholder="Nama belakang Anda" :value="old('last_name')">
+                            <p id="error-last-name" class="text-sm md:text-xs  text-red-500"></p>
                         </div>
                     </div>
 
                     <div class="flex flex-col gap-2 w-full">
-                        <label class="text-white" for="email">Alamat Email</label>
-                        <input class="rounded-lg py-3 w-full" type="email" name="email" id="email1" placeholder="Alamat email Anda" :value="old('email')">
-                        <p id="error-email" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
+                        <label class="text-white paragraph" for="email">Alamat Email</label>
+                        <input class="rounded-lg py-2 md:py-2.5 xl:py-3 w-full paragraph" type="email" name="email" id="email1" placeholder="Alamat email Anda" :value="old('email')">
+                        <p id="error-email" class="text-sm md:text-xs  text-red-500"></p>
                     </div>
 
                     <div class="flex flex-col gap-2 w-full">
-                        <label class="text-white" for="subject">Subjek</label>
-                        <input class="rounded-lg py-3 w-full" type="text" name="subject" id="subject" placeholder="Subjek email Anda" :value="old('subject')">
-                        <p id="error-subject" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
+                        <label class="text-white paragraph" for="subject">Subjek</label>
+                        <input class="rounded-lg py-2 md:py-2.5 xl:py-3 w-full paragraph" type="text" name="subject" id="subject" placeholder="Subjek email Anda" :value="old('subject')">
+                        <p id="error-subject" class="text-sm md:text-xs  text-red-500"></p>
                     </div>
 
                     <div class="flex flex-col gap-2 w-full">
-                        <label class="text-white" for="mail">Pesan</label>
-                        <textarea class="rounded-lg py-3 w-full h-48 resize-none" name="mail" id="mail" placeholder="Pesan Anda" :value="old('mail')"></textarea>
-                        <p id="error-message" class="text-xs sm:text-sm md:text-base  text-red-500"></p>
+                        <label class="text-white paragraph" for="mail">Pesan</label>
+                        <textarea class="rounded-lg py-2 md:py-2.5 xl:py-3 w-full h-32 md:h-40 xl:h-48 resize-none paragraph" name="mail" id="mail" placeholder="Pesan Anda" :value="old('mail')"></textarea>
+                        <p id="error-message" class="text-sm md:text-xs  text-red-500"></p>
                     </div>
 
                     <div class="flex justify-end">
-                        <button id="contact-submit-button" type="submit" class="hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] text-xs md:text-sm bg-gold text-white px-12 py-4 rounded-lg">Kirim</button>
+                        <button id="contact-submit-button" type="submit" class="hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] text-xs md:text-sm bg-gold text-white px-8 md:px-10 xl:px-12 py-3 md:py-3.5 xl:py-4 rounded-lg">Kirim</button>
                     </div>
 
-                    <div class="flex w-full justify-center items-center text-xs sm:text-sm md:text-base">
+                    <div class="flex w-full justify-center items-center text-xs md:text-sm">
                         <p id="contact-validation-message" class="text-center font-medium">
                         </p>
                     </div>
                 </form>
 
-                <div class="flex justify-between mt-16">
-                    <div class="flex gap-8 text-white">
+                <div class="flex justify-between items-center gap-4 mt-8 md:mt-12 xl:mt-16">
+                    <div class="flex gap-6 md:gap-7 xl:gap-8 text-white flex-wrap">
                         <a class="transition hover:text-gold flex items-center gap-2" href="https://www.instagram.com/rcp.law/" target="_blank" rel="noreferrer noopener">
-                            <svg class="size-4 md:size-5" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.2513 1.74603C9.69841 1.19039 9.03991 0.749834 8.31415 0.450065C7.5884 0.150296 6.80992 -0.00268806 6.02412 3.57417e-05C2.73166 3.57417e-05 0.0482413 2.67003 0.0482413 5.94602C0.0482413 6.99601 0.325628 8.01601 0.844221 8.91601L0 12L3.16583 11.172C4.0402 11.646 5.02312 11.898 6.02412 11.898C9.31658 11.898 12 9.22801 12 5.95202C12 4.36202 11.3789 2.86803 10.2513 1.74603ZM6.02412 10.89C5.13166 10.89 4.25729 10.65 3.49146 10.2L3.31055 10.092L1.42915 10.584L1.92965 8.76001L1.80905 8.57401C1.31321 7.78619 1.04993 6.87556 1.04925 5.94602C1.04925 3.22203 3.2804 1.00203 6.01809 1.00203C7.34472 1.00203 8.59296 1.51803 9.52764 2.45403C9.99044 2.91241 10.3572 3.45762 10.6067 4.05808C10.8561 4.65853 10.9833 5.30229 10.9809 5.95202C10.993 8.67601 8.76181 10.89 6.02412 10.89ZM8.74975 7.19401C8.59899 7.12201 7.86332 6.76202 7.73065 6.70802C7.59196 6.66002 7.49548 6.63602 7.39296 6.78002C7.29045 6.93002 7.00703 7.26601 6.92261 7.36201C6.83819 7.46401 6.74774 7.47601 6.59698 7.39801C6.44623 7.32601 5.96382 7.16401 5.39698 6.66002C4.95075 6.26402 4.65528 5.77802 4.56482 5.62802C4.4804 5.47802 4.55276 5.40002 4.63116 5.32202C4.69749 5.25602 4.78191 5.14802 4.85427 5.06402C4.92663 4.98002 4.95678 4.91402 5.00502 4.81802C5.05327 4.71602 5.02915 4.63202 4.99296 4.56002C4.95678 4.48802 4.65528 3.75602 4.53467 3.45603C4.41407 3.16803 4.28744 3.20403 4.19698 3.19803H3.90754C3.80502 3.19803 3.64824 3.23403 3.50955 3.38403C3.37688 3.53403 2.99095 3.89402 2.99095 4.62602C2.99095 5.35802 3.52764 6.06602 3.6 6.16202C3.67236 6.26402 4.65528 7.76401 6.15075 8.40601C6.50653 8.56201 6.78392 8.65201 7.001 8.71801C7.35678 8.83201 7.68241 8.81401 7.94171 8.77801C8.23115 8.73601 8.82814 8.41801 8.94874 8.07001C9.07537 7.72201 9.07538 7.42801 9.03316 7.36201C8.99095 7.29601 8.9005 7.26601 8.74975 7.19401Z" />
                             </svg>
 
-                            <p>(021) 5222289 </p>
+                            <p class="paragraph">(021) 5222289 </p>
                         </a>
 
                         <a class="transition hover:text-gold flex items-center gap-2" href="https://www.instagram.com/rcp.law/" target="_blank" rel="noreferrer noopener">
-                            <svg class="size-4 md:size-5" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.9985 2.92142C4.29485 2.92142 2.91992 4.29635 2.91992 6C2.91992 7.70365 4.29485 9.07858 5.9985 9.07858C7.70215 9.07858 9.07708 7.70365 9.07708 6C9.07708 4.29635 7.70215 2.92142 5.9985 2.92142ZM5.9985 8.00085C4.89675 8.00085 3.99765 7.10174 3.99765 6C3.99765 4.89826 4.89675 3.99915 5.9985 3.99915C7.10024 3.99915 7.99935 4.89826 7.99935 6C7.99935 7.10174 7.10024 8.00085 5.9985 8.00085ZM9.20317 2.07785C8.8054 2.07785 8.48418 2.39907 8.48418 2.79684C8.48418 3.1946 8.8054 3.51582 9.20317 3.51582C9.60093 3.51582 9.92215 3.19611 9.92215 2.79684C9.92227 2.70238 9.90375 2.60884 9.86766 2.52155C9.83157 2.43427 9.77862 2.35496 9.71183 2.28817C9.64504 2.22138 9.56573 2.16843 9.47845 2.13234C9.39116 2.09625 9.29762 2.07773 9.20317 2.07785ZM11.9996 6C11.9996 5.17144 12.0071 4.35039 11.9605 3.52333C11.914 2.56268 11.6948 1.7101 10.9924 1.00763C10.2884 0.303651 9.43732 0.0860042 8.47667 0.0394728C7.64811 -0.00705863 6.82706 0.000446468 6 0.000446468C5.17144 0.000446468 4.35039 -0.00705863 3.52333 0.0394728C2.56268 0.0860042 1.7101 0.305152 1.00763 1.00763C0.303651 1.7116 0.0860043 2.56268 0.0394728 3.52333C-0.00705863 4.35189 0.000446468 5.17294 0.000446468 6C0.000446468 6.82706 -0.00705863 7.64961 0.0394728 8.47667C0.0860043 9.43732 0.305152 10.2899 1.00763 10.9924C1.7116 11.6963 2.56268 11.914 3.52333 11.9605C4.35189 12.0071 5.17294 11.9996 6 11.9996C6.82856 11.9996 7.64962 12.0071 8.47667 11.9605C9.43732 11.914 10.2899 11.6948 10.9924 10.9924C11.6964 10.2884 11.914 9.43732 11.9605 8.47667C12.0086 7.64961 11.9996 6.82856 11.9996 6ZM10.6787 9.53939C10.5691 9.81258 10.437 10.0167 10.2254 10.2269C10.0137 10.4385 9.81108 10.5706 9.53789 10.6802C8.74836 10.9939 6.87359 10.9233 5.9985 10.9233C5.12341 10.9233 3.24714 10.9939 2.45761 10.6817C2.18442 10.5721 1.98028 10.44 1.77014 10.2284C1.5585 10.0167 1.42641 9.81408 1.31684 9.54089C1.00463 8.74986 1.07517 6.87509 1.07517 6C1.07517 5.12491 1.00463 3.24864 1.31684 2.45911C1.42641 2.18592 1.5585 1.98179 1.77014 1.77164C1.98179 1.5615 2.18442 1.42791 2.45761 1.31834C3.24714 1.00613 5.12341 1.07667 5.9985 1.07667C6.87359 1.07667 8.74986 1.00613 9.53939 1.31834C9.81258 1.42791 10.0167 1.56 10.2269 1.77164C10.4385 1.98329 10.5706 2.18592 10.6802 2.45911C10.9924 3.24864 10.9218 5.12491 10.9218 6C10.9218 6.87509 10.9924 8.74986 10.6787 9.53939Z" />
                             </svg>
 
-                            <p>rcp.law</p>
+                            <p class="paragraph">rcp.law</p>
                         </a>
                     </div>
 
-                    <img class="size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
+                    <img class="size-6 md:size-7 xl:size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
                 </div>
             </div>
         </div>
     </section>
 
-    <br><br><br><br>
+    <section class="py-12 md:py-16 xl:py-20">
+
+    </section>
 </div>
 
 <script src="{{ asset('js/contact.js') }}?t={{ env('VERSION_TIME') }}"></script>
