@@ -609,7 +609,8 @@
                 <a href="{{route("artikel", $n->id)}}">
                     <div class="bg-customDarkGray text-white flex shadow-xl hover:scale-105 transition">
                         <div class="flex-none size-32 md:size-40 lg:size-48 xl:size-56 flex justify-center items-center overflow-hidden">
-                            <img class="object-cover" src="{{asset('assets/news.png')}}" alt="news">
+                            {{-- <img class="object-cover" src="{{asset('assets/news.png')}}" alt="news"> --}}
+                            <img src="{{ asset('/storage/news/' . $n->image) }}" alt="" class="w-56 h-56 object-cover">
                         </div>
 
                         <div class="py-3 xd:py-3.5 xl:py-4 px-4 md:px-5 xl:px-6 flex flex-col justify-between">
