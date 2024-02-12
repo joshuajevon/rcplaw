@@ -11,7 +11,7 @@
     <div class="container mx-auto p-8">
         <div class="bg-white rounded-lg p-6 shadow-md">
             <h1 class="text-2xl mb-4">Terima Kasih Telah Menghubungi RCP Law</h1>
-            <p class="mb-4">Terima kasih telah menghubungi RCP Law!</p>
+            <p class="mb-4">Terima kasih telah menghubungi RCP Law !</p>
             <p class="mb-4">Kami menghargai minat Anda terhadap layanan hukum kami. Kami siap membantu Anda dengan berbagai permasalahan hukum yang Anda hadapi.</p>
             <p class="mb-4">Berikut beberapa layanan hukum yang kami tawarkan:</p>
             <p class="mb-4">• Hukum Ketenagakerjaan;
@@ -51,8 +51,9 @@
 
             <br>
             <p>Kontak Kami:</p>
-            <a href="https://www.instagram.com/rcp.law?igsh=NmxzeHppcGxnbGl4" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Instagram</a>
-
+            <a href="https://www.instagram.com/rcp.law?igsh=NmxzeHppcGxnbGl4" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Instagram: rcp.law</a>
+            <br>
+            <a href="tel:021-5222-289">Nomor Telepon: 021-5222-289</a>
         </div>
     </div>
 </body>
