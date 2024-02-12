@@ -697,7 +697,7 @@
                     </div>
 
                     <div class="flex justify-end">
-                        <button id="contact-submit-button" type="submit" class="hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] text-xs md:text-sm bg-gold text-white px-8 md:px-10 xl:px-12 py-3 md:py-3.5 xl:py-4 rounded-lg">Kirim</button>
+                        <button id="contact-submit-button" type="submit" class="hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))] text-xs md:text-sm bg-gold text-white px-8 md:px-10 xl:px-12 py-3 md:py-3.5 xl:py-4 rounded-lg flex justify-center items-center gap-2">Kirim</button>
                     </div>
 
                     <div class="flex w-full justify-center items-center text-xs md:text-sm">
