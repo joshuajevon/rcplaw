@@ -269,7 +269,7 @@
                 <h1 class="heading-1 font-cormorant font-bold">Layanan Kami</h1>
             </div>
 
-            <p class="text-sm leading-loose text-center md:text-start">RCP menjunjung tinggi reputasi terpercaya dengan memahami minat klien dan bekerja sama untuk mencapai tujuan yang diinginkan. Tujuan firma kami adalah untuk membangun hubungan jangka panjang dengan klien kami dengan menyediakan layanan hukum berkualitas tinggi yang efektif dan efisien untuk klien.</p>
+            <p class="text-xs md:text-sm leading-loose text-center md:text-start">RCP menjunjung tinggi reputasi terpercaya dengan memahami minat klien dan bekerja sama untuk mencapai tujuan yang diinginkan. Tujuan firma kami adalah untuk membangun hubungan jangka panjang dengan klien kami dengan menyediakan layanan hukum berkualitas tinggi yang efektif dan efisien untuk klien.</p>
         </div>
 
         <div class="grid grid-cols-4 gap-y-8 md:gap-y-12 xl:gap-y-16 font-medium">
@@ -600,7 +600,7 @@
                 <h1 class="heading-1 font-cormorant font-bold">Artikel</h1>
             </div>
 
-            <p class="text-sm leading-loose text-center md:text-start">Jelajahi dunia hukum melalui artikel-artikel kami. Temukan wawasan terbaru dalam litigasi, kepailitan dan lain sebagainya. Kami hadirkan solusi praktis dan pandangan mendalam untuk membimbing Anda melalui kompleksitas masalah hukum. Mulailah eksplorasi Anda sekarang untuk mendapatkan pengetahuan yang berharga!</p>
+            <p class="text-xs md:text-sm leading-loose text-center md:text-start">Jelajahi dunia hukum melalui artikel-artikel kami. Temukan wawasan terbaru dalam litigasi, kepailitan dan lain sebagainya. Kami hadirkan solusi praktis dan pandangan mendalam untuk membimbing Anda melalui kompleksitas masalah hukum. Mulailah eksplorasi Anda sekarang untuk mendapatkan pengetahuan yang berharga!</p>
         </div>
 
         <div class="flex flex-col gap-8 md:gap-12 xl:gap-16">
