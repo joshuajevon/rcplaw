@@ -47,6 +47,13 @@
                 </div>
                 </form>
 
+                @if(session('success'))
+                    <div class="font-outfit text-black mx-4 my-2 ">
+                        {{ session('success')}}
+                    </div>
+                @endif
+
+
                 @if($newss->count() == 0)
                 <h1 class="font-outfit">Maaf, hasil pencarian untuk artikel dengan kata kunci "{{ $result }}" belum tersedia. <a href="{{ route('viewsNews') }}" class="underline text-blue-500">Klik di sini</a> untuk memuat ulang.</h1>
                 @else

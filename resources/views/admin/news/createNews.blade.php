@@ -66,42 +66,6 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div id="successModal" class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center  bg-black bg-opacity-70 rounded hidden">
-        <div class="bg-[#D9D9D9] rounded-lg p-8 max-w-md flex flex-col items-center justify-center px-8 py-16">
-            <h2 id="modalTitle" class="text-2xl font-outfit font-bold mb-4">Artikel Telah Disimpan!</h2>
-            <p class="text-lg text-center"><span id="articleTitlePlaceholder"></span> telah berhasil disimpan.</p>
-            <a href="{{ route('viewsNews') }}" class="bg-gold text-black px-10 py-2 rounded-full mt-4">Kembali</a>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('submitForm').addEventListener('click', function () {
-                var formData = new FormData(document.getElementById('articleForm'));
-
-                fetch('{{ route("storeNews") }}', {
-                    method: 'POST',
-                    body: formData,
-                })
-                .then(response => {
-                    if (response.ok) {
-                        var articleTitle = document.getElementById('title').value;
-                        document.getElementById('modalTitle').textContent = "Artikel Telah Disimpan!";
-                        document.getElementById('articleTitlePlaceholder').textContent = '"' + articleTitle + '"';
-                        document.getElementById('successModal').classList.remove('hidden');
-                    } else {
-                        console.error('Failed to save article');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-            });
-        });
-    </script>
-
-
 @endsection
 
 

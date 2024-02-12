@@ -35,13 +35,21 @@ class NewsController extends Controller
     }
 
     public function storeNews(Request $request){
+        $messages = [
+            'title.required' => 'Judul artikel harus diisi.',
+            'image.required' => 'Gambar artikel harus dipilih.',
+            'description.required' => 'Isi artikel harus dipilih.',
+            'author.required' => 'Penulis artikel harus dipilih.',
+            'date.required' => 'Tanggal artikel harus dipilih.'
+        ];
+
         $request->validate([
             'title' => 'required',
             'image' => 'required',
             'description' => 'required',
             'author' => 'required',
             'date' => 'required'
-        ]);
+        ], $messages);
 
         $fileName = time() . '-' . $request->title . '-' . $request->file('image')->getClientOriginalName();
         $request->file('image')->storeAs('/public/news',$fileName);
@@ -53,8 +61,13 @@ class NewsController extends Controller
             'author' => $request->author,
             'date' => $request->date
         ]);
-        return redirect(route('createNews'));
+
+        $articleTitle = $request->title;
+
+        return redirect(route('viewsNews'))->with('success', "Artikel '$articleTitle' telah berhasil ditambahkan!");
     }
+
+
 
     public function editNews($id){
         $news = News::findOrFail($id);
@@ -62,13 +75,19 @@ class NewsController extends Controller
     }
 
     public function updateNews(Request $request, $id){
+        $messages = [
+            'title.required' => 'Judul artikel harus diisi.',
+            'description.required' => 'Isi artikel harus dipilih.',
+            'author.required' => 'Penulis artikel harus dipilih.',
+            'date.required' => 'Tanggal artikel harus dipilih.'
+        ];
+
         $request->validate([
             'title' => 'required',
-            // 'image' => 'required',
             'description' => 'required',
             'author' => 'required',
             'date' => 'required'
-        ]);
+        ], $messages);
 
         $news = News::findOrFail($id);
 
@@ -89,7 +108,9 @@ class NewsController extends Controller
             'author' => $request->author,
             'date' => $request->date
         ]);
-        return redirect(route('viewsNews'));
+
+        $articleTitle = $request->title;
+        return redirect(route('viewsNews'))->with('success', "Artikel '$articleTitle' telah berhasil diperbaharui!");
     }
 
     public function deleteNews($id){

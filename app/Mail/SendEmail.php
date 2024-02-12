@@ -27,7 +27,7 @@ class SendEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Welcome to RCPlaw',
+            subject: 'Terima Kasih Telah Menghubungi RCP Law',
         );
     }
 
