@@ -20,7 +20,7 @@
                     <br>
                     Partnership</h1>
 
-                <h1 class="flex sm:hidden font-cormorant font-bold text-5xl text-center" style="line-height: 1.5;">
+                <h1 class="flex sm:hidden font-cormorant font-bold text-4xl text-center" style="line-height: 1.5;">
                     Resandhi
                     Cumbhadrika
                     Partnership</h1>
@@ -664,11 +664,11 @@
 
                             <div class="flex justify-between items-center">
                                 <div class="flex items-center flex-none gap-1">
-                                    <img class="size-4 md:size-5 xl:size-6" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
-                                    <p class="text-xs md:text-sm font-cormorant font-semibold">RCP</p>
+                                    <img class="size-3 sm:size-4 md:size-5 xl:size-6" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
+                                    <p class="text-[0.5rem] sm:text-xs md:text-sm font-cormorant font-semibold">RCP</p>
                                 </div>
 
-                                <p class="font-cormorant text-xs md:text-sm font-semibold">{{$n->date}}</p>
+                                <p class="font-cormorant text-[0.5rem] sm:text-xs md:text-sm font-semibold">{{$n->date}}</p>
                             </div>
                         </div>
                     </div>
@@ -686,7 +686,7 @@
     </section>
 
     {{-- KONTAK --}}
-    <section id="kontak" class="py-12 md:py-16 xl:py-20 custom-container flex flex-col items-center gap-8">
+    <section id="kontak" class="py-12 md:py-16 xl:py-20 custom-container flex flex-col items-center gap-4 md:gap-6 xl:gap-8">
         <div class="flex flex-col items-center">
             <img class="size-6 md:size-7 xl:size-8" src="{{asset('assets/logo/logo-rcp.png')}}" alt="logo">
 
