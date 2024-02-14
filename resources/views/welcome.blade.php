@@ -20,7 +20,7 @@
                     <br>
                     Partnership</h1>
 
-                    <h1 class="flex sm:hidden font-cormorant font-bold text-5xl text-center" style="line-height: 1.5;">
+                <h1 class="flex sm:hidden font-cormorant font-bold text-5xl text-center" style="line-height: 1.5;">
                     Resandhi
                     Cumbhadrika
                     Partnership</h1>
@@ -425,7 +425,7 @@
                     <div class="flex justify-center sm:justify-start">
                         <img class="w-52 sm:w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/WILHELMUS.png')}}" alt="Wilhemus">
                     </div>
-                    
+
 
                     <div class="w-full sm:w-32 md:w-48 xl:w-64 flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
                         <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
@@ -499,7 +499,7 @@
                         <div class="flex justify-center sm:justify-start">
                             <img class="w-52 sm:w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/CHITTO.png')}}" alt="Wilhemus">
                         </div>
-                        
+
 
                         <div class="w-full sm:w-32 md:w-48 xl:w-64 flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
                             <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
@@ -578,7 +578,7 @@
                         <div class="flex justify-center sm:justify-start">
                             <img class="w-52 sm:w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/CHITTO.png')}}" alt="Wilhemus">
                         </div>
-                        
+
 
                         <div class="w-full sm:w-32 md:w-48 xl:w-64 flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
                             <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
@@ -603,7 +603,7 @@
 
                 </div>
 
-                
+
             </div>
 
             <div class="flex items-center justify-center gap-x-8 md:gap-x-12 xl:gap-x-16 gap-y-4 md:gap-y-8 xl:gap-y-12 flex-wrap">
@@ -648,17 +648,16 @@
         </div>
 
         <div class="flex flex-col gap-8 md:gap-12 xl:gap-16">
-            <div class="px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16">
+            <div class="px-4 md:px-6 xl:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16">
                 @forelse($news as $n)
                 <a href="{{route("artikel", $n->id)}}">
                     <div class="bg-customDarkGray text-white flex shadow-xl hover:scale-105 transition">
-                        <div class="flex-none size-32 md:size-40 lg:size-48 xl:size-56 flex justify-center items-center overflow-hidden">
-                            {{-- <img class="object-cover" src="{{asset('assets/news.png')}}" alt="news"> --}}
-                            <img src="{{ asset('/storage/news/' . $n->image) }}" alt="" class="w-56 h-56 object-cover">
+                        <div class="flex-none size-24 sm:size-32 md:size-40 lg:size-48 xl:size-56 flex justify-center items-center overflow-hidden">
+                            <img src="{{ asset('/storage/news/' . $n->image) }}" alt="" class="w-full h-full object-cover">
                         </div>
 
-                        <div class="py-3 xd:py-3.5 xl:py-4 px-4 md:px-5 xl:px-6 flex flex-col justify-between">
-                            <div class="*:font-cormorant flex flex-col gap-2">
+                        <div class="w-full py-2 md:py-3 xl:py-4 px-4 md:px-5 xl:px-6 flex flex-col justify-between">
+                            <div class="*:font-cormorant flex flex-col gap-1 md:gap-1.5 xl:gap-2">
                                 <h4 class="heading-4 font-bold">{{$n->title}}</h4>
                                 <p class="paragraph font-medium line-clamp-2 lg:line-clamp-3">{{$n->description}}</p>
                             </div>
