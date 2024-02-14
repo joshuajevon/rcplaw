@@ -10,9 +10,9 @@
 
 <div class="bg-[#EDEDED] font-outfit *:text-customDarkGray">
     {{-- BERANDA --}}
-    <section id="beranda" class="flex flex-col gap-5 sm:gap-24 md:gap-28 xl:gap-32 pt-40 md:pt-44 xl:pt-48 pb-12 md:pb-16 xl:pb-20">
+    <section id="beranda" class="flex flex-col gap-5 sm:gap-24 md:gap-28 xl:gap-32 pt-32 sm:pt-40 md:pt-44 xl:pt-48 pb-12 md:pb-16 xl:pb-20">
         <div class="custom-container flex justify-between items-center gap-0 sm:gap-8 md:gap-6 xl:gap-16">
-            <div class="md:flex-none flex flex-col sm:gap-3 md:gap-6 xl:gap-16 w-full sm:w-2/5">
+            <div class="md:flex-none flex flex-col items-center sm:items-start sm:gap-3 md:gap-6 xl:gap-16 w-full sm:w-2/5">
                 <h1 class="hidden sm:flex title font-cormorant font-bold text-start" style="line-height: 1.5;">
                     Resandhi
                     <br>
@@ -20,12 +20,12 @@
                     <br>
                     Partnership</h1>
 
-                <h1 class="flex sm:hidden font-cormorant font-bold text-4xl text-center" style="line-height: 1.5;">
+                <h1 class="flex sm:hidden font-cormorant font-bold text-4xl text-center mb-4" style="line-height: 1.5;">
                     Resandhi
                     Cumbhadrika
                     Partnership</h1>
 
-                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" class="flex justify-center">
+                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" class="w-full sm:w-auto flex justify-center">
                     @csrf
                     <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden bg-[#D9D9D9] *:font-cormorant *:font-bold mt-2 sm:mt-0 w-3/4 sm:w-full">
                         <input class="paragraph border-none outline-none py-2 md:py-2.5 xl:py-3 pl-3 md:pl-3.5 xl:pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda" value="{{ old('email') }}">
