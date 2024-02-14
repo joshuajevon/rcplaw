@@ -10,19 +10,24 @@
 
 <div class="bg-[#EDEDED] font-outfit *:text-customDarkGray">
     {{-- BERANDA --}}
-    <section id="beranda" class="flex flex-col gap-24 md:gap-28 xl:gap-32 pt-40 md:pt-44 xl:pt-48 pb-12 md:pb-16 xl:pb-20">
-        <div class="custom-container flex justify-between items-center gap-8 md:gap-12 xl:gap-16">
-            <div class="md:flex-none flex flex-col gap-8 md:gap-12 xl:gap-16 w-fit md:w-2/5">
-                <h1 class="title font-cormorant font-bold" style="line-height: 1.5;">
+    <section id="beranda" class="flex flex-col gap-5 sm:gap-24 md:gap-28 xl:gap-32 pt-40 md:pt-44 xl:pt-48 pb-12 md:pb-16 xl:pb-20">
+        <div class="custom-container flex justify-between items-center gap-0 sm:gap-8 md:gap-6 xl:gap-16">
+            <div class="md:flex-none flex flex-col sm:gap-3 md:gap-6 xl:gap-16 w-full sm:w-2/5">
+                <h1 class="hidden sm:flex title font-cormorant font-bold text-start" style="line-height: 1.5;">
                     Resandhi
                     <br>
                     Cumbhadrika
                     <br>
                     Partnership</h1>
 
-                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST">
+                    <h1 class="flex sm:hidden font-cormorant font-bold text-5xl text-center" style="line-height: 1.5;">
+                    Resandhi
+                    Cumbhadrika
+                    Partnership</h1>
+
+                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" class="flex justify-center">
                     @csrf
-                    <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden bg-[#D9D9D9] *:font-cormorant *:font-bold">
+                    <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden bg-[#D9D9D9] *:font-cormorant *:font-bold mt-2 sm:mt-0 w-3/4 sm:w-full">
                         <input class="paragraph border-none outline-none py-2 md:py-2.5 xl:py-3 pl-3 md:pl-3.5 xl:pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda" value="{{ old('email') }}">
                         <button class="paragraph flex-none py-1.5 md:py-2 xl:py-2.5 px-4 md:px-5 xl:px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]" type="submit">Hubungi Kami</button>
                     </div>
@@ -35,8 +40,8 @@
                 </form>
             </div>
 
-            <div class="flex lg:w-full gap-4 h-80 md:h-96 xl:h-[28rem] overflow-auto">
-                <div class="flex-none lg:flex-auto group transition-all h-full overflow-hidden w-20 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
+            <div class="flex mt-4 justify-center w-0 sm:w-full h-80 md:h-96 xl:h-[28rem] overflow-clip">
+                <div class="mr-2 duration-500 ease-in-out flex-none lg:flex-auto group transition-all h-full overflow-hidden w-20 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
                     <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
 
                     <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
@@ -51,7 +56,7 @@
                     <img class="object-cover h-full w-full brightness-50" src="{{asset('assets/beranda/pkpu-&-kepailitan.png')}}" alt="pkpu-&-kepailitan">
                 </div>
 
-                <div class="flex-none lg:flex-auto group transition-all h-full overflow-hidden w-20 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
+                <div class="lg:mx-2 duration-500 ease-in-out flex-none lg:flex-auto group transition-all h-full overflow-hidden w-0 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
                     <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
 
                     <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
@@ -66,7 +71,7 @@
                     <img class="object-cover h-full w-full brightness-50" src="{{asset('assets/beranda/perdana-umum.png')}}" alt="perdana-umum">
                 </div>
 
-                <div class="flex-none lg:flex-auto group transition-all h-full overflow-hidden w-20 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
+                <div class="mx-2 duration-500 ease-in-out flex-none lg:flex-auto group transition-all h-full overflow-hidden w-20 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
                     <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
 
                     <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
@@ -81,7 +86,7 @@
                     <img class="object-cover h-full w-full brightness-50" src="{{asset('assets/beranda/perselisihan-hubungan-industrial.png')}}" alt="perselisihan-hubungan-industrial">
                 </div>
 
-                <div class="flex-none lg:flex-auto group transition-all h-full overflow-hidden w-20 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
+                <div class="mx-2 duration-500 ease-in-out flex-none lg:flex-auto group transition-all h-full overflow-hidden w-0 sm:w-20 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
                     <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
 
                     <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
@@ -96,7 +101,7 @@
                     <img class="object-cover h-full w-full brightness-50" src="{{asset('assets/beranda/pidana-umum-dan-pidana-khusus.png')}}" alt="pidana-umum-dan-pidana-khusus">
                 </div>
 
-                <div class="flex-none lg:flex-auto group transition-all h-full overflow-hidden w-20 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
+                <div class="ml-2 duration-500 ease-in-out flex-none lg:flex-auto group transition-all h-full overflow-hidden w-20 lg:w-1/5 hover:w-64 lg:hover:w-96 shadow-lg rounded-xl lg:rounded-2xl relative">
                     <div class="absolute bottom-8 bg-gold h-16 w-full z-10 group-hover:hidden"></div>
 
                     <div class="absolute z-10 text-white bottom-8 flex justify-center items-center right-0 left-0 mx-auto p-4 font-bold *:font-cormorant gap-2 rotate-180 group-hover:hidden" style="writing-mode: vertical-rl;">
@@ -180,17 +185,17 @@
         </div>
 
 
-        <p class="paragraph text-center" style="line-height: 2"><span class="font-bold">Resandhi Cumbhadrika Partnership (RCP)</span> adalah firma hukum penuh layanan yang beroperasi sejak 2020. Dengan lebih dari 10 tahun pengalaman sebagai pengacara, tim RCP berkomitmen untuk memberikan layanan hukum profesional berstandar internasional. Firma ini menawarkan sumber daya dan keahlian yang dapat dipercayakan untuk membantu klien. Dengan pengetahuan mendalam dalam ilmu hukum dan kredibilitas profesional, RCP bertujuan untuk mempertahankan dan memaksimalkan posisi serta kepentingan hukum klien.</p>
+        <p class="paragraph text-justify md:text-center mx-2" style="line-height: 2"><span class="font-bold">Resandhi Cumbhadrika Partnership (RCP)</span> adalah firma hukum penuh layanan yang beroperasi sejak 2020. Dengan lebih dari 10 tahun pengalaman sebagai pengacara, tim RCP berkomitmen untuk memberikan layanan hukum profesional berstandar internasional. Firma ini menawarkan sumber daya dan keahlian yang dapat dipercayakan untuk membantu klien. Dengan pengetahuan mendalam dalam ilmu hukum dan kredibilitas profesional, RCP bertujuan untuk mempertahankan dan memaksimalkan posisi serta kepentingan hukum klien.</p>
 
         <span class="border border-b-gold mt-8 md:mt-12 xl:mt-16 mb-4 md:mb-6 xl:mb-8 pb-1">
             <p class="paragraph font-bold">Keunggulan Kami</p>
         </span>
 
         {{-- KEUNGGULAN KAMI --}}
-        <div class="flex justify-center gap-8 md:gap-16 xl:gap-24 items-center *:flex-none flex-wrap">
-            <div class="flex flex-col items-center gap-2 group">
+        <div class="flex justify-center gap-3 sm:gap-4 md:gap-8 xl:gap-16 items-center *:flex-none w-full">
+            <div class="flex flex-col items-center gap-2 group w-1/6">
                 <div class="border-b border-b-customDarkGray group-hover:border-b-gold pb-2 group-hover:text-gold transition">
-                    <svg class="size-8 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="size-6 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_13_70)">
                             <path d="M38.2222 33.4445H4.77777V25.4656C3.88821 25.0395 3.07979 24.4614 2.38889 23.7575V33.4445C2.38889 34.078 2.64057 34.6856 3.08857 35.1337C3.53658 35.5817 4.1442 35.8333 4.77777 35.8333H38.2222C38.8558 35.8333 39.4634 35.5817 39.9114 35.1337C40.3594 34.6856 40.6111 34.078 40.6111 33.4445V23.7575C39.9253 24.4642 39.1156 25.0391 38.2222 25.4536V33.4445Z" />
                             <path d="M29.8611 26.7556C30.1779 26.7556 30.4817 26.6298 30.7057 26.4058C30.9297 26.1818 31.0556 25.8779 31.0556 25.5612V19.0395H28.6667V21.5H16.7222V23.8889H28.6667V25.5612C28.6667 25.8779 28.7925 26.1818 29.0165 26.4058C29.2405 26.6298 29.5443 26.7556 29.8611 26.7556Z" />
@@ -207,9 +212,9 @@
                 <p class="paragraph group-hover:text-gold transition text-center">> 10 Tahun</p>
             </div>
 
-            <div class="flex flex-col items-center gap-2 group">
+            <div class="flex flex-col items-center gap-2 group group w-1/6">
                 <div class="border-b border-b-customDarkGray group-hover:border-b-gold pb-2 group-hover:text-gold transition">
-                    <svg class="size-8 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="size-6 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 11.1979C19.9557 11.1979 18.4746 11.8114 17.3826 12.9034C16.2906 13.9954 15.6771 15.4765 15.6771 17.0209C15.6771 18.5652 16.2906 20.0463 17.3826 21.1383C18.4746 22.2303 19.9557 22.8438 21.5 22.8438C23.0443 22.8438 24.5254 22.2303 25.6174 21.1383C26.7094 20.0463 27.3229 18.5652 27.3229 17.0209C27.3229 15.4765 26.7094 13.9954 25.6174 12.9034C24.5254 11.8114 23.0443 11.1979 21.5 11.1979ZM18.3646 17.0209C18.3646 16.1893 18.6949 15.3918 19.2829 14.8038C19.8709 14.2158 20.6684 13.8854 21.5 13.8854C22.3316 13.8854 23.1291 14.2158 23.7171 14.8038C24.3051 15.3918 24.6354 16.1893 24.6354 17.0209C24.6354 17.8524 24.3051 18.6499 23.7171 19.2379C23.1291 19.8259 22.3316 20.1563 21.5 20.1563C20.6684 20.1563 19.8709 19.8259 19.2829 19.2379C18.6949 18.6499 18.3646 17.8524 18.3646 17.0209Z" />
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 4.03125C19.1571 4.03109 16.8578 4.66459 14.8456 5.86465C12.8334 7.06471 11.1833 8.78665 10.0699 10.8481C8.95656 12.9095 8.42147 15.2337 8.52133 17.5745C8.62118 19.9152 9.35226 22.1854 10.6371 24.1445L6.00209 32.1712C5.87342 32.3947 5.8118 32.6506 5.82459 32.9082C5.83738 33.1658 5.92405 33.4143 6.07423 33.624C6.22442 33.8336 6.43178 33.9957 6.67156 34.0907C6.91134 34.1858 7.1734 34.2098 7.42646 34.1599L12.1099 33.239L13.6525 37.754C13.7356 37.9986 13.8875 38.2141 14.09 38.3746C14.2924 38.5351 14.5369 38.6338 14.794 38.659C15.0511 38.6841 15.31 38.6346 15.5398 38.5163C15.7695 38.3981 15.9602 38.2162 16.0892 37.9923L20.7117 29.9871C21.2367 30.0188 21.7633 30.0188 22.2883 29.9871L26.9108 37.9923C27.0399 38.2161 27.2308 38.398 27.4606 38.5161C27.6905 38.6342 27.9495 38.6835 28.2066 38.6582C28.4638 38.6329 28.7081 38.5339 28.9105 38.3732C29.1128 38.2125 29.2646 37.9969 29.3475 37.7522L30.8848 33.2265L35.5718 34.1581C35.8249 34.2084 36.0873 34.1847 36.3273 34.0899C36.5674 33.995 36.7751 33.833 36.9255 33.6232C37.076 33.4134 37.1628 33.1648 37.1756 32.9069C37.1885 32.6491 37.1268 32.3931 36.9979 32.1694L32.3647 24.1445C33.6496 22.1852 34.3807 19.9149 34.4805 17.574C34.5803 15.2331 34.045 12.9088 32.9315 10.8473C31.8179 8.78581 30.1675 7.06389 28.155 5.86396C26.1426 4.66403 23.843 4.03077 21.5 4.03125ZM11.1979 17.0208C11.1979 14.2886 12.2833 11.6682 14.2153 9.73616C16.1473 7.80415 18.7677 6.71875 21.5 6.71875C24.2323 6.71875 26.8527 7.80415 28.7847 9.73616C30.7167 11.6682 31.8021 14.2886 31.8021 17.0208C31.8021 19.7531 30.7167 22.3735 28.7847 24.3055C26.8527 26.2375 24.2323 27.3229 21.5 27.3229C18.7677 27.3229 16.1473 26.2375 14.2153 24.3055C12.2833 22.3735 11.1979 19.7531 11.1979 17.0208ZM17.888 29.5016C15.8501 28.9114 13.9879 27.8305 12.4646 26.3536L9.80938 30.9528L12.7423 30.3759C13.0611 30.3134 13.3917 30.3684 13.6729 30.5308C13.9542 30.6931 14.1672 30.9519 14.2724 31.2592L15.2399 34.0882L17.888 29.5016ZM27.7565 34.0811L25.112 29.5016C27.1499 28.9113 29.0121 27.8305 30.5354 26.3536L33.187 30.9457L30.2523 30.3616C29.9326 30.2983 29.6008 30.3533 29.3186 30.5165C29.0365 30.6796 28.8232 30.9398 28.7186 31.2485L27.7565 34.0811Z" />
                     </svg>
@@ -218,9 +223,9 @@
                 <p class="paragraph group-hover:text-gold transition text-center">Solusi Terbaik</p>
             </div>
 
-            <div class="flex flex-col items-center gap-2 group">
+            <div class="flex flex-col items-center gap-2 group group w-1/6">
                 <div class="border-b border-b-customDarkGray group-hover:border-b-gold pb-2 group-hover:text-gold transition">
-                    <svg class="size-8 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="size-6 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M25.0833 5.85694C25.0833 4.60098 24.0657 3.58331 22.8097 3.58331H20.1921C18.9343 3.58331 17.9167 4.60098 17.9167 5.85694C17.9167 6.89252 17.2072 7.78119 16.2415 8.16102C16.0892 8.22194 15.9369 8.28644 15.7882 8.35094C14.8368 8.76302 13.7062 8.6376 12.9717 7.90481C12.5453 7.47877 11.9673 7.23945 11.3645 7.23945C10.7618 7.23945 10.1838 7.47877 9.75742 7.90481L7.90483 9.7574C7.4788 10.1837 7.23948 10.7618 7.23948 11.3645C7.23948 11.9672 7.4788 12.5453 7.90483 12.9716C8.63942 13.7062 8.76483 14.835 8.34917 15.7881C8.28386 15.9382 8.22114 16.0893 8.16104 16.2414C7.78121 17.2071 6.89254 17.9166 5.85696 17.9166C4.601 17.9166 3.58333 18.9343 3.58333 20.1903V22.8097C3.58333 24.0656 4.601 25.0833 5.85696 25.0833C6.89254 25.0833 7.78121 25.7928 8.16104 26.7585C8.22196 26.9108 8.28646 27.0631 8.34917 27.2118C8.76304 28.1632 8.63763 29.2937 7.90483 30.0283C7.4788 30.4547 7.23948 31.0327 7.23948 31.6354C7.23948 32.2382 7.4788 32.8162 7.90483 33.2426L9.75742 35.0951C10.1838 35.5212 10.7618 35.7605 11.3645 35.7605C11.9673 35.7605 12.5453 35.5212 12.9717 35.0951C13.7062 34.3606 14.835 34.2351 15.7882 34.649C15.9369 34.7153 16.0892 34.778 16.2415 34.8389C17.2072 35.2188 17.9167 36.1074 17.9167 37.143C17.9167 38.399 18.9343 39.4166 20.1903 39.4166H22.8097C24.0657 39.4166 25.0833 38.399 25.0833 37.143C25.0833 36.1074 25.7928 35.2188 26.7585 34.8371C26.9108 34.778 27.0631 34.7153 27.2118 34.6508C28.1632 34.2351 29.2938 34.3624 30.0265 35.0951C30.2377 35.3064 30.4884 35.4739 30.7643 35.5882C31.0402 35.7026 31.3359 35.7614 31.6346 35.7614C31.9332 35.7614 32.2289 35.7026 32.5049 35.5882C32.7808 35.4739 33.0314 35.3064 33.2426 35.0951L35.0952 33.2426C35.5212 32.8162 35.7605 32.2382 35.7605 31.6354C35.7605 31.0327 35.5212 30.4547 35.0952 30.0283C34.3606 29.2937 34.2352 28.165 34.649 27.2118C34.7153 27.0631 34.778 26.9108 34.839 26.7585C35.2188 25.7928 36.1075 25.0833 37.143 25.0833C38.399 25.0833 39.4167 24.0656 39.4167 22.8097V20.1921C39.4167 18.9361 38.399 17.9184 37.143 17.9184C36.1075 17.9184 35.2188 17.2089 34.8372 16.2432C34.7771 16.091 34.7144 15.9399 34.649 15.7899C34.237 14.8386 34.3624 13.708 35.0952 12.9734C35.5212 12.5471 35.7605 11.969 35.7605 11.3663C35.7605 10.7636 35.5212 10.1855 35.0952 9.75919L33.2426 7.9066C32.8162 7.48057 32.2382 7.24125 31.6355 7.24125C31.0327 7.24125 30.4547 7.48057 30.0283 7.9066C29.2938 8.64119 28.165 8.7666 27.2118 8.35273C27.0618 8.28681 26.9107 8.22349 26.7585 8.16281C25.7928 7.78119 25.0833 6.89073 25.0833 5.85694Z" stroke-width="2" />
                         <path d="M28.6667 21.5C28.6667 23.4007 27.9116 25.2236 26.5676 26.5676C25.2236 27.9116 23.4007 28.6666 21.5 28.6666C19.5993 28.6666 17.7764 27.9116 16.4324 26.5676C15.0884 25.2236 14.3333 23.4007 14.3333 21.5C14.3333 19.5993 15.0884 17.7764 16.4324 16.4324C17.7764 15.0884 19.5993 14.3333 21.5 14.3333C23.4007 14.3333 25.2236 15.0884 26.5676 16.4324C27.9116 17.7764 28.6667 19.5993 28.6667 21.5Z" stroke-width="2" />
                     </svg>
@@ -229,9 +234,9 @@
                 <p class="paragraph group-hover:text-gold transition text-center">Efisien & Efektif</p>
             </div>
 
-            <div class="flex flex-col items-center gap-2 group">
+            <div class="flex flex-col items-center gap-2 group group w-1/6">
                 <div class="border-b border-b-customDarkGray group-hover:border-b-gold pb-2 group-hover:text-gold transition">
-                    <svg class="size-8 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="size-6 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.8389 5.35347C7.31886 5.11973 6.72727 5.10212 6.19425 5.30453C5.66123 5.50693 5.23043 5.91276 4.9966 6.43277L0.346152 16.7592C0.112136 17.2787 0.0939086 17.8699 0.295474 18.4028C0.49704 18.9358 0.901914 19.3669 1.42115 19.6015L4.62465 21.0442C4.882 21.1604 5.15973 21.2248 5.44196 21.2336C5.72419 21.2425 6.00541 21.1957 6.26954 21.0958C6.53368 20.996 6.77557 20.8451 6.98139 20.6518C7.18721 20.4585 7.35294 20.2265 7.4691 19.9692L12.1196 9.64057C12.3536 9.12106 12.3718 8.5299 12.1702 7.99696C11.9687 7.46402 11.5638 7.03289 11.0446 6.79827L7.8389 5.35347ZM4.02695 18.0987C4.20229 18.1777 4.39148 18.2215 4.58372 18.2274C4.77596 18.2334 4.96749 18.2014 5.14737 18.1333C5.32725 18.0652 5.49196 17.9624 5.63209 17.8306C5.77223 17.6989 5.88505 17.5409 5.9641 17.3655C6.04316 17.1902 6.08691 17.001 6.09285 16.8088C6.09879 16.6165 6.0668 16.425 5.99872 16.2451C5.93064 16.0652 5.8278 15.9005 5.69607 15.7604C5.56433 15.6202 5.40629 15.5074 5.23095 15.4284C4.87685 15.2687 4.47382 15.2563 4.11054 15.3937C3.74725 15.5312 3.45346 15.8074 3.2938 16.1615C3.13414 16.5156 3.12169 16.9186 3.25918 17.2819C3.39667 17.6452 3.67285 17.939 4.02695 18.0987ZM40.8823 19.8832C41.1463 19.783 41.388 19.6317 41.5935 19.4381C41.7991 19.2445 41.9645 19.0123 42.0803 18.7547C42.1961 18.4972 42.26 18.2193 42.2684 17.9371C42.2768 17.6548 42.2295 17.3737 42.1293 17.1097L38.1195 6.52307C38.0195 6.25887 37.8684 6.01696 37.6749 5.81117C37.4814 5.60539 37.2492 5.43976 36.9916 5.32375C36.734 5.20774 36.4561 5.14363 36.1738 5.13508C35.8914 5.12653 35.6101 5.17371 35.346 5.27392L32.063 6.51877C31.7989 6.61897 31.5573 6.7702 31.3517 6.96382C31.1461 7.15744 30.9807 7.38966 30.8649 7.64721C30.7491 7.90477 30.6852 8.18261 30.6768 8.46487C30.6684 8.74713 30.7157 9.02828 30.816 9.29227L34.8279 19.881C35.0298 20.4141 35.4352 20.8451 35.9549 21.0794C36.4746 21.3136 37.066 21.3319 37.5992 21.1302L40.8823 19.8832ZM34.5677 8.17642C34.3879 8.24461 34.2232 8.34755 34.0831 8.47937C33.9431 8.61119 33.8303 8.76931 33.7514 8.9447C33.6724 9.12009 33.6288 9.30931 33.6229 9.50157C33.6171 9.69382 33.6492 9.88534 33.7174 10.0652C33.7856 10.245 33.8885 10.4097 34.0203 10.5498C34.1522 10.6898 34.3103 10.8026 34.4857 10.8815C34.661 10.9605 34.8503 11.0041 35.0425 11.01C35.2348 11.0158 35.4263 10.9837 35.6062 10.9155C35.9694 10.7778 36.263 10.5015 36.4225 10.1472C36.582 9.79303 36.5942 9.38997 36.4565 9.02675C36.3188 8.66352 36.0424 8.36987 35.6882 8.2104C35.334 8.05094 34.9309 8.03871 34.5677 8.17642Z" />
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M32.0027 8.83H32.0199C32.1607 8.81771 32.2976 8.77783 32.423 8.71262C32.5483 8.64741 32.6596 8.55816 32.7504 8.44995C32.8413 8.34174 32.9099 8.2167 32.9524 8.08197C32.9949 7.94723 33.0105 7.80544 32.9982 7.6647C32.9859 7.52395 32.946 7.387 32.8808 7.26166C32.8156 7.13633 32.7264 7.02507 32.6182 6.93423C32.5099 6.84339 32.3849 6.77475 32.2502 6.73224C32.1154 6.68972 31.9736 6.67416 31.8329 6.68645H31.8157L31.7598 6.6929L31.5512 6.7144C30.4626 6.81784 29.376 6.94113 28.2919 7.0842C26.3698 7.33575 23.9854 7.72275 22.4266 8.24305C21.6677 8.4946 20.8679 8.98265 20.1046 9.54165C19.2825 10.1528 18.4971 10.8118 17.7525 11.5153C16.3868 12.8041 15.0817 14.1558 13.8417 15.5659C12.9408 16.585 12.7323 18.2104 13.7901 19.3628C14.4781 20.1067 15.5531 21.0484 16.9463 21.4698C18.4018 21.9063 20.0788 21.7364 21.7924 20.4636L23.9402 19.0769C23.9529 19.0686 23.9658 19.0607 23.9789 19.0532C24.2864 19.2403 24.7142 19.5628 25.2259 19.9906C25.7849 20.4593 26.3912 21.0119 26.9567 21.5429C27.5984 22.1479 28.2291 22.7644 28.8487 23.3919L28.9669 23.5145L28.997 23.5446L29.0078 23.5553L29.1346 23.6843L29.2959 23.7682C30.1623 24.1982 31.1148 24.0434 31.8544 23.794C32.6241 23.536 33.3895 23.0974 34.0409 22.6652C34.8572 22.1171 35.6299 21.5069 36.3522 20.8399L36.3909 20.8055L36.4016 20.7947L36.4038 20.7926C36.4038 20.7926 36.2146 20.1261 35.475 19.3478L34.8923 20.0788L34.4 21.4999L29.0078 23.5553L30.1 22.5749L29.5238 21.0334C29.1634 20.6785 28.7993 20.3273 28.4316 19.9799C27.8511 19.4338 27.2104 18.8511 26.6041 18.3459C26.0171 17.8514 25.4065 17.3827 24.897 17.1032C24.0499 16.6388 23.22 16.9828 22.7728 17.273L20.5626 18.7006L20.5325 18.7221C19.3392 19.6165 18.3588 19.6509 17.5655 19.4123C16.7055 19.1543 15.9422 18.5265 15.3725 17.9073C15.194 17.7138 15.1424 17.3418 15.452 16.9914C16.6458 15.633 17.902 14.3309 19.2167 13.0891C19.9498 12.4076 20.6851 11.7776 21.371 11.2767C22.0719 10.765 22.661 10.4317 23.106 10.2834C24.4476 9.8362 26.6428 9.46855 28.5756 9.2127C29.6326 9.07376 30.692 8.95406 31.7533 8.85365L31.9533 8.8343L32.0027 8.83Z" />
                         <path d="M30.373 21.8805C30.0923 21.5959 29.8092 21.3135 29.5238 21.0334L30.1 22.575L29.0078 23.5575L34.4 21.5L34.8923 20.081L35.475 19.35L34.9268 19.2339L34.9203 19.2382L34.8902 19.2661L34.7741 19.3736C34.1683 19.9186 33.5253 20.4207 32.8498 20.8765C32.2693 21.2635 31.6824 21.586 31.1664 21.758C30.7665 21.8934 30.5171 21.9042 30.373 21.8805Z" />
@@ -242,9 +247,9 @@
                 <p class="paragraph group-hover:text-gold transition text-center">Memahami Klien</p>
             </div>
 
-            <div class="flex flex-col items-center gap-2 group">
+            <div class="flex flex-col items-center gap-2 group group w-1/6">
                 <div class="border-b border-b-customDarkGray group-hover:border-b-gold pb-2 group-hover:text-gold transition">
-                    <svg class="size-8 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="size-6 md:size-10 xl:size-12" viewBox="0 0 43 43" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21.5 25.9792C23.9738 25.9792 25.9791 23.9738 25.9791 21.5C25.9791 19.0263 23.9738 17.0209 21.5 17.0209C19.0262 17.0209 17.0208 19.0263 17.0208 21.5C17.0208 23.9738 19.0262 25.9792 21.5 25.9792Z" />
                         <path d="M17.9167 25.0833L11.6458 31.3542M18.8125 18.8125L10.75 10.75" stroke-linejoin="round" />
                         <path d="M30.4583 33.1459C31.9426 33.1459 33.1458 31.9426 33.1458 30.4584C33.1458 28.9741 31.9426 27.7709 30.4583 27.7709C28.974 27.7709 27.7708 28.9741 27.7708 30.4584C27.7708 31.9426 28.974 33.1459 30.4583 33.1459Z" />
@@ -269,7 +274,7 @@
                 <h1 class="heading-1 font-cormorant font-bold">Layanan Kami</h1>
             </div>
 
-            <p class="text-xs md:text-sm leading-loose text-center md:text-start">RCP menjunjung tinggi reputasi terpercaya dengan memahami minat klien dan bekerja sama untuk mencapai tujuan yang diinginkan. Tujuan firma kami adalah untuk membangun hubungan jangka panjang dengan klien kami dengan menyediakan layanan hukum berkualitas tinggi yang efektif dan efisien untuk klien.</p>
+            <p class="text-xs md:text-sm leading-loose text-justify md:text-start mx-2">RCP menjunjung tinggi reputasi terpercaya dengan memahami minat klien dan bekerja sama untuk mencapai tujuan yang diinginkan. Tujuan firma kami adalah untuk membangun hubungan jangka panjang dengan klien kami dengan menyediakan layanan hukum berkualitas tinggi yang efektif dan efisien untuk klien.</p>
         </div>
 
         <div class="grid grid-cols-4 gap-y-8 md:gap-y-12 xl:gap-y-16 font-medium">
@@ -290,7 +295,7 @@
                         </defs>
                     </svg>
 
-                    <h5 class="paragraph group-hover:text-gold transition text-center">Hukum Pidana</h5>
+                    <h5 class="paragraph group-hover:text-gold transition text-center leading-loose">Hukum Pidana</h5>
                 </span>
             </div>
 
@@ -301,7 +306,7 @@
                         <path d="M29.4152 12.1706H54.5285L56.9281 8.36084H27.0157L29.4152 12.1706ZM83.3077 12.0412C82.1098 7.95147 79.1634 4.65852 75.3507 2.5307C73.448 1.46944 71.357 0.720253 69.1892 0.334213C68.4138 0.195999 67.6325 0.108849 66.8451 0.0630722C66.5167 0.0441437 65.6559 0.00320435 65.5229 0.000564575V0.00012207H18.4758L18.4754 0.000564575C18.3428 0.00320435 17.4829 0.0441437 17.1546 0.0630722C16.3677 0.108849 15.5858 0.195999 14.8104 0.334213C12.6427 0.720253 10.5516 1.46944 8.6494 2.5307C4.83622 4.65852 1.88987 7.95147 0.692388 12.0412C-0.46168 15.9816 0.122511 20.2905 2.25331 23.8397C4.41089 27.4337 8.18482 30.0197 12.5189 30.5792C16.5764 31.103 20.8066 29.7627 23.6698 26.9592C26.4144 24.2719 27.5042 20.4344 26.4739 16.8048C25.494 13.3507 22.6455 10.4301 18.8661 9.8099C15.4066 9.24251 11.702 10.6638 10.0062 13.6716C8.98237 15.4882 8.86599 17.7441 9.95125 19.562C10.9515 21.2382 12.8579 22.4518 14.9287 22.2783C15.9991 22.189 17.0655 21.7572 17.8025 20.9996C18.0099 20.7862 18.1904 20.5489 18.3359 20.2932C18.4394 20.1105 18.4998 20.0717 18.317 19.9617C18.1036 19.8336 17.9748 19.6875 17.7628 19.838C17.5102 20.0176 17.2742 20.2249 17.01 20.3882C16.5963 20.6435 16.0231 20.7487 15.5387 20.7663C14.5079 20.8033 13.625 20.3746 12.9184 19.6813C12.1352 18.8974 11.8184 17.4839 12.1703 16.4024C12.5009 15.3869 13.2749 14.5273 14.2212 13.9797C15.3092 13.3502 16.6286 13.172 17.869 13.4167C18.9654 13.6328 19.9661 14.2508 20.6644 14.8931C21.3132 15.5789 21.8327 16.3276 22.1532 17.2049C22.8538 19.124 22.5587 21.2981 21.3118 22.9536C20.0585 24.6175 18.0316 25.7298 15.9299 26.0793C13.6924 26.4508 11.3542 25.9732 9.48944 24.7359C7.77612 23.5993 6.46919 21.913 5.71459 20.0665C4.20493 16.3721 4.95953 12.0398 7.61171 8.99117C9.6677 6.6283 12.5651 5.09693 15.6722 4.40013C16.9449 4.11446 18.2546 4.00749 19.562 4.00749H64.4376C65.745 4.00749 67.0547 4.11446 68.3275 4.40013C71.4346 5.09693 74.3324 6.6283 76.3879 8.99117C79.0401 12.0398 79.7947 16.3721 78.2851 20.0665C77.5309 21.913 76.224 23.5993 74.5107 24.7359C72.6454 25.9732 70.3073 26.4508 68.0703 26.0793C65.9681 25.7298 63.9412 24.6175 62.6878 22.9536C61.4414 21.2981 61.1458 19.124 61.8469 17.2049C62.1669 16.3276 62.6869 15.5789 63.3358 14.8931C64.0336 14.2508 65.0343 13.6328 66.1311 13.4167C67.3711 13.172 68.6909 13.3502 69.7785 13.9797C70.7247 14.5273 71.4987 15.3869 71.8294 16.4024C72.1813 17.4839 71.8645 18.8974 71.0817 19.6813C70.3747 20.3746 69.4922 20.8033 68.4609 20.7663C67.9765 20.7487 67.4034 20.6435 66.9901 20.3882C66.7255 20.2249 66.4895 20.0176 66.2369 19.838C66.0249 19.6875 65.896 19.8336 65.6827 19.9617C65.4998 20.0717 65.5603 20.1105 65.6637 20.2932C65.8092 20.5489 65.9898 20.7862 66.1976 20.9996C66.9342 21.7572 68.0005 22.189 69.071 22.2783C71.1422 22.4518 73.0481 21.2382 74.0489 19.562C75.1341 17.7441 75.0177 15.4882 73.9934 13.6716C72.2977 10.6638 68.593 9.24251 65.134 9.8099C61.3541 10.4301 58.5057 13.3507 57.5257 16.8048C56.4959 20.4344 57.5853 24.2719 60.3298 26.9592C63.1931 29.7627 67.4232 31.103 71.4807 30.5792C75.8148 30.0197 79.5888 27.4337 81.7463 23.8397C83.8771 20.2905 84.4618 15.9816 83.3077 12.0412ZM25.8251 36.2179C25.8251 34.5985 24.448 33.2859 22.7494 33.2859C21.0504 33.2859 19.6733 34.5985 19.6733 36.2179V71.5918H21.297L25.8251 36.2179ZM58.1182 36.2179C58.1182 34.5985 59.4958 33.2859 61.1943 33.2859C62.8933 33.2859 64.2705 34.5985 64.2705 36.2179V71.5918H62.6467L58.1182 36.2179Z" />
                     </svg>
 
-                    <h5 class="paragraph group-hover:text-gold transition text-center">Hukum Korporasi
+                    <h5 class="paragraph group-hover:text-gold transition text-center leading-loose">Hukum Korporasi
                         dan Bisnis</h5>
                 </span>
             </div>
@@ -313,7 +318,7 @@
                         <path d="M12.2338 15.9898L72.7649 15.9614L42.4961 4.26896L12.2338 15.9898ZM0.610519 16.722L42.4949 0.499977L84.3895 16.6827V16.6843C84.3895 18.2742 83.3771 19.5629 82.1281 19.5635L2.87395 19.6007C1.62407 19.6012 0.610519 18.312 0.610519 16.722ZM76.9507 22.3791L8.04037 22.4116C8.04077 24.1669 9.15949 25.5895 10.5389 25.5885L74.4542 25.5585C75.8336 25.558 76.9511 24.1344 76.9507 22.3791ZM71.1147 84.2521L71.1134 80.3606L13.9227 80.387L13.9239 84.2789L71.1147 84.2521ZM2.56249 84.2789C2.56209 82.1294 3.93095 80.3865 5.61979 80.3859L7.61562 80.3849L7.6144 77.2272C7.61399 75.0502 9.00031 73.2851 10.7107 73.2841L74.3214 73.2541C76.0322 73.2536 77.4193 75.0172 77.4197 77.1941L77.4209 80.3518L79.4159 80.3508C81.1052 80.3503 82.4749 82.0916 82.4757 84.2412L74.3636 84.2453L74.3616 77.1461L10.6729 77.176L10.6749 84.2753L2.56249 84.2789Z" />
                     </svg>
 
-                    <h5 class="paragraph group-hover:text-gold transition text-center">Hukum Pertahanan</h5>
+                    <h5 class="paragraph group-hover:text-gold transition text-center leading-loose">Hukum Pertahanan</h5>
                 </span>
             </div>
 
@@ -339,7 +344,7 @@
                         </defs>
                     </svg>
 
-                    <h5 class="paragraph group-hover:text-gold transition text-center">Hukum Keluarga</h5>
+                    <h5 class="paragraph group-hover:text-gold transition text-center leading-loose">Hukum Keluarga</h5>
                 </span>
             </div>
 
@@ -350,13 +355,13 @@
                         <path d="M77.9031 40.8473L77.1745 11.7099C77.301 11.7172 77.4268 11.7164 77.5518 11.7035L83.4876 40.9834C81.6541 40.9017 79.7882 40.8602 77.9031 40.8473ZM70.344 40.9834L76.3214 11.5002C76.4308 11.549 76.541 11.5884 76.6519 11.6201L75.9211 40.8473C74.0386 40.8602 72.1753 40.9017 70.344 40.9834ZM15.0789 40.8473L14.3481 11.6201C14.459 11.5884 14.5692 11.549 14.6786 11.5002L20.656 40.9834C18.825 40.9017 16.9614 40.8602 15.0789 40.8473ZM7.51235 40.9834L13.4486 11.7035C13.5732 11.7164 13.699 11.7172 13.8254 11.7099L13.0969 40.8473C11.2118 40.8602 9.34593 40.9017 7.51235 40.9834ZM85.8802 41.1165L78.2584 11.5225C78.7455 11.3192 79.181 10.9601 79.507 10.473C80.4964 10.8561 81.4819 11.2554 82.4631 11.6753C82.521 11.5392 82.7257 11.1942 82.689 11.0705C82.6248 10.8518 81.9212 10.5227 81.7602 10.4101C77.4639 7.39962 72.6464 5.30631 67.7975 3.83016C62.6094 2.25086 57.3012 1.2836 51.9496 0.861168C41.3206 0.0223007 30.4734 1.15349 20.2806 4.81283C17.8124 5.69878 15.3515 6.75721 13.0253 8.06301C11.9715 8.6545 10.9165 9.25797 9.90383 9.93977C9.43236 10.2569 8.96942 10.5937 8.50499 10.925C8.23791 11.1155 8.27056 11.1039 8.4245 11.4296C8.59328 11.7866 8.68565 11.6072 9.02395 11.4626C9.54661 11.2396 10.0644 11.0012 10.5912 10.7915C10.8857 10.6746 11.181 10.5621 11.4759 10.4474C11.8038 10.9473 12.246 11.3153 12.7415 11.5225L5.11976 41.1165C3.71092 41.203 2.31357 41.3018 0.942932 41.4272C3.79994 46.8011 8.61628 50.3402 14.0881 50.3402C19.5595 50.3402 24.3758 46.8011 27.2329 41.4272C25.857 41.3014 24.4545 41.2025 23.0404 41.1161L15.317 11.0996C15.9936 10.5308 16.4024 9.64317 16.4495 8.69944C18.0984 8.1927 19.7628 7.74545 21.4313 7.35469C31.8129 4.92283 42.5102 4.23718 53.0773 4.93823C58.4278 5.29304 63.7523 6.03432 69.0119 7.22842C70.8804 7.65257 72.7247 8.15974 74.552 8.73368C74.6072 9.66457 75.0145 10.5377 75.683 11.0996L67.9596 41.1161C66.5455 41.2025 65.143 41.3014 63.7671 41.4272C66.6242 46.8011 71.4405 50.3402 76.9119 50.3402C82.3837 50.3402 87.2001 46.8011 90.0571 41.4272C88.6864 41.3018 87.2891 41.203 85.8802 41.1165Z" />
                     </svg>
 
-                    <h5 class="paragraph group-hover:text-gold transition text-center">Penyelesaian
+                    <h5 class="paragraph group-hover:text-gold transition text-center leading-loose">Penyelesaian
                         Sengketa</h5>
                 </span>
             </div>
 
             <div class="flex items-center justify-center border-r border-customDarkGray px-4 md:px-6 xl:px-8">
-                <span class="flex flex-col gap-4 text-lg items-center  group">
+                <span class="flex flex-col gap-4 text-lg items-center group">
                     <svg class="size-12 md:size-16 xl:size-20 group-hover:text-gold transition" viewBox="0 0 86 85" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7_447)">
                             <path d="M83.6323 14.3172C82.7741 13.8219 81.7543 13.6876 80.7971 13.9438C79.8398 14.2 79.0235 14.8257 78.5273 15.6835L76.1035 19.882C75.5555 19.8368 75.006 19.9482 74.519 20.2033C74.0319 20.4585 73.6274 20.8468 73.3526 21.323L71.0533 25.3074V12.4512H79.7691C80.0994 12.4512 80.4161 12.32 80.6496 12.0865C80.8831 11.853 81.0143 11.5363 81.0143 11.2061V6.22559C81.0125 4.57557 80.3565 2.99359 79.1901 1.82654C78.0236 0.659497 76.442 0.00263628 74.792 0H16.6865C15.0359 0.00175782 13.4535 0.65823 12.2863 1.82537C11.1192 2.99252 10.4627 4.575 10.4609 6.22559V72.5488H1.74512C1.41489 72.5488 1.09819 72.68 0.864686 72.9135C0.631182 73.147 0.5 73.4637 0.5 73.7939L0.5 78.7744C0.501758 80.425 1.15823 82.0075 2.32537 83.1746C3.49252 84.3418 5.075 84.9982 6.72559 85H64.8311C66.4816 84.9982 68.0641 84.3418 69.2313 83.1746C70.3984 82.0075 71.0549 80.425 71.0566 78.7744V46.8845L71.0799 46.8479L80.4183 30.673L82.2162 31.709C82.3112 31.7642 82.3804 31.8547 82.4087 31.9608C82.437 32.0669 82.4221 32.1799 82.3673 32.2751L77.3868 40.9079C77.3051 41.0496 77.252 41.206 77.2307 41.3683C77.2094 41.5305 77.2203 41.6953 77.2627 41.8533C77.3051 42.0113 77.3782 42.1594 77.4778 42.2892C77.5774 42.4189 77.7017 42.5278 77.8434 42.6096C77.9851 42.6913 78.1415 42.7444 78.3037 42.7657C78.4659 42.787 78.6307 42.7761 78.7887 42.7337C78.9468 42.6913 79.0949 42.6182 79.2246 42.5186C79.3544 42.419 79.4633 42.2947 79.545 42.153L84.5255 33.5202C84.9105 32.8531 85.0149 32.0604 84.8157 31.3164C84.6164 30.5723 84.1299 29.9379 83.463 29.5524L81.665 28.5148L82.7026 26.7169C82.978 26.2417 83.1125 25.6979 83.0905 25.1491C83.0684 24.6002 82.8907 24.069 82.5781 23.6174L85.002 19.4238C85.4975 18.565 85.6316 17.5445 85.3747 16.5869C85.1179 15.6292 84.4911 14.8128 83.6323 14.3172ZM74.792 2.49023C75.7824 2.49111 76.732 2.88494 77.4323 3.58526C78.1326 4.28559 78.5265 5.23518 78.5273 6.22559V9.96094H71.0566V6.22559C71.0575 5.23518 71.4513 4.28559 72.1517 3.58526C72.852 2.88494 73.8016 2.49111 74.792 2.49023ZM6.72559 82.5098C5.73518 82.5089 4.78559 82.1151 4.08526 81.4147C3.38494 80.7144 2.99111 79.7648 2.99023 78.7744V75.0391H58.6055V78.7744C58.604 80.1222 59.0423 81.4337 59.8539 82.5098H6.72559ZM64.8311 82.5098C63.8406 82.5089 62.8911 82.1151 62.1907 81.4147C61.4904 80.7144 61.0966 79.7648 61.0957 78.7744V73.7939C61.0957 73.4637 60.9645 73.147 60.731 72.9135C60.4975 72.68 60.1808 72.5488 59.8506 72.5488H12.9512V6.22559C12.9521 5.23518 13.3459 4.28559 14.0462 3.58526C14.7465 2.88494 15.6961 2.49111 16.6865 2.49023H69.8115C69.0011 3.56673 68.564 4.87816 68.5664 6.22559V29.6188L61.7349 41.4524C61.5421 41.783 61.4171 42.1486 61.3672 42.528C61.3173 42.9074 61.3436 43.293 61.4443 43.6621C61.4891 43.8283 61.5492 43.99 61.6236 44.1452L54.9066 55.7779C52.9102 59.2398 51.8665 63.1687 51.8818 67.1649C51.884 67.3821 51.943 67.5949 52.0529 67.7822C52.1628 67.9695 52.3197 68.1249 52.5082 68.2328C52.6967 68.3407 52.9101 68.3974 53.1272 68.3974C53.3444 68.3973 53.5578 68.3404 53.7462 68.2324C57.2139 66.2487 60.0936 63.381 62.0918 59.9217L68.5664 48.714V78.7744C68.5655 79.7648 68.1717 80.7144 67.4714 81.4147C66.771 82.1151 65.8215 82.5089 64.8311 82.5098ZM63.5179 45.8353L66.3933 47.4954L59.9336 58.6766C58.5583 61.0584 56.7082 63.1322 54.4982 64.7693C54.8127 62.0372 55.6839 59.3986 57.0582 57.0164L63.5179 45.8353ZM68.9233 45.6028C68.8962 45.65 68.86 45.6914 68.8168 45.7245C68.7736 45.7577 68.7243 45.782 68.6717 45.796C68.6191 45.81 68.5642 45.8135 68.5103 45.8063C68.4563 45.7991 68.4043 45.7813 68.3572 45.7539L64.0408 43.2637C63.9935 43.2366 63.952 43.2005 63.9187 43.1574C63.8854 43.1143 63.8609 43.065 63.8467 43.0124C63.8325 42.9598 63.8289 42.9049 63.836 42.8508C63.8431 42.7968 63.8608 42.7447 63.8881 42.6976L75.5092 22.5682C75.5365 22.521 75.5728 22.4797 75.6161 22.4467C75.6594 22.4136 75.7088 22.3895 75.7615 22.3756C75.7966 22.3654 75.8329 22.3603 75.8694 22.3606C75.9424 22.3607 76.014 22.3802 76.077 22.4171L80.3934 24.9073C80.4883 24.9625 80.5575 25.0531 80.5859 25.1592C80.6142 25.2653 80.5993 25.3783 80.5444 25.4734L78.8843 28.3488L68.9233 45.6028ZM82.8438 18.1737L80.561 22.1282L78.4028 20.8831L80.6855 16.9336C80.8507 16.6474 81.1227 16.4385 81.4418 16.3529C81.7609 16.2673 82.101 16.3119 82.3872 16.4771C82.6734 16.6422 82.8823 16.9142 82.9679 17.2333C83.0535 17.5525 83.0089 17.8925 82.8438 18.1787V18.1737Z" />
@@ -376,18 +381,18 @@
                         </defs>
                     </svg>
 
-                    <h5 class="paragraph group-hover:text-gold transition text-center">Hukum Kekayaan
+                    <h5 class="paragraph group-hover:text-gold transition text-center leading-loose">Hukum Kekayaan
                         Intelektual</h5>
                 </span>
             </div>
 
             <div class="flex items-center justify-center border-r border-customDarkGray px-4 md:px-6 xl:px-8">
-                <span class="flex flex-col gap-4 text-lg items-center group">
+                <span class="flex flex-col gap-4 text-lg items-center group h-max">
                     <svg class="size-12 md:size-16 xl:size-20 group-hover:text-gold transition" viewBox="0 0 84 69" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.4775 7.62939e-06H69.5222V3.07385H14.4775V7.62939e-06ZM11.9642 5.97036L72.0358 5.9707C81.9866 5.9707 87.0025 18.5468 79.9596 25.8742C72.9163 33.2013 60.8291 27.9821 60.8291 17.63H63.7833C63.7833 25.2549 72.6861 29.0946 77.8705 23.7004C83.0543 18.3072 79.3653 9.04453 72.0358 9.04453H11.9642C4.63404 9.04453 0.944366 18.3072 6.12914 23.7004C11.3136 29.0946 20.2163 25.2556 20.2163 17.63H23.1708C23.1708 27.9828 11.0833 33.2013 4.04005 25.8742C-3.00226 18.5468 2.01336 5.9707 11.9642 5.9707V5.97036ZM54.8703 17.63H57.8244V59.9551H66.3943V63.029H54.8703V17.63ZM29.1297 17.63V63.029H17.6043V59.9551H26.1752V17.63H29.1297ZM34.8692 69H14.498V65.9265H31.9141V17.63H34.8683L34.8692 69ZM46.3473 69H37.6526V17.63H40.6078V65.9265H43.3922L43.3915 17.63H46.3473V69ZM52.0856 65.9265H69.5016V69H49.1314C49.1314 51.8769 49.1307 34.7535 49.1307 17.63H52.0856V65.9265ZM69.5222 17.63C69.5222 19.9537 72.2345 21.1204 73.812 19.4786C75.391 17.8365 74.2686 15.0152 72.0358 15.0152H11.9642C9.73134 15.0152 8.60962 17.8368 10.187 19.4786C11.7651 21.1204 14.4775 19.9537 14.4775 17.63H17.432C17.432 22.6799 11.5345 25.2275 8.0986 21.6521C4.6617 18.0764 7.11033 11.9414 11.9642 11.9414H72.0358C76.889 11.9414 79.3383 18.076 75.902 21.6521C72.4651 25.2275 66.568 22.6803 66.568 17.63H69.5222Z" />
                     </svg>
 
-                    <h5 class="paragraph group-hover:text-gold transition text-center">Sengketa Hasil
+                    <h5 class="paragraph group-hover:text-gold transition text-center leading-loose">Sengketa Hasil
                         Pemilihan Umum</h5>
                 </span>
             </div>
@@ -415,11 +420,14 @@
         </div>
 
         <div class="flex flex-col items-center gap-8 md:gap-12 xl:gap-16">
-            <div class="flex gap-6 md:gap-7 xl:gap-8">
+            <div class="flex-col sm:flex sm:flex-row gap-6 md:gap-7 xl:gap-8">
                 <div class="flex-none">
-                    <img class="w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/WILHELMUS.png')}}" alt="Wilhemus">
+                    <div class="flex justify-center sm:justify-start">
+                        <img class="w-52 sm:w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/WILHELMUS.png')}}" alt="Wilhemus">
+                    </div>
+                    
 
-                    <div class="w-32 md:w-48 xl:w-64 flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
+                    <div class="w-full sm:w-32 md:w-48 xl:w-64 flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
                         <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
                             <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.2513 1.74603C9.69841 1.19039 9.03991 0.749834 8.31415 0.450065C7.5884 0.150296 6.80992 -0.00268806 6.02412 3.57417e-05C2.73166 3.57417e-05 0.0482413 2.67003 0.0482413 5.94602C0.0482413 6.99601 0.325628 8.01601 0.844221 8.91601L0 12L3.16583 11.172C4.0402 11.646 5.02312 11.898 6.02412 11.898C9.31658 11.898 12 9.22801 12 5.95202C12 4.36202 11.3789 2.86803 10.2513 1.74603ZM6.02412 10.89C5.13166 10.89 4.25729 10.65 3.49146 10.2L3.31055 10.092L1.42915 10.584L1.92965 8.76001L1.80905 8.57401C1.31321 7.78619 1.04993 6.87556 1.04925 5.94602C1.04925 3.22203 3.2804 1.00203 6.01809 1.00203C7.34472 1.00203 8.59296 1.51803 9.52764 2.45403C9.99044 2.91241 10.3572 3.45762 10.6067 4.05808C10.8561 4.65853 10.9833 5.30229 10.9809 5.95202C10.993 8.67601 8.76181 10.89 6.02412 10.89ZM8.74975 7.19401C8.59899 7.12201 7.86332 6.76202 7.73065 6.70802C7.59196 6.66002 7.49548 6.63602 7.39296 6.78002C7.29045 6.93002 7.00703 7.26601 6.92261 7.36201C6.83819 7.46401 6.74774 7.47601 6.59698 7.39801C6.44623 7.32601 5.96382 7.16401 5.39698 6.66002C4.95075 6.26402 4.65528 5.77802 4.56482 5.62802C4.4804 5.47802 4.55276 5.40002 4.63116 5.32202C4.69749 5.25602 4.78191 5.14802 4.85427 5.06402C4.92663 4.98002 4.95678 4.91402 5.00502 4.81802C5.05327 4.71602 5.02915 4.63202 4.99296 4.56002C4.95678 4.48802 4.65528 3.75602 4.53467 3.45603C4.41407 3.16803 4.28744 3.20403 4.19698 3.19803H3.90754C3.80502 3.19803 3.64824 3.23403 3.50955 3.38403C3.37688 3.53403 2.99095 3.89402 2.99095 4.62602C2.99095 5.35802 3.52764 6.06602 3.6 6.16202C3.67236 6.26402 4.65528 7.76401 6.15075 8.40601C6.50653 8.56201 6.78392 8.65201 7.001 8.71801C7.35678 8.83201 7.68241 8.81401 7.94171 8.77801C8.23115 8.73601 8.82814 8.41801 8.94874 8.07001C9.07537 7.72201 9.07538 7.42801 9.03316 7.36201C8.99095 7.29601 8.9005 7.26601 8.74975 7.19401Z" />
@@ -441,9 +449,9 @@
                 </div>
 
                 <div class="*:font-cormorant font-bold">
-                    <p class="paragraph text-gold">Managing Partner</p>
-                    <h4 class="heading-4">WILHELMUS RIO RESANDHI, S.H., M.H.</h4>
-                    <p class="paragraph mt-4">
+                    <p class="paragraph text-gold text-center sm:text-start mt-2">Managing Partner</p>
+                    <h4 class="heading-4 text-center sm:text-start">WILHELMUS RIO RESANDHI, S.H., M.H.</h4>
+                    <p class="paragraph mt-4 text-justify">
                         Wilhelmus Rio Resandhi bergabung dengan Resandhi Cumbhadrika Partnership - Attorneys and Counsellors at Law pada awal berdirinya pada tahun 2020. Memperoleh gelar Sarjana Hukum dari Universitas Gadjah Mada, Yogyakarta dan Magister Ilmu Hukum Litigasi di Universitas Gadjah Mada - Kampus Jakarta.
                         <br><br>
                         Bidang keahlian Wilhelmus Rio Resandhi meliputi Hukum Ketenagakerjaan, Penyelesaian Sengketa, Hukum Perusahaan, Hukum Perdata, Hukum Pidana, Hak Kekayaan Intelektual, Litigasi, Pasar Modal, Sengketa Hasil Pemilihan Umum, dan PKPU dan Kepailitan.
@@ -484,82 +492,118 @@
                 </div>
             </div>
 
-            <div class="flex gap-6 md:gap-7 xl:gap-8">
-                <div class="flex-none order-2">
-                    <img class="w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/CHITTO.png')}}" alt="Chitto">
+            <div class="flex flex-col items-center sm:items-end gap-4 md:gap-12 xl:gap-16">
+                <div class="flex-col sm:flex sm:flex-row gap-6 md:gap-7 xl:gap-8">
 
-                    <div class="flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
-                        <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
-                            <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.2513 1.74603C9.69841 1.19039 9.03991 0.749834 8.31415 0.450065C7.5884 0.150296 6.80992 -0.00268806 6.02412 3.57417e-05C2.73166 3.57417e-05 0.0482413 2.67003 0.0482413 5.94602C0.0482413 6.99601 0.325628 8.01601 0.844221 8.91601L0 12L3.16583 11.172C4.0402 11.646 5.02312 11.898 6.02412 11.898C9.31658 11.898 12 9.22801 12 5.95202C12 4.36202 11.3789 2.86803 10.2513 1.74603ZM6.02412 10.89C5.13166 10.89 4.25729 10.65 3.49146 10.2L3.31055 10.092L1.42915 10.584L1.92965 8.76001L1.80905 8.57401C1.31321 7.78619 1.04993 6.87556 1.04925 5.94602C1.04925 3.22203 3.2804 1.00203 6.01809 1.00203C7.34472 1.00203 8.59296 1.51803 9.52764 2.45403C9.99044 2.91241 10.3572 3.45762 10.6067 4.05808C10.8561 4.65853 10.9833 5.30229 10.9809 5.95202C10.993 8.67601 8.76181 10.89 6.02412 10.89ZM8.74975 7.19401C8.59899 7.12201 7.86332 6.76202 7.73065 6.70802C7.59196 6.66002 7.49548 6.63602 7.39296 6.78002C7.29045 6.93002 7.00703 7.26601 6.92261 7.36201C6.83819 7.46401 6.74774 7.47601 6.59698 7.39801C6.44623 7.32601 5.96382 7.16401 5.39698 6.66002C4.95075 6.26402 4.65528 5.77802 4.56482 5.62802C4.4804 5.47802 4.55276 5.40002 4.63116 5.32202C4.69749 5.25602 4.78191 5.14802 4.85427 5.06402C4.92663 4.98002 4.95678 4.91402 5.00502 4.81802C5.05327 4.71602 5.02915 4.63202 4.99296 4.56002C4.95678 4.48802 4.65528 3.75602 4.53467 3.45603C4.41407 3.16803 4.28744 3.20403 4.19698 3.19803H3.90754C3.80502 3.19803 3.64824 3.23403 3.50955 3.38403C3.37688 3.53403 2.99095 3.89402 2.99095 4.62602C2.99095 5.35802 3.52764 6.06602 3.6 6.16202C3.67236 6.26402 4.65528 7.76401 6.15075 8.40601C6.50653 8.56201 6.78392 8.65201 7.001 8.71801C7.35678 8.83201 7.68241 8.81401 7.94171 8.77801C8.23115 8.73601 8.82814 8.41801 8.94874 8.07001C9.07537 7.72201 9.07538 7.42801 9.03316 7.36201C8.99095 7.29601 8.9005 7.26601 8.74975 7.19401Z" />
-                            </svg>
-                        </a>
+                    <div class="flex-none sm:hidden">
+                        <div class="flex justify-center sm:justify-start">
+                            <img class="w-52 sm:w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/CHITTO.png')}}" alt="Wilhemus">
+                        </div>
+                        
 
-                        <a id="instagram" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
-                            <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.9985 2.92142C4.29485 2.92142 2.91992 4.29635 2.91992 6C2.91992 7.70365 4.29485 9.07858 5.9985 9.07858C7.70215 9.07858 9.07708 7.70365 9.07708 6C9.07708 4.29635 7.70215 2.92142 5.9985 2.92142ZM5.9985 8.00085C4.89675 8.00085 3.99765 7.10174 3.99765 6C3.99765 4.89826 4.89675 3.99915 5.9985 3.99915C7.10024 3.99915 7.99935 4.89826 7.99935 6C7.99935 7.10174 7.10024 8.00085 5.9985 8.00085ZM9.20317 2.07785C8.8054 2.07785 8.48418 2.39907 8.48418 2.79684C8.48418 3.1946 8.8054 3.51582 9.20317 3.51582C9.60093 3.51582 9.92215 3.19611 9.92215 2.79684C9.92227 2.70238 9.90375 2.60884 9.86766 2.52155C9.83157 2.43427 9.77862 2.35496 9.71183 2.28817C9.64504 2.22138 9.56573 2.16843 9.47845 2.13234C9.39116 2.09625 9.29762 2.07773 9.20317 2.07785ZM11.9996 6C11.9996 5.17144 12.0071 4.35039 11.9605 3.52333C11.914 2.56268 11.6948 1.7101 10.9924 1.00763C10.2884 0.303651 9.43732 0.0860042 8.47667 0.0394728C7.64811 -0.00705863 6.82706 0.000446468 6 0.000446468C5.17144 0.000446468 4.35039 -0.00705863 3.52333 0.0394728C2.56268 0.0860042 1.7101 0.305152 1.00763 1.00763C0.303651 1.7116 0.0860043 2.56268 0.0394728 3.52333C-0.00705863 4.35189 0.000446468 5.17294 0.000446468 6C0.000446468 6.82706 -0.00705863 7.64961 0.0394728 8.47667C0.0860043 9.43732 0.305152 10.2899 1.00763 10.9924C1.7116 11.6963 2.56268 11.914 3.52333 11.9605C4.35189 12.0071 5.17294 11.9996 6 11.9996C6.82856 11.9996 7.64962 12.0071 8.47667 11.9605C9.43732 11.914 10.2899 11.6948 10.9924 10.9924C11.6964 10.2884 11.914 9.43732 11.9605 8.47667C12.0086 7.64961 11.9996 6.82856 11.9996 6ZM10.6787 9.53939C10.5691 9.81258 10.437 10.0167 10.2254 10.2269C10.0137 10.4385 9.81108 10.5706 9.53789 10.6802C8.74836 10.9939 6.87359 10.9233 5.9985 10.9233C5.12341 10.9233 3.24714 10.9939 2.45761 10.6817C2.18442 10.5721 1.98028 10.44 1.77014 10.2284C1.5585 10.0167 1.42641 9.81408 1.31684 9.54089C1.00463 8.74986 1.07517 6.87509 1.07517 6C1.07517 5.12491 1.00463 3.24864 1.31684 2.45911C1.42641 2.18592 1.5585 1.98179 1.77014 1.77164C1.98179 1.5615 2.18442 1.42791 2.45761 1.31834C3.24714 1.00613 5.12341 1.07667 5.9985 1.07667C6.87359 1.07667 8.74986 1.00613 9.53939 1.31834C9.81258 1.42791 10.0167 1.56 10.2269 1.77164C10.4385 1.98329 10.5706 2.18592 10.6802 2.45911C10.9924 3.24864 10.9218 5.12491 10.9218 6C10.9218 6.87509 10.9924 8.74986 10.6787 9.53939Z" />
-                            </svg>
-                        </a>
+                        <div class="w-full sm:w-32 md:w-48 xl:w-64 flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
+                            <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                                <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2513 1.74603C9.69841 1.19039 9.03991 0.749834 8.31415 0.450065C7.5884 0.150296 6.80992 -0.00268806 6.02412 3.57417e-05C2.73166 3.57417e-05 0.0482413 2.67003 0.0482413 5.94602C0.0482413 6.99601 0.325628 8.01601 0.844221 8.91601L0 12L3.16583 11.172C4.0402 11.646 5.02312 11.898 6.02412 11.898C9.31658 11.898 12 9.22801 12 5.95202C12 4.36202 11.3789 2.86803 10.2513 1.74603ZM6.02412 10.89C5.13166 10.89 4.25729 10.65 3.49146 10.2L3.31055 10.092L1.42915 10.584L1.92965 8.76001L1.80905 8.57401C1.31321 7.78619 1.04993 6.87556 1.04925 5.94602C1.04925 3.22203 3.2804 1.00203 6.01809 1.00203C7.34472 1.00203 8.59296 1.51803 9.52764 2.45403C9.99044 2.91241 10.3572 3.45762 10.6067 4.05808C10.8561 4.65853 10.9833 5.30229 10.9809 5.95202C10.993 8.67601 8.76181 10.89 6.02412 10.89ZM8.74975 7.19401C8.59899 7.12201 7.86332 6.76202 7.73065 6.70802C7.59196 6.66002 7.49548 6.63602 7.39296 6.78002C7.29045 6.93002 7.00703 7.26601 6.92261 7.36201C6.83819 7.46401 6.74774 7.47601 6.59698 7.39801C6.44623 7.32601 5.96382 7.16401 5.39698 6.66002C4.95075 6.26402 4.65528 5.77802 4.56482 5.62802C4.4804 5.47802 4.55276 5.40002 4.63116 5.32202C4.69749 5.25602 4.78191 5.14802 4.85427 5.06402C4.92663 4.98002 4.95678 4.91402 5.00502 4.81802C5.05327 4.71602 5.02915 4.63202 4.99296 4.56002C4.95678 4.48802 4.65528 3.75602 4.53467 3.45603C4.41407 3.16803 4.28744 3.20403 4.19698 3.19803H3.90754C3.80502 3.19803 3.64824 3.23403 3.50955 3.38403C3.37688 3.53403 2.99095 3.89402 2.99095 4.62602C2.99095 5.35802 3.52764 6.06602 3.6 6.16202C3.67236 6.26402 4.65528 7.76401 6.15075 8.40601C6.50653 8.56201 6.78392 8.65201 7.001 8.71801C7.35678 8.83201 7.68241 8.81401 7.94171 8.77801C8.23115 8.73601 8.82814 8.41801 8.94874 8.07001C9.07537 7.72201 9.07538 7.42801 9.03316 7.36201C8.99095 7.29601 8.9005 7.26601 8.74975 7.19401Z" />
+                                </svg>
+                            </a>
 
-                        <a id="email" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
-                            <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 23 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15.9947 9.06438L21.8311 2.89138V15.1669L15.9947 9.06438ZM8.47406 10.1098L10.5236 12.2756C10.8453 12.6083 11.2646 12.8093 11.7229 12.8093H11.7391H11.7514C12.2107 12.8093 12.6301 12.6072 12.9555 12.2722L12.9527 12.2745L15.0022 10.1086L21.2324 16.6224H2.24673L8.47406 10.1098ZM2.23819 1.42783H21.2438L12.1148 11.0801C12.0122 11.1789 11.8851 11.2326 11.7543 11.2326H11.741H11.7286C11.5973 11.2328 11.4698 11.1786 11.3671 11.0789L11.3681 11.0801L2.23819 1.42783ZM1.64895 2.89022L7.48441 9.06323L1.64895 15.1623V2.89022ZM22.1442 0.0705562C21.9165 -0.0680591 21.6489 -0.148918 21.3652 -0.148918H2.11768C1.84267 -0.148838 1.57143 -0.0709347 1.32539 0.0786421L1.33583 0.0728663C1.04128 0.249729 0.79322 0.523342 0.61968 0.862795C0.446141 1.20225 0.354032 1.59402 0.35376 1.99384V16.0541C0.354262 16.6231 0.540165 17.1686 0.870677 17.571C1.20119 17.9734 1.64932 18.1997 2.11673 18.2003H21.3624C21.8298 18.1997 22.2779 17.9734 22.6084 17.571C22.9389 17.1686 23.1248 16.6231 23.1253 16.0541V1.99384C23.1253 1.15407 22.7278 0.426336 22.149 0.076332L22.1385 0.0705562H22.1442Z" />
-                            </svg>
-                        </a>
+                            <a id="instagram" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                                <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.9985 2.92142C4.29485 2.92142 2.91992 4.29635 2.91992 6C2.91992 7.70365 4.29485 9.07858 5.9985 9.07858C7.70215 9.07858 9.07708 7.70365 9.07708 6C9.07708 4.29635 7.70215 2.92142 5.9985 2.92142ZM5.9985 8.00085C4.89675 8.00085 3.99765 7.10174 3.99765 6C3.99765 4.89826 4.89675 3.99915 5.9985 3.99915C7.10024 3.99915 7.99935 4.89826 7.99935 6C7.99935 7.10174 7.10024 8.00085 5.9985 8.00085ZM9.20317 2.07785C8.8054 2.07785 8.48418 2.39907 8.48418 2.79684C8.48418 3.1946 8.8054 3.51582 9.20317 3.51582C9.60093 3.51582 9.92215 3.19611 9.92215 2.79684C9.92227 2.70238 9.90375 2.60884 9.86766 2.52155C9.83157 2.43427 9.77862 2.35496 9.71183 2.28817C9.64504 2.22138 9.56573 2.16843 9.47845 2.13234C9.39116 2.09625 9.29762 2.07773 9.20317 2.07785ZM11.9996 6C11.9996 5.17144 12.0071 4.35039 11.9605 3.52333C11.914 2.56268 11.6948 1.7101 10.9924 1.00763C10.2884 0.303651 9.43732 0.0860042 8.47667 0.0394728C7.64811 -0.00705863 6.82706 0.000446468 6 0.000446468C5.17144 0.000446468 4.35039 -0.00705863 3.52333 0.0394728C2.56268 0.0860042 1.7101 0.305152 1.00763 1.00763C0.303651 1.7116 0.0860043 2.56268 0.0394728 3.52333C-0.00705863 4.35189 0.000446468 5.17294 0.000446468 6C0.000446468 6.82706 -0.00705863 7.64961 0.0394728 8.47667C0.0860043 9.43732 0.305152 10.2899 1.00763 10.9924C1.7116 11.6963 2.56268 11.914 3.52333 11.9605C4.35189 12.0071 5.17294 11.9996 6 11.9996C6.82856 11.9996 7.64962 12.0071 8.47667 11.9605C9.43732 11.914 10.2899 11.6948 10.9924 10.9924C11.6964 10.2884 11.914 9.43732 11.9605 8.47667C12.0086 7.64961 11.9996 6.82856 11.9996 6ZM10.6787 9.53939C10.5691 9.81258 10.437 10.0167 10.2254 10.2269C10.0137 10.4385 9.81108 10.5706 9.53789 10.6802C8.74836 10.9939 6.87359 10.9233 5.9985 10.9233C5.12341 10.9233 3.24714 10.9939 2.45761 10.6817C2.18442 10.5721 1.98028 10.44 1.77014 10.2284C1.5585 10.0167 1.42641 9.81408 1.31684 9.54089C1.00463 8.74986 1.07517 6.87509 1.07517 6C1.07517 5.12491 1.00463 3.24864 1.31684 2.45911C1.42641 2.18592 1.5585 1.98179 1.77014 1.77164C1.98179 1.5615 2.18442 1.42791 2.45761 1.31834C3.24714 1.00613 5.12341 1.07667 5.9985 1.07667C6.87359 1.07667 8.74986 1.00613 9.53939 1.31834C9.81258 1.42791 10.0167 1.56 10.2269 1.77164C10.4385 1.98329 10.5706 2.18592 10.6802 2.45911C10.9924 3.24864 10.9218 5.12491 10.9218 6C10.9218 6.87509 10.9924 8.74986 10.6787 9.53939Z" />
+                                </svg>
+                            </a>
+
+                            <a id="email" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                                <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 23 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.9947 9.06438L21.8311 2.89138V15.1669L15.9947 9.06438ZM8.47406 10.1098L10.5236 12.2756C10.8453 12.6083 11.2646 12.8093 11.7229 12.8093H11.7391H11.7514C12.2107 12.8093 12.6301 12.6072 12.9555 12.2722L12.9527 12.2745L15.0022 10.1086L21.2324 16.6224H2.24673L8.47406 10.1098ZM2.23819 1.42783H21.2438L12.1148 11.0801C12.0122 11.1789 11.8851 11.2326 11.7543 11.2326H11.741H11.7286C11.5973 11.2328 11.4698 11.1786 11.3671 11.0789L11.3681 11.0801L2.23819 1.42783ZM1.64895 2.89022L7.48441 9.06323L1.64895 15.1623V2.89022ZM22.1442 0.0705562C21.9165 -0.0680591 21.6489 -0.148918 21.3652 -0.148918H2.11768C1.84267 -0.148838 1.57143 -0.0709347 1.32539 0.0786421L1.33583 0.0728663C1.04128 0.249729 0.79322 0.523342 0.61968 0.862795C0.446141 1.20225 0.354032 1.59402 0.35376 1.99384V16.0541C0.354262 16.6231 0.540165 17.1686 0.870677 17.571C1.20119 17.9734 1.64932 18.1997 2.11673 18.2003H21.3624C21.8298 18.1997 22.2779 17.9734 22.6084 17.571C22.9389 17.1686 23.1248 16.6231 23.1253 16.0541V1.99384C23.1253 1.15407 22.7278 0.426336 22.149 0.076332L22.1385 0.0705562H22.1442Z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
+
+                    <div class="*:font-cormorant font-bold">
+                        <p class="paragraph text-gold text-center sm:text-end">Partner</p>
+                        <h4 class="heading-4 text-center sm:text-end">CHITTO CUMBHADRIKA, S.H., S.I.P., M.H.</h4>
+                        <p class="paragraph mt-4 text-justify">
+                            Chitto Cumbhadrika memperoleh gelar Sarjana dan Magisternya di Universitas Gadjah Mada, Yogyakarta, serta memperoleh gelar Sarja. Selama menjadi mahasiswa hukum di UGM, Chitto dipercaya untuk mengemban peran utama sebagai Director di Asian Law Students's Association (ALSA) Local Chapter UGM 2009/2010, himpunan mahasiswa hukum terkemuka se-Asia.
+                            <br><br>
+                            Chitto memiliki pengalaman yang luas di bidang Hukum Pidana, Hukum Perdata, Hukum Tata Negara, Hukum Pertanahan dan Pembebasan Tanah, Korporasi Umum, Hukum Perbankan, PKPU dan Kepailitan, Keuangan, serta Hukum Ketenagakerjaan dan Hukum Keluarga.
+                            <br><br>
+                            Selain sebagai Advokat, ia mendedikasikan waktunya untuk mengajar sebagai Dosen di STIH IBLAM, dengan harapan dapat membagikan keahliannya kepada para pemuda.
+                            <br><br>
+                            Asosiasi Profesional dan Keanggotaan :
+                        </p>
+
+                        <ol class="paragraph *:font-cormorant list-decimal pl-4 md:pl-6 xl:pl-8">
+                            <li>
+                                Perhimpunan Advokat Indonesia (PERADI) DPC Jakarta Pusat
+                            </li>
+
+                            <li>
+                                Anggota Asosiasi Advokat Indonesia (AAI) DPC Jakarta Selatan
+                            </li>
+
+                            <li>
+                                Pendidikan Profesi Konsultan Hukum Pasar Modal
+                            </li>
+
+                            <li>
+                                Asosiasi Auditor Hukum Indonesia (ASAHI)
+                            </li>
+
+                            <li>
+                                Pusat Mediator Indonesia - Universitas Gadjah Mada
+                            </li>
+
+                            <li>
+                                Himpunan Kurator dan Pengurus Indonesia (HKPI)
+                            </li>
+
+                            <li>
+                                Asosiasi Industri Perlengkapan dan Pakaian Olahraga Indonesia (EQUINOC) (Ketua Bidang Peraturan Perundang-undangan)
+                            </li>
+
+                            <li>
+                                Divisi Koordinasi Internal pada Komite Advokat Muda PERADI (Anggota)
+                            </li>
+
+                            <li>
+                                Divisi Seni, Olahraga dan Budaya DPN PERADI (Anggota).
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="poto">
+                        <div class="flex justify-center sm:justify-start">
+                            <img class="w-52 sm:w-32 md:w-48 xl:w-64 rounded-2xl border border-gold" src="{{asset('assets/tim/CHITTO.png')}}" alt="Wilhemus">
+                        </div>
+                        
+
+                        <div class="w-full sm:w-32 md:w-48 xl:w-64 flex justify-center items-start gap-2 md:gap-3 xl:gap-4 -mt-4 md:-mt-5 xl:-mt-6">
+                            <a id="whatsapp" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                                <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2513 1.74603C9.69841 1.19039 9.03991 0.749834 8.31415 0.450065C7.5884 0.150296 6.80992 -0.00268806 6.02412 3.57417e-05C2.73166 3.57417e-05 0.0482413 2.67003 0.0482413 5.94602C0.0482413 6.99601 0.325628 8.01601 0.844221 8.91601L0 12L3.16583 11.172C4.0402 11.646 5.02312 11.898 6.02412 11.898C9.31658 11.898 12 9.22801 12 5.95202C12 4.36202 11.3789 2.86803 10.2513 1.74603ZM6.02412 10.89C5.13166 10.89 4.25729 10.65 3.49146 10.2L3.31055 10.092L1.42915 10.584L1.92965 8.76001L1.80905 8.57401C1.31321 7.78619 1.04993 6.87556 1.04925 5.94602C1.04925 3.22203 3.2804 1.00203 6.01809 1.00203C7.34472 1.00203 8.59296 1.51803 9.52764 2.45403C9.99044 2.91241 10.3572 3.45762 10.6067 4.05808C10.8561 4.65853 10.9833 5.30229 10.9809 5.95202C10.993 8.67601 8.76181 10.89 6.02412 10.89ZM8.74975 7.19401C8.59899 7.12201 7.86332 6.76202 7.73065 6.70802C7.59196 6.66002 7.49548 6.63602 7.39296 6.78002C7.29045 6.93002 7.00703 7.26601 6.92261 7.36201C6.83819 7.46401 6.74774 7.47601 6.59698 7.39801C6.44623 7.32601 5.96382 7.16401 5.39698 6.66002C4.95075 6.26402 4.65528 5.77802 4.56482 5.62802C4.4804 5.47802 4.55276 5.40002 4.63116 5.32202C4.69749 5.25602 4.78191 5.14802 4.85427 5.06402C4.92663 4.98002 4.95678 4.91402 5.00502 4.81802C5.05327 4.71602 5.02915 4.63202 4.99296 4.56002C4.95678 4.48802 4.65528 3.75602 4.53467 3.45603C4.41407 3.16803 4.28744 3.20403 4.19698 3.19803H3.90754C3.80502 3.19803 3.64824 3.23403 3.50955 3.38403C3.37688 3.53403 2.99095 3.89402 2.99095 4.62602C2.99095 5.35802 3.52764 6.06602 3.6 6.16202C3.67236 6.26402 4.65528 7.76401 6.15075 8.40601C6.50653 8.56201 6.78392 8.65201 7.001 8.71801C7.35678 8.83201 7.68241 8.81401 7.94171 8.77801C8.23115 8.73601 8.82814 8.41801 8.94874 8.07001C9.07537 7.72201 9.07538 7.42801 9.03316 7.36201C8.99095 7.29601 8.9005 7.26601 8.74975 7.19401Z" />
+                                </svg>
+                            </a>
+
+                            <a id="instagram" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                                <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.9985 2.92142C4.29485 2.92142 2.91992 4.29635 2.91992 6C2.91992 7.70365 4.29485 9.07858 5.9985 9.07858C7.70215 9.07858 9.07708 7.70365 9.07708 6C9.07708 4.29635 7.70215 2.92142 5.9985 2.92142ZM5.9985 8.00085C4.89675 8.00085 3.99765 7.10174 3.99765 6C3.99765 4.89826 4.89675 3.99915 5.9985 3.99915C7.10024 3.99915 7.99935 4.89826 7.99935 6C7.99935 7.10174 7.10024 8.00085 5.9985 8.00085ZM9.20317 2.07785C8.8054 2.07785 8.48418 2.39907 8.48418 2.79684C8.48418 3.1946 8.8054 3.51582 9.20317 3.51582C9.60093 3.51582 9.92215 3.19611 9.92215 2.79684C9.92227 2.70238 9.90375 2.60884 9.86766 2.52155C9.83157 2.43427 9.77862 2.35496 9.71183 2.28817C9.64504 2.22138 9.56573 2.16843 9.47845 2.13234C9.39116 2.09625 9.29762 2.07773 9.20317 2.07785ZM11.9996 6C11.9996 5.17144 12.0071 4.35039 11.9605 3.52333C11.914 2.56268 11.6948 1.7101 10.9924 1.00763C10.2884 0.303651 9.43732 0.0860042 8.47667 0.0394728C7.64811 -0.00705863 6.82706 0.000446468 6 0.000446468C5.17144 0.000446468 4.35039 -0.00705863 3.52333 0.0394728C2.56268 0.0860042 1.7101 0.305152 1.00763 1.00763C0.303651 1.7116 0.0860043 2.56268 0.0394728 3.52333C-0.00705863 4.35189 0.000446468 5.17294 0.000446468 6C0.000446468 6.82706 -0.00705863 7.64961 0.0394728 8.47667C0.0860043 9.43732 0.305152 10.2899 1.00763 10.9924C1.7116 11.6963 2.56268 11.914 3.52333 11.9605C4.35189 12.0071 5.17294 11.9996 6 11.9996C6.82856 11.9996 7.64962 12.0071 8.47667 11.9605C9.43732 11.914 10.2899 11.6948 10.9924 10.9924C11.6964 10.2884 11.914 9.43732 11.9605 8.47667C12.0086 7.64961 11.9996 6.82856 11.9996 6ZM10.6787 9.53939C10.5691 9.81258 10.437 10.0167 10.2254 10.2269C10.0137 10.4385 9.81108 10.5706 9.53789 10.6802C8.74836 10.9939 6.87359 10.9233 5.9985 10.9233C5.12341 10.9233 3.24714 10.9939 2.45761 10.6817C2.18442 10.5721 1.98028 10.44 1.77014 10.2284C1.5585 10.0167 1.42641 9.81408 1.31684 9.54089C1.00463 8.74986 1.07517 6.87509 1.07517 6C1.07517 5.12491 1.00463 3.24864 1.31684 2.45911C1.42641 2.18592 1.5585 1.98179 1.77014 1.77164C1.98179 1.5615 2.18442 1.42791 2.45761 1.31834C3.24714 1.00613 5.12341 1.07667 5.9985 1.07667C6.87359 1.07667 8.74986 1.00613 9.53939 1.31834C9.81258 1.42791 10.0167 1.56 10.2269 1.77164C10.4385 1.98329 10.5706 2.18592 10.6802 2.45911C10.9924 3.24864 10.9218 5.12491 10.9218 6C10.9218 6.87509 10.9924 8.74986 10.6787 9.53939Z" />
+                                </svg>
+                            </a>
+
+                            <a id="email" href="" class="text-white hover:text-gold transition bg-gold hover:bg-customDarkGray hover:-translate-y-2 flex justify-center items-center p-2 md:p-2.5 xl:p-3 rounded-xl" target="_blank" rel="noreferrer noopener">
+                                <svg class="size-4 md:size-5 xl:size-6" viewBox="0 0 23 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.9947 9.06438L21.8311 2.89138V15.1669L15.9947 9.06438ZM8.47406 10.1098L10.5236 12.2756C10.8453 12.6083 11.2646 12.8093 11.7229 12.8093H11.7391H11.7514C12.2107 12.8093 12.6301 12.6072 12.9555 12.2722L12.9527 12.2745L15.0022 10.1086L21.2324 16.6224H2.24673L8.47406 10.1098ZM2.23819 1.42783H21.2438L12.1148 11.0801C12.0122 11.1789 11.8851 11.2326 11.7543 11.2326H11.741H11.7286C11.5973 11.2328 11.4698 11.1786 11.3671 11.0789L11.3681 11.0801L2.23819 1.42783ZM1.64895 2.89022L7.48441 9.06323L1.64895 15.1623V2.89022ZM22.1442 0.0705562C21.9165 -0.0680591 21.6489 -0.148918 21.3652 -0.148918H2.11768C1.84267 -0.148838 1.57143 -0.0709347 1.32539 0.0786421L1.33583 0.0728663C1.04128 0.249729 0.79322 0.523342 0.61968 0.862795C0.446141 1.20225 0.354032 1.59402 0.35376 1.99384V16.0541C0.354262 16.6231 0.540165 17.1686 0.870677 17.571C1.20119 17.9734 1.64932 18.1997 2.11673 18.2003H21.3624C21.8298 18.1997 22.2779 17.9734 22.6084 17.571C22.9389 17.1686 23.1248 16.6231 23.1253 16.0541V1.99384C23.1253 1.15407 22.7278 0.426336 22.149 0.076332L22.1385 0.0705562H22.1442Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="*:font-cormorant font-bold">
-                    <p class="paragraph text-gold text-end">Partner</p>
-                    <h4 class="heading-4 text-end">CHITTO CUMBHADRIKA, S.H., S.I.P., M.H.</h4>
-                    <p class="paragraph mt-4">
-                        Chitto Cumbhadrika memperoleh gelar Sarjana dan Magisternya di Universitas Gadjah Mada, Yogyakarta, serta memperoleh gelar Sarja. Selama menjadi mahasiswa hukum di UGM, Chitto dipercaya untuk mengemban peran utama sebagai Director di Asian Law Students's Association (ALSA) Local Chapter UGM 2009/2010, himpunan mahasiswa hukum terkemuka se-Asia.
-                        <br><br>
-                        Chitto memiliki pengalaman yang luas di bidang Hukum Pidana, Hukum Perdata, Hukum Tata Negara, Hukum Pertanahan dan Pembebasan Tanah, Korporasi Umum, Hukum Perbankan, PKPU dan Kepailitan, Keuangan, serta Hukum Ketenagakerjaan dan Hukum Keluarga.
-                        <br><br>
-                        Selain sebagai Advokat, ia mendedikasikan waktunya untuk mengajar sebagai Dosen di STIH IBLAM, dengan harapan dapat membagikan keahliannya kepada para pemuda.
-                        <br><br>
-                        Asosiasi Profesional dan Keanggotaan :
-                    </p>
-
-                    <ol class="paragraph *:font-cormorant list-decimal pl-4 md:pl-6 xl:pl-8">
-                        <li>
-                            Perhimpunan Advokat Indonesia (PERADI) DPC Jakarta Pusat
-                        </li>
-
-                        <li>
-                            Anggota Asosiasi Advokat Indonesia (AAI) DPC Jakarta Selatan
-                        </li>
-
-                        <li>
-                            Pendidikan Profesi Konsultan Hukum Pasar Modal
-                        </li>
-
-                        <li>
-                            Asosiasi Auditor Hukum Indonesia (ASAHI)
-                        </li>
-
-                        <li>
-                            Pusat Mediator Indonesia - Universitas Gadjah Mada
-                        </li>
-
-                        <li>
-                            Himpunan Kurator dan Pengurus Indonesia (HKPI)
-                        </li>
-
-                        <li>
-                            Asosiasi Industri Perlengkapan dan Pakaian Olahraga Indonesia (EQUINOC) (Ketua Bidang Peraturan Perundang-undangan)
-                        </li>
-
-                        <li>
-                            Divisi Koordinasi Internal pada Komite Advokat Muda PERADI (Anggota)
-                        </li>
-
-                        <li>
-                            Divisi Seni, Olahraga dan Budaya DPN PERADI (Anggota).
-                        </li>
-                    </ol>
-                </div>
+                
             </div>
 
             <div class="flex items-center justify-center gap-x-8 md:gap-x-12 xl:gap-x-16 gap-y-4 md:gap-y-8 xl:gap-y-12 flex-wrap">
@@ -600,7 +644,7 @@
                 <h1 class="heading-1 font-cormorant font-bold">Artikel</h1>
             </div>
 
-            <p class="text-xs md:text-sm leading-loose text-center md:text-start">Jelajahi dunia hukum melalui artikel-artikel kami. Temukan wawasan terbaru dalam litigasi, kepailitan dan lain sebagainya. Kami hadirkan solusi praktis dan pandangan mendalam untuk membimbing Anda melalui kompleksitas masalah hukum. Mulailah eksplorasi Anda sekarang untuk mendapatkan pengetahuan yang berharga!</p>
+            <p class="text-xs md:text-sm leading-loose text-justify md:text-start">Jelajahi dunia hukum melalui artikel-artikel kami. Temukan wawasan terbaru dalam litigasi, kepailitan dan lain sebagainya. Kami hadirkan solusi praktis dan pandangan mendalam untuk membimbing Anda melalui kompleksitas masalah hukum. Mulailah eksplorasi Anda sekarang untuk mendapatkan pengetahuan yang berharga!</p>
         </div>
 
         <div class="flex flex-col gap-8 md:gap-12 xl:gap-16">
@@ -631,7 +675,7 @@
                     </div>
                 </a>
                 @empty
-                <p class="paragraph">Maaf, saat ini artikel masih sedang dalam proses pembuatan</p>
+                <p class="paragraph text-center">Maaf, saat ini artikel masih sedang dalam proses pembuatan</p>
                 @endforelse
 
             </div>
@@ -653,8 +697,8 @@
         </div>
 
         <div class="bg-customDarkGray flex w-full border border-gold">
-            <div class="w-2/5 flex-none">
-                <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1983.1971427965777!2d106.8299067!3d-6.2116164!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f40f56e2d7af%3A0x5cf7c3803a23f8b2!2sWisma%20Kodel%2C%20Jl.%20H.%20R.%20Rasuna%20Said%2C%20RT.10%2FRW.7%2C%20Kuningan%2C%20Setia%20Budi%2C%20Kecamatan%20Setiabudi%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012920!5e0!3m2!1sen!2sid!4v1707136544781!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="w-0 sm:w-2/5 flex-none">
+                <iframe class=" w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1983.1971427965777!2d106.8299067!3d-6.2116164!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f40f56e2d7af%3A0x5cf7c3803a23f8b2!2sWisma%20Kodel%2C%20Jl.%20H.%20R.%20Rasuna%20Said%2C%20RT.10%2FRW.7%2C%20Kuningan%2C%20Setia%20Budi%2C%20Kecamatan%20Setiabudi%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012920!5e0!3m2!1sen!2sid!4v1707136544781!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="flex flex-col gap-6 md:gap-7 xl:gap-8 w-full px-6 md:px-7 xl:px-8 pb-4 md:pb-6 xl:pb-8 pt-8 md:pt-12 xl:pt-16">
