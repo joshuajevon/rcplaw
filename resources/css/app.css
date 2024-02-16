@@ -12,29 +12,46 @@
 }
 
 .title {
-    @apply text-4xl md:text-5xl xl:text-6xl;
+    @apply text-3xl sm:text-4xl md:text-5xl xl:text-6xl;
 }
 
 .heading-1 {
-    @apply text-2xl md:text-4xl xl:text-5xl;
+    @apply text-2xl sm:text-3xl md:text-4xl xl:text-5xl;
 }
 
 .heading-2 {
-    @apply text-xl md:text-3xl xl:text-4xl;
+    @apply text-xl sm:text-2xl md:text-3xl xl:text-4xl;
 }
 
 .heading-3 {
-    @apply text-lg md:text-2xl xl:text-3xl;
+    @apply text-lg sm:text-xl md:text-2xl xl:text-3xl;
 }
 
 .heading-4 {
-    @apply text-base md:text-xl xl:text-2xl;
+    @apply text-base sm:text-lg md:text-xl xl:text-2xl;
 }
 
 .heading-5 {
-    @apply text-xs md:text-lg xl:text-xl;
+    @apply text-xs sm:text-base md:text-lg xl:text-xl;
 }
 
 .paragraph {
-    @apply text-[10px] md:text-sm xl:text-base;
+    @apply text-xs sm:text-sm md:text-base xl:text-lg;
 }
+
+.paragraph1 {
+    @apply text-[8px] sm:text-xs md:text-sm xl:text-lg;
+}
+
+.animated-section {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  }
+  
+  .animated-section.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  

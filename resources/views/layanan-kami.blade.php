@@ -26,8 +26,8 @@
                 Kembali
             </a>
 
-            <div class="flex">
-                <div class="flex-none flex flex-col border-r-2 border-customDarkGray w-32 md:w-48 xl:w-64 pr-4 md:pr-6 xl:pr-8">
+            <div class="hidden sm:flex">
+                <div class="flex-none flex flex-col border-r-2 border-customDarkGray sm:w-32 md:w-48 xl:w-64 pr-4 md:pr-6 xl:pr-8">
                     <div class="py-3 md:py-3.5 xl:py-4">
                         <p class="paragraph jenis-layanan cursor-pointer hover:opacity-100 transition font-bold pointer-events-none" data-jenis-layanan="hukum-perdata">Hukum Perdata</p>
                     </div>
@@ -78,6 +78,70 @@
                 </div>
 
                 <div id="detail-layanan" class="paragraph pl-6 md:pl-10 xl:pl-14 *:font-cormorant font-semibold">
+                    <p>
+                        Hukum perdata adalah salah satu cabang hukum yang mengatur hubungan antara orang per orang atau badan hukum perdata dengan orang per orang atau badan hukum perdata lainnya. Hukum perdata mengatur berbagai aspek kehidupan manusia, mulai dari hukum keluarga, hukum perikatan, hukum kekayaan, hukum waris, hukum benda, hukum perjanjian, hukum warisan, dan lain-lain.
+                        <br><br>
+                        RCP memberikan layanan hukum perdata yang komprehensif dan profesional. Tim kami memiliki pengalaman dan pengetahuan yang luas dalam bidang hukum perdata, dan kami selalu berkomitmen untuk memberikan layanan terbaik kepada klien kami.
+                        <br><br>
+                        Beberapa layanan hukum perdata yang kami tawarkan meliputi:
+                        <br>
+                    </p>
+
+                    <ol class="*:font-cormorant list-decimal pl-4 md:pl-6 xl:pl-8">
+                        <li>
+                            Hukum keluarga, seperti perceraian, pengasuhan anak, dan perwalian.
+                        </li>
+
+                        <li>
+                            Hukum perikatan, seperti perjanjian jual beli, perjanjian sewa menyewa, dan perjanjian utang piutang.
+                        </li>
+
+                        <li>
+                            Hukum kekayaan, seperti kepemilikan tanah, hak cipta, dan paten.
+                        </li>
+
+                        <li>
+                            Hukum waris, seperti pembagian harta warisan.
+                        </li>
+
+                        <li>
+                            Hukum benda, seperti hukum pertanahan dan hukum niaga.
+                        </li>
+
+                        <li>
+                            Hukum perjanjian, seperti pembuatan dan pelaksanaan perjanjian.
+                        </li>
+
+                        <li>
+                            Hukum warisan, seperti pembagian harta warisan.
+                        </li>
+                    </ol>
+
+                    <br>
+                    <p>
+                        Dengan pengalaman dan pengetahuan yang luas, kami yakin dapat membantu Anda menyelesaikan berbagai masalah hukum perdata yang Anda hadapi.
+                    </p>
+                </div>
+            </div>
+
+            <div id="" class="flex sm:hidden w-full items-center border-b-2 border-customDarkGray overflow-x-auto">
+                <div id="" class="flex items-center gap-8 md:gap-12 xl:gap-16 pb-2">
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition font-bold pointer-events-none" data-jenis-layanan1="hukum-perdata1">Hukum Perdata</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="hukum-pidana1">Hukum Pidana</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="hukum-koorporasi-dan-bisnis1">Hukum Koorporasi dan Bisnis</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="hukum-pertahanan1">Hukum Pertahanan</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="hukum-keluarga1">Hukum Keluarga</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="penyelesaian-sengketa1">Penyelesaian Sengketa</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="hukum-kekayaan-intelektual1">Hukum Kekayaan Intelektual</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="sengketa-hasil-pemilihan-umum-legislatif1">Sengketa Hasil Pemilihan Umum Legislatif</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="sengketa-hasil-pemilihan-umum-kepala-daerah1">Sengketa Hasil Pemilihan Umum Kepala Daerah</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="hukum-ketenagakerjaan1">Hukum Ketenagakerjaan</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="hukum-lingkungan1">Hukum Lingkungan</p>
+                    <p class="jenis-layanan1 paragraph cursor-pointer flex-none uppercase hover:opacity-100 transition opacity-50" data-jenis-layanan1="pkpu-dan-kepailitan1">PKPU dan Kepailitan</p>
+                </div>
+            </div>
+
+            <div id="detail-layanan1" class="flex-none sm:hidden paragraph md:pl-10 xl:pl-14 *:font-cormorant font-semibold">
                     <p>
                         Hukum perdata adalah salah satu cabang hukum yang mengatur hubungan antara orang per orang atau badan hukum perdata dengan orang per orang atau badan hukum perdata lainnya. Hukum perdata mengatur berbagai aspek kehidupan manusia, mulai dari hukum keluarga, hukum perikatan, hukum kekayaan, hukum waris, hukum benda, hukum perjanjian, hukum warisan, dan lain-lain.
                         <br><br>

@@ -49,7 +49,7 @@ $(".tim-selector").on("click", function () {
 
         case "Dicke Muhdi Gailea":
             $("#tim-position").html("Junior Associate");
-            $("#tim-name").html("Elisabeth Yunita, S.H.");
+            $("#tim-name").html("Dickie Muhdi Gailea, S.H.");
 
             $("#whatsapp").attr("href", "https://www.example.com");
             $("#instagram").attr("href", "https://www.example.com");
