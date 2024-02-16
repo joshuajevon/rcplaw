@@ -46,7 +46,7 @@ class EmailController extends Controller
         $subject = $request->input('subject');
         $mail = $request->input('mail');
 
-        Mail::to('fotobos81@gmail.com')->send(new ContactFormMail($first_name, $last_name, $email, $subject, $mail));
+        Mail::to(env('MAIL_USERNAME'))->send(new ContactFormMail($first_name, $last_name, $email, $subject, $mail));
 
         return response()->json([
             'success' => true,
