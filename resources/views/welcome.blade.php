@@ -40,10 +40,10 @@
                         <button class="paragraph flex-none py-1.5 md:py-2 xl:py-2.5 px-4 md:px-5 xl:px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]" type="submit">Hubungi Kami</button>
                     </div>
                     @if(session('success'))
-                    <p class="text-xs md:text-sm text-green-500 mt-2">{{ session('success') }}</p>
+                    <p class="text-xs md:text-sm text-green-500 mt-2 self-auto sm:self-start">{{ session('success') }}</p>
                     @endif
                     @error('email')
-                    <p class="text-xs md:text-sm text-red-500 mt-2">{{ $message }}</p>
+                    <p class="text-xs md:text-sm text-red-500 mt-2 self-auto sm:self-start">{{ $message }}</p>
                     @enderror
                 </form>
             </div>
