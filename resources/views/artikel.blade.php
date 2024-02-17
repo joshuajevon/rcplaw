@@ -28,7 +28,7 @@
 
             <div class="flex flex-col items-center md:items-start md:flex-row gap-8 md:gap-12 xl:gap-16">
                 <div class="flex-none size-48 md:size-64 xl:size-96 flex justify-center items-center overflow-hidden">
-                    <img class="object-cover" src="{{asset('assets/news.png')}}" alt="news">
+                    <img class="object-cover" src="{{ asset('/storage/news/'.$artikel->image) }}" alt="news">
                 </div>
 
                 <div class="*:font-cormorant flex flex-col gap-4">

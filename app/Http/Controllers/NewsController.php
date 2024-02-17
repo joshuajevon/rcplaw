@@ -51,8 +51,18 @@ class NewsController extends Controller
             'date' => 'required'
         ], $messages);
 
-        $fileName = time() . '-' . $request->title . '-' . $request->file('image')->getClientOriginalName();
-        $request->file('image')->storeAs('/public/news',$fileName);
+        $extension = $request->file('image')->getClientOriginalExtension();
+
+        $titleSlug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $request->title), '-'));
+
+        $imageNameSlug = pathinfo($request->file('image')->getClientOriginalName(), PATHINFO_FILENAME);
+        $imageNameSlug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $imageNameSlug), '-'));
+
+        $combinedSlug = $titleSlug . '-' . $imageNameSlug . '.' . $extension;
+
+        $fileName = time() . '-' . $combinedSlug;
+
+        $request->file('image')->storeAs('/public/news', $fileName);
 
         News::create([
             'title' => $request->title,
@@ -95,8 +105,13 @@ class NewsController extends Controller
 
         if($image){
             Storage::delete('/public/news/'. $news->image);
-            $fileName = time()  . '-' . $request->title . '-' . $request->file('image')->getClientOriginalName();
-            $image->storeAs('/public/news', $fileName);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $titleSlug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $request->title), '-'));
+            $imageNameSlug = pathinfo($request->file('image')->getClientOriginalName(), PATHINFO_FILENAME);
+            $imageNameSlug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $imageNameSlug), '-'));
+            $combinedSlug = $titleSlug . '-' . $imageNameSlug . '.' . $extension;
+            $fileName = time() . '-' . $combinedSlug;
+            $request->file('image')->storeAs('/public/news', $fileName);
             $news->update([
                 'image' => $fileName,
             ]);
