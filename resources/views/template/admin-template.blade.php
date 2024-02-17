@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Resandhi Cumbhadrika Partnership (RCP) adalah firma hukum penuh layanan yang beroperasi sejak 2020. Dengan lebih dari 10 tahun pengalaman sebagai pengacara, tim RCP berkomitmen untuk memberikan layanan hukum profesional berstandar internasional. Firma ini menawarkan sumber daya dan keahlian yang dapat dipercayakan untuk membantu klien. Dengan pengetahuan mendalam dalam ilmu hukum dan kredibilitas profesional, RCP bertujuan untuk mempertahankan dan memaksimalkan posisi serta kepentingan hukum klien.">
 
     <title>RCP Law</title>
 
