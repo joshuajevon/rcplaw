@@ -681,7 +681,7 @@
                     </div>
                 </a>
                 @empty
-                <p class="paragraph text-center">Maaf, saat ini artikel masih sedang dalam proses pembuatan</p>
+                <p class="paragraph text-center col-span-2">Maaf, saat ini artikel masih sedang dalam proses pembuatan</p>
                 @endforelse
 
             </div>
