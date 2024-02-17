@@ -33,7 +33,7 @@
                     Cumbhadrika
                     Partnership</h1>
 
-                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" class="w-full sm:w-auto flex flex-col">
+                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" class="w-full sm:w-auto flex flex-col items-center">
                     @csrf
                     <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden bg-[#D9D9D9] *:font-cormorant *:font-bold mt-2 sm:mt-0 w-3/4 sm:w-full">
                         <input class="paragraph border-none outline-none py-2 md:py-2.5 xl:py-3 pl-3 md:pl-3.5 xl:pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda" value="{{ old('email') }}">
