@@ -9,8 +9,6 @@
 <x-navbar :page="'beranda'" />
 
 <div class="bg-[#EDEDED] font-outfit *:text-customDarkGray">
-
-
     <div class="wa-sticky fixed flex justify-end right-4 bottom-4 md:right-10 md:bottom-10 z-40">
         <a class="transition hover:text-gold p-2 sm:p-3 bg-white rounded-full" href="tel:021-5222-289" target="_blank" rel="noreferrer noopener">
             <svg class="size-3 md:size-3.5 xl:size-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -35,17 +33,17 @@
                     Cumbhadrika
                     Partnership</h1>
 
-                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" class="w-full sm:w-auto flex justify-center">
+                <form id="form-subscribe" action="{{ route('storeEmail') }}" method="POST" class="w-full sm:w-auto flex flex-col">
                     @csrf
                     <div class="flex border-2 border-customDarkGray rounded-xl overflow-hidden bg-[#D9D9D9] *:font-cormorant *:font-bold mt-2 sm:mt-0 w-3/4 sm:w-full">
                         <input class="paragraph border-none outline-none py-2 md:py-2.5 xl:py-3 pl-3 md:pl-3.5 xl:pl-4 w-full bg-[#D9D9D9] focus:ring-0" type="text" name="email" id="email" placeholder="Alamat email Anda" value="{{ old('email') }}">
                         <button class="paragraph flex-none py-1.5 md:py-2 xl:py-2.5 px-4 md:px-5 xl:px-6 bg-gold m-1 rounded-lg hover:bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))]" type="submit">Hubungi Kami</button>
                     </div>
                     @if(session('success'))
-                    <p class="text-xs text-green-500 mt-2">{{ session('success') }}</p>
+                    <p class="text-xs md:text-sm text-green-500 mt-2">{{ session('success') }}</p>
                     @endif
                     @error('email')
-                    <p class="text-xs text-red-500 mt-2">{{ $message }}</p>
+                    <p class="text-xs md:text-sm text-red-500 mt-2">{{ $message }}</p>
                     @enderror
                 </form>
             </div>
@@ -667,7 +665,7 @@
 
                         <div class="w-full py-2 md:py-3 xl:py-4 px-4 md:px-5 xl:px-6 flex flex-col justify-between">
                             <div class="*:font-cormorant flex flex-col gap-1 md:gap-1.5 xl:gap-2">
-                                <h4 class="heading-4 font-bold">{{$n->title}}</h4>
+                                <h4 class="heading-4 font-bold line-clamp-1">{{$n->title}}</h4>
                                 <p class="paragraph font-medium line-clamp-2 lg:line-clamp-3">{{$n->description}}</p>
                             </div>
 
@@ -790,32 +788,32 @@
 </div>
 
 <script>
-// Function to handle the fade-in animation
-function handleFadeIn(entries, observer) {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = 'translateX(0)';
-        } else {
-            // Reset the animation when the element is not in the viewport
-            entry.target.style.opacity = 0;
-            entry.target.style.transform = 'translateX(-10px)';
-        }
+    // Function to handle the fade-in animation
+    function handleFadeIn(entries, observer) {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateX(0)';
+            } else {
+                // Reset the animation when the element is not in the viewport
+                entry.target.style.opacity = 0;
+                entry.target.style.transform = 'translateX(-10px)';
+            }
+        });
+    }
+
+    // Create an Intersection Observer for all elements with class "content-container"
+    const containers = document.querySelectorAll('.animated-section');
+
+    const observer = new IntersectionObserver(handleFadeIn, {
+        root: null
+        , rootMargin: '0px'
+        , threshold: 0.5
+    , });
+
+    containers.forEach((container) => {
+        observer.observe(container);
     });
-}
-
-// Create an Intersection Observer for all elements with class "content-container"
-const containers = document.querySelectorAll('.animated-section');
-
-const observer = new IntersectionObserver(handleFadeIn, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-});
-
-containers.forEach((container) => {
-    observer.observe(container);
-});
 
 </script>
 
